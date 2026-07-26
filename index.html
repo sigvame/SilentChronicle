@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silent Chronicle — Архив заброшенных мест</title>
+
+    <!-- Шрифты: Cinzel (заголовки) + Inter (текст) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Кастомные стили -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Навбар -->
+    <!-- НАВБАР -->
+    <nav class="navbar custom-navbar sticky-top">
+        <div class="container navbar-container d-flex align-items-center justify-content-between">
+    
+            <!-- Логотип -->
+            <a href="index.html" class="logo">
+                <span>SILENT</span>
+                <span>CHRONICLE</span>
+            </a>
+    
+            <!-- Поиск (Отображается всегда рядом или на ПК) -->
+            <div class="search-box me-2 me-md-0">
+                <input type="text" id="search-input" class="form-control form-control-dark" placeholder="Поиск...">
+            </div>
+    
+            <!-- Кнопка Бургера (Только на мобильных устройствах, скрыта на ПК) -->
+            <button class="navbar-toggler custom-toggler d-md-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#mobileMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+        </div>
+    </nav>
+    
+    <!-- БУРГЕР-МЕНЮ (OFFCANVAS: открывается поверх контента и закрывается кликом мимо) -->
+    <div class="offcanvas offcanvas-top text-bg-dark h-auto rounded-bottom-4" tabindex="-1" id="mobileMenu"
+        aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header border-bottom border-secondary pb-2">
+            <h5 class="offcanvas-title h6 fw-bold text-uppercase" id="mobileMenuLabel">Категории</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Закрыть"></button>
+        </div>
+        <div class="offcanvas-body py-3">
+            <!-- Кнопки-чипы в сетку по несколько в ряд -->
+            <div class="d-flex flex-wrap gap-2 justify-content-start">
+                <button class="btn btn-chip filter-btn active" data-category="all">Все</button>
+                <button class="btn btn-chip filter-btn" data-category="europe">Европа</button>
+                <button class="btn btn-chip filter-btn" data-category="asia">Азия</button>
+                <button class="btn btn-chip filter-btn" data-category="castle">Замки</button>
+                <button class="btn btn-chip filter-btn" data-category="island">Острова</button>
+                <button class="btn btn-chip filter-btn" data-category="hospital">Больницы</button>
+                <button class="btn btn-chip filter-btn" data-category="village">Деревни</button>
+                <button class="btn btn-chip filter-btn" data-category="city">Города</button>
+                <button class="btn btn-chip filter-btn" data-category="medieval">Средневековье</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Главный контейнер -->
+    <main class="container my-3 my-md-4">
+
+        <!-- Заголовок -->
+        <header class="text-center my-4 my-md-5">
+            <h1 class="display-5 fw-bold hero-title">SILENT CHRONICLE</h1>
+            <p class="text-muted col-md-8 mx-auto small-desc">
+                Архив древних руин, забытых замков и проклятых локаций со всего мира.
+            </p>
+        </header>
+
+        <!-- Фильтр категорий -->
+        <!-- ЛЕНТА ЧИПОВ (Скрыта на телефонах d-none, видна от планшетов и ПК d-md-flex) -->
+        <div class="category-scroll-wrapper d-none d-md-flex gap-2 mb-4">
+            <button class="btn btn-chip filter-btn active" data-category="all">Все</button>
+            <button class="btn btn-chip filter-btn" data-category="europe">Европа</button>
+            <button class="btn btn-chip filter-btn" data-category="asia">Азия</button>
+            <button class="btn btn-chip filter-btn" data-category="castle">Замки</button>
+            <button class="btn btn-chip filter-btn" data-category="island">Острова</button>
+            <button class="btn btn-chip filter-btn" data-category="hospital">Больницы</button>
+            <button class="btn btn-chip filter-btn" data-category="village">Деревни</button>
+            <button class="btn btn-chip filter-btn" data-category="city">Города</button>
+            <button class="btn btn-chip filter-btn" data-category="medieval">Средневековье</button>
+        </div>
+
+        <!-- Контейнер для автоматической загрузки карточек через JS -->
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-2 g-sm-3" id="places-container">
+            <!-- Карточки будут сгенерированы автоматически -->
+        </div>
+
+    </main>
+
+    <!-- Подключаем Bootstrap JS и наш файл с базой данных/скриптом -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/list.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

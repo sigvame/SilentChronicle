@@ -1,0 +1,507 @@
+:root {
+    /* Античная палитра */
+    --bg-color: #0c0b0e;
+    /* Чистый тёмно-угольный фон */
+    --card-bg: #141219;
+    /* Плотный цвет старого гранита */
+    --border-color: #26212e;
+    /* Сдержанная тёмно-фиолетовая граница */
+
+    --text-main: #dfdad6;
+    /* Тёплый светло-серый (пергаментный) */
+    --text-muted: #8e8899;
+    /* Приглушенный пыльный */
+
+    --ancient-purple: #9b6cc9;
+    /* Элегантный аметист */
+    --ancient-hover: #b48be0;
+}
+
+/* ФОН: Чистый и лёгкий без тяжелых CSS-эффектов */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+/* Высеченный каменный шрифт для заголовков */
+.hero-title,
+.logo span:first-child {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 3px;
+    background: linear-gradient(180deg,
+            #ffffff 0%,
+            #d1cad8 40%,
+            #8e829e 70%,
+            #9b6cc9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+
+.hero-title {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    padding-bottom: 0.8rem;
+    border-bottom: 1px dashed rgba(155, 108, 201, 0.25);
+    display: inline-block;
+}
+
+.small-desc {
+    font-size: 0.9rem;
+    margin-top: 0.8rem;
+}
+
+/* Навбар */
+.custom-navbar {
+    background-color: rgba(20, 18, 25, 0.98);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.5rem 0;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+/* Логотип */
+.logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 0.95;
+    text-decoration: none;
+    padding: 0;
+}
+
+.logo span:first-child {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.logo span:last-child {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+}
+
+@media (min-width: 768px) {
+    .logo {
+        flex-direction: row;
+        gap: 0.4rem;
+        align-items: center;
+    }
+}
+
+/* Поиск по центру */
+.search-wrapper {
+    flex-grow: 1;
+    max-width: 180px;
+    margin: 0 0.5rem;
+}
+
+/* Подсветка поля поиска в стиле сайта */
+#search-input {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+/* Эффект при клике / фокусе */
+#search-input:focus {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-color: #8a5cf6;
+    /* Фиолетовый цвет акцента */
+    box-shadow: 0 0 10px rgba(138, 92, 246, 0.4);
+    /* Мягкое фиолетовое свечение */
+    color: #fff;
+    outline: none;
+}
+
+/* Цвет текста-подсказки (placeholder) */
+#search-input::placeholder {
+    color: #888; }
+
+@media (min-width: 576px) {
+    .search-wrapper {
+        max-width: 260px;
+    }
+}
+
+.custom-search {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    font-size: 0.8rem;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+}
+
+.custom-search::placeholder {
+    color: var(--text-muted);
+}
+
+.custom-search:focus {
+    background-color: var(--bg-color);
+    border-color: var(--ancient-purple);
+    color: var(--text-main);
+    box-shadow: none;
+}
+
+.custom-toggler {
+    border-color: var(--border-color);
+    padding: 0.25rem 0.5rem;
+    font-size: 0.9rem;
+}
+
+.nav-link {
+    color: var(--text-main) !important;
+    font-size: 0.9rem;
+}
+
+.nav-link:hover {
+    color: var(--ancient-purple) !important;
+}
+
+/* Карточки */
+.custom-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.custom-card:hover {
+    border-color: var(--ancient-purple);
+    transform: translateY(-2px);
+}
+
+.card-img-wrapper {
+    position: relative;
+    height: 140px;
+    overflow: hidden;
+    background-color: var(--card-bg);
+}
+
+@media (min-width: 768px) {
+    .card-img-wrapper {
+        height: 180px;
+    }
+}
+
+.card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.badge-tag {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: rgba(12, 11, 14, 0.9);
+    border: 1px solid var(--border-color);
+    color: var(--ancient-purple);
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+.card-title {
+    font-family: 'Cinzel', serif;
+    color: #f0ebf5;
+    margin-bottom: 0.4rem;
+    font-size: 26px;
+}
+
+.location-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.card-link {
+    color: var(--ancient-purple);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.card-link:hover {
+    color: var(--ancient-hover);
+    text-decoration: underline;
+}
+
+/* Чипсы категорий */
+.btn-chip {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    border-radius: 12px;
+    padding: 0.25rem 0.9rem;
+    white-space: nowrap;
+    font-size: 0.8rem;
+}
+
+.btn-chip:hover,
+.btn-chip.active {
+    background-color: var(--ancient-purple);
+    border-color: var(--ancient-purple);
+    color: #100d14;
+    font-weight: 600; 
+}
+
+/* Делаем всю карточку кликабельной ссылкой */
+.card-clickable-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+.card-clickable-link:hover {
+    color: inherit;
+}
+
+/* Ещё более компактные карточки на мобильных устройствах */
+@media (max-width: 576px) {
+    .card-img-wrapper {
+        height: 120px;
+        /* Уменьшенная высота картинки для мобилок */
+    }
+
+    .card-title {
+        font-size: 0.95rem;
+        /* Аккуратный заголовок */
+    }
+
+    .card-text {
+        font-size: 0.75rem !important;
+        /* Уменьшенный текст описания */
+        line-height: 1.3;
+    }
+
+    .location-label,
+    .card-link-text {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .article-content h2 {
+        font-size: 1.5rem !important;
+        /* Делает заголовок крупнее и заметнее на мобильных */
+        line-height: 1.3;
+        margin-top: 1.75rem;
+    } }
+
+.card-link-text {
+    color: var(--ancient-purple);
+    font-weight: 500;
+}
+
+.custom-card:hover .card-link-text {
+    color: var(--ancient-hover);
+    text-decoration: underline; }
+
+
+
+
+/* Кнопка «Назад» в навбаре */
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+    padding: 0.2rem 0.6rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--bg-color);
+    transition: all 0.2s ease;
+}
+
+.btn-back:hover {
+    color: var(--ancient-purple);
+    border-color: var(--ancient-purple); 
+}
+
+
+
+
+
+
+/* Стили галереи */
+.gallery-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    background-color: #1a1a1a;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.gallery-card:hover .gallery-img {
+    transform: scale(1.05);
+}
+
+/* Подпись на самом фото (слева внизу) */
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 24px 12px 10px 12px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
+    color: #e0e0e0;
+    font-size: 0.85rem;
+    text-align: left;
+    pointer-events: none;
+}
+
+/* Стилизация аккордеона галереи */
+.gallery-accordion .accordion-button {
+    background-color: var(--card-bg, #1e1e1e);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: none;
+}
+
+.gallery-accordion .accordion-button:not(.collapsed) {
+    background-color: var(--card-bg, #252525);
+    color: #fff;
+    border-bottom: none;
+}
+
+.gallery-accordion .accordion-body {
+    background-color: var(--card-bg, #141414);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: none;
+}
+
+/* Выпадающая панель меню (Offcanvas) */
+.offcanvas.offcanvas-top {
+    /* Ограничиваем максимальную высоту меню (например, 40% экрана) */
+    max-height: 40vh !important;
+
+    /* Размытие фона самой панели (стеклянный эффект) */
+    background-color: rgba(18, 18, 18, 0.85) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    /* Граница снизу для красивого разделения */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Запрещаем кнопкам растягиваться во всю ширину */
+.offcanvas-body .btn-chip {
+    width: auto !important;
+    flex-grow: 0 !important;
+}
+
+/* Полупрозрачный задник страницы с размытием при открытом меню */
+.offcanvas-backdrop.show {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px); 
+}
+
+/* Ограничение размеров для промежуточных картинок в статье */
+.article-content figure {
+    max-width: 650px; /* Максимальная ширина картинки на ПК */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .article-content figure img {
+    max-height: 400px; /* Ограничиваем высоту, чтобы она не была гигантской */
+    object-fit: cover;  /* Аккуратно кадрируем, если пропорции слишком вытянутые */
+    width: 100%;
+  }
+
+
+/* Адаптивный блок с тремя карточками-историями */
+@media (max-width: 767.98px) {
+    .story-scroll-container {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 1rem;
+        padding-bottom: 1rem;
+        scrollbar-width: none;
+        /* Добавляем отступы по бокам, чтобы крайние карточки вставали по центру */
+        padding-inline: calc(50% - 42.5%);
+    }
+
+    .story-scroll-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .story-card-item {
+        flex: 0 0 85%;
+        scroll-snap-align: center !important;
+    } 
+}
+
+.legend-card-img {
+    height: 250px;
+    object-fit: cover; 
+}
+
+/* Стили для современной хронологии (без вертикальных линий) */
+.timeline-clean-item {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 1.5rem;
+}
+
+.timeline-clean-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-clean-dot {
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #8b5cf6 !important;
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+}
+
+@media (min-width: 768px) {
+    .floating-lead-image {
+        max-width: 42%;
+    }
+}
+
+.gallery-img-box {
+        height: 200px;
+        width: 100%;
+        overflow: hidden;
+}
+    .gallery-img-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+}
+
+.custom-card p {
+    font-style: italic;
+}

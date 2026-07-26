@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Замок Лип — Silent Chronicle</title>
+
+    <!-- Шрифты: Cinzel & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Стили -->
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <style>
+        /* Дополнительный класс для ограничения ширины фото на ПК, чтобы текст красиво обтекал */
+        @media (min-width: 768px) {
+            .floating-lead-image {
+                max-width: 42%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- НАВБАР -->
+    <nav class="navbar custom-navbar sticky-top">
+        <div class="container navbar-container">
+
+            <!-- Кнопка «Назад» на главную -->
+            <a href="../../index.html" class="btn-back">
+                <i class="bi bi-arrow-left"></i>
+                <span>Назад</span>
+            </a>
+
+            <!-- Логотип -->
+            <a href="../../index.html" class="logo">
+                <span>SILENT</span>
+                <span>CHRONICLE</span>
+            </a>
+
+            <!-- Пустой блок для центровки -->
+            <div style="width: 75px;"></div>
+
+        </div>
+    </nav>
+
+    <!-- ГЛАВНЫЙ КОНТЕНТ -->
+    <main class="container my-4 my-md-5">
+
+        <!-- HEADER ЛОКАЦИИ -->
+        <header class="mb-4 text-start">
+            <span class="badge-tag d-inline-block mb-2">Европа • Замок</span>
+            <h1 class="hero-title d-block mb-2">Замок Лип (Leap Castle)</h1>
+            <p class="location-label mb-0">
+                <i class="bi bi-geo-alt"></i> Графство Оффали, Ирландия
+            </p>
+        </header>
+
+        <!-- ОСНОВНОЙ БЛОК -->
+        <article class="article-content clearfix">
+
+            <!-- ГЛАВНОЕ ФОТО С ОБТЕКАНИЕМ (Слева на ПК, на всю ширину на мобилках) -->
+            <div class="float-md-start floating-lead-image me-md-4 mb-4 col-12">
+                <div class="article-img-wrapper rounded-3 overflow-hidden shadow-sm">
+                    <img src="../../images/leap-castle/leap-castle.jpg" alt="Замок Лип" class="img-fluid w-100 article-img">
+                </div>
+            </div>
+
+            <!-- ВСТУПЛЕНИЕ (Начнет обтекать фото сразу с первых строк) -->
+            <p class="lead text-main mb-4">
+                Каменные стены замка Лип хранят в себе атмосферу, которую невозможно спутать ни с чем другим.
+                Возведенный прямо на руинах древнего друидического святилища, он на протяжении веков служил ареной для
+                кровавых династических войн, предательств и ритуалов, отголоски которых до сих пор заставляют
+                содрогаться исследователей паранормального со всего мира.
+            </p>
+
+            <p class="text-muted mb-4">
+                Замок Лип считается самым проклятым и темным местом Ирландии. Его история пропитана жестокостью
+                клана О’Кэрролл, чей каждый шаг к власти сопровождался новыми жертвами. Даже спустя столетия руины
+                продолжают привлекать искателей острых ощущений, желающих своими глазами увидеть легендарную «Кровавую
+                Часовню» и узнать тайны мрачного подземелья.
+            </p>
+
+            <!-- СЕКЦИЯ 1 -->
+            <section class="mb-4">
+                <h2 class="card-title h4 mb-3">«Прыжок О’Кэрролла»: Легенда о рождении крепости</h2>
+                <p class="text-muted">
+                    В конце XV века жестокий и могущественный клан заложил крепость на стратегическом проходе через горы
+                    Слив Блум. Само место было выбрано не случайно: задолго до появления первого камня друиды проводили
+                    здесь свои таинственные обряды.
+                </p>
+                <p class="text-muted">
+                    Название «Лип» происходит от ирландского <em>Léim Uí Chorbhmaic</em> — «Прыжок О’Кэрролла». Согласно
+                    древнему преданию, двое братьев из вождей соперничали за право возглавить клан. Чтобы решить спор,
+                    они устроили смертельное испытание: оба прыгнули с вершины высокой скалы на острые камни. Выживший
+                    брат не только возглавил род, но и возвел на этой крови замок.
+                </p>
+            </section>
+
+            <!-- ИНФОБОКС И ФАКТЫ (Вынесены ниже или идут потоком) -->
+            <div class="row g-4 my-4">
+                <div class="col-12 col-md-6">
+                    <div class="custom-card p-3 rounded-3 h-100">
+                        <h3 class="card-title h5 mb-3">Информация</h3>
+                        <ul class="list-unstyled text-muted mb-0 small d-flex flex-column gap-2">
+                            <li><strong class="text-main">Дата постройки:</strong> Конец XV века</li>
+                            <li><strong class="text-main">Основатели:</strong> Клан О'Кэрролл</li>
+                            <li><strong class="text-main">Статус:</strong> Частное владение / Исторический памятник</li>
+                            <li><strong class="text-main">Координаты:</strong> 53.0281° N, 7.8082° W</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="custom-card border-start border-3 border-purple p-3 rounded-3 h-100">
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="bi bi-lightning-charge text-purple me-2 fs-5"></i>
+                            <h4 class="h6 mb-0 text-uppercase fw-bold text-light">Факты из хроник</h4>
+                        </div>
+                        <p class="small text-muted mb-0">
+                            При очистке темницы-ублиета в начале XX века рабочие извлекли три полные повозки
+                            человеческих костей. Среди них были найдены карманные часы 1840-х годов — доказательство
+                            того, что темницу использовали даже в XIX веке.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- СЕКЦИЯ 2 -->
+            <section class="mb-4">
+                <h2 class="card-title h4 mb-3">Кровавая Часовня и Братоубийство</h2>
+                <p class="text-muted">
+                    В 1532 году, после смерти вождя Мурога О’Кэрролла, замок погрузился в хаос междоусобицы. В день
+                    трагедии один из сыновей Мурога, являвшийся священником, проводил семейную мессу в верхнем зале
+                    центральной башни.
+                </p>
+                <p class="text-muted">
+                    Его брат, Тейг О’Кэрролл, ослепленный жаждой власти, ворвался в часовню и прямо во время молитвы
+                    вонзил меч в спину брата. Священник рухнул на алтарь, залив его кровью на глазах у собственной
+                    семьи. С тех пор верхний зал зовут «Кровавой Часовней». Считается, что призрачный свет в её окнах
+                    можно увидеть с дороги и в наши дни.
+                </p>
+            </section>
+
+            <!-- ВСТАВКА ФОТО 1 (ДИНАМИКА) -->
+            <figure class="my-4 my-md-5">
+                <div class="article-img-wrapper rounded-3 overflow-hidden mb-2">
+                    <img src="../../images/leap-castle/clocktower-window.jpg"
+                        alt="Кровавая Часовня" class="img-fluid w-100">
+                </div>
+                <figcaption class="figure-caption text-center small text-muted">
+                    Оконный проем «Кровавой Часовни» на верхнем ярусе башни.
+                </figcaption>
+            </figure>
+
+            <!-- СЕКЦИЯ 3 -->
+            <section class="mb-4">
+                <h2 class="card-title h4 mb-3">Ублиет: Бездна, из которой нет возврата</h2>
+                <p class="text-muted">
+                    За алтарем Кровавой Часовни находилась тайная дверь, ведущая к узкой вертикальной шахте — ублиету
+                    (от французского <em>oublier</em> — «забыть»). Сюда сбрасывали пленников, неугодных гостей и
+                    наемников, выполнивших свою работу.
+                </p>
+                <p class="text-muted">
+                    Внизу жертв ждали вмонтированные в дно железные и деревянные колья. Ублиет был сконструирован так,
+                    чтобы падающий не погибал мгновенно, а умирал долго в полной темноте среди разлагающихся тел
+                    предыдущих узников.
+                </p>
+            </section>
+
+            <!-- ВСТАВКА ЦИТАТЫ / ДНЕВНИКА -->
+            <blockquote class="blockquote custom-card p-4 rounded-3 border-start border-3 border-purple my-4">
+                <p class="mb-2 text-light font-italic small fs-6">
+                    «Оно было размером с овцу, с человеческим лицом, но совершенно истощенным и разлагающимся. От
+                    существа исходил удушливый, невыносимый запах гниения и трупного яда...»
+                </p>
+                <footer class="blockquote-footer text-muted small mb-0">
+                    Милдред Дарби, <cite title="Записи из дневника">Дневники замка Лип (1909 г.)</cite>
+                </footer>
+            </blockquote>
+
+            <!-- СЕКЦИЯ 4 -->
+            <section class="mb-4">
+                <h2 class="card-title h4 mb-3">Сущность «Элементаль»</h2>
+                <p class="text-muted">
+                    В конце XIX века замком владела семья Дарби. Оккультистка Милдред Дарби увлекалась спиритизмом и
+                    проводила в залах замка сеансы. Считается, что именно она разбудила древнюю темную сущность —
+                    «Элементаля».
+                </p>
+                <p class="text-muted">
+                    Исследователи мистики предполагают, что Элементаль — это древнее друидическое заградительное
+                    заклятие, созданное для защиты земли от чужаков, которое веками питалось кровью и страданиями,
+                    витавшими в замке.
+                </p>
+            </section>
+
+            <!-- ТРИ ИСТОРИИ С АДАПТИВНЫМ СКРОЛЛОМ НА МОБИЛЬНЫХ -->
+            <!-- СКРЫВАЕМЫЙ БЛОК С КАРТОЧКАМИ (АККОРДЕОН) -->
+            <section class="my-5">
+                <div class="accordion" id="legendsAccordion">
+                    <div class="accordion-item border-0">
+                        <h2 class="accordion-header" id="headingLegends">
+                            <button class="accordion-button collapsed rounded-3 fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseLegends" aria-expanded="false" aria-controls="collapseLegends">
+                                <i class="bi bi-book-half me-2 text-main"></i> Легенды и призраки замка Лип
+                            </button>
+                        </h2>
+                        <div id="collapseLegends" class="accordion-collapse collapse" aria-labelledby="headingLegends"
+                            data-bs-parent="#legendsAccordion">
+                            <div class="accordion-body rounded-bottom-3 pt-4">
+            
+                                <div class="row g-4">
+            
+                                    <!-- Карточка 1: Красная Дама -->
+                                    <div class="col-12 col-md-4">
+                                        <div class="custom-card p-3 rounded-3 h-100 d-flex flex-column">
+                                            <div class="article-img-wrapper rounded-3 overflow-hidden mb-3">
+                                                <img src="../../images/leap-castle/ladder.jpg" alt="Красная Дама"
+                                                    class="img-fluid w-100">
+                                            </div>
+                                            <h3 class="h6 text-main fw-bold mb-2">Призрак «Красной Дамы»</h3>
+                                            <p class="small text-muted mb-0">
+                                                На фото виден тесный каменный проход с аутентичной средневековой лестницей. По
+                                                рассказам владельцев
+                                                и экстрасенсов, здесь регулярно видят призрак «Красной Дамы» — высокую женщину в
+                                                развевающемся
+                                                красном платье, которая держит в руках кинжал и бесшумно перемещается между уровнями
+                                                башни.
+                                            </p>
+                                        </div>
+                                    </div>
+            
+                                    <!-- Карточка 2: Сводчатые залы -->
+                                    <div class="col-12 col-md-4">
+                                        <div class="custom-card p-3 rounded-3 h-100 d-flex flex-column">
+                                            <div class="article-img-wrapper rounded-3 overflow-hidden mb-3">
+                                                <img src="../../images/leap-castle/rooms.jpg" alt="Сводчатые залы"
+                                                    class="img-fluid w-100">
+                                            </div>
+                                            <h3 class="h6 text-main fw-bold mb-2">Сводчатые переходы подземелий</h3>
+                                            <p class="small text-muted mb-0">
+                                                На снимке показаны мрачные своды нижних уровней. Из-за вековой сырости, отсутствия
+                                                дневного
+                                                света и тяжелой энергетики эти места считаются эпицентром паранормального. Гости
+                                                замка часто
+                                                описывают внезапное падение температуры и гнетущее чувство чужого присутствия.
+                                            </p>
+                                        </div>
+                                    </div>
+            
+                                    <!-- Карточка 3: Темница-ублиет -->
+                                    <div class="col-12 col-md-4">
+                                        <div class="custom-card p-3 rounded-3 h-100 d-flex flex-column">
+                                            <div class="article-img-wrapper rounded-3 overflow-hidden mb-3">
+                                                <img src="../../images/leap-castle/oubliette.jpg" alt="Ублиет"
+                                                    class="img-fluid w-100">
+                                            </div>
+                                            <h3 class="h6 text-main fw-bold mb-2">Темница-ублиет (Oubliette)</h3>
+                                            <p class="small text-muted mb-0">
+                                                Вертикальная потайная шахта в стене Кровавой часовни. Пленников сбрасывали туда на
+                                                шипы. В
+                                                начале XX века оттуда вывезли повозки с костями. Именно из этой шахты, по легенде,
+                                                появляется самое
+                                                жуткое существо замка — Элементаль, пахнущий разлагающейся плотью.
+                                            </p>
+                                        </div>
+                                    </div>
+            
+                                </div>
+            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- СЕКЦИЯ 6 -->
+            <section class="mb-4">
+                <h2 class="card-title h4 mb-3">Современность: Музыка среди призраков</h2>
+                <p class="text-muted">
+                    Во время Ирландской гражданской войны 1922 года замок был разграблен и сожжен. Более половины века
+                    он простоял в виде обугленного остова.
+                </p>
+                <p class="text-muted">
+                    В 1991 году замок купил ирландский музыкант Шон Райан. Он восстановил часть помещений и живет там с
+                    семьей до сих пор. Шон открыто признает присутствие потусторонних сил в доме: по его словам,
+                    призраки стали частью повседневной жизни, а сам он нередко играл для них на традиционной ирландской
+                    флейте.
+                </p>
+            </section>
+
+        </article>
+
+        <!-- РАЗДЕЛЬНАЯ ЛИНИЯ -->
+        <hr class="my-5 border-secondary">
+
+        <!-- РАЗВОРАЧИВАЮЩАЯСЯ ГАЛЕРЕЯ (6 ФОТО) -->
+        <section class="gallery-accordion">
+            <div class="accordion" id="galleryAccordion">
+                <div class="accordion-item border-0">
+                    <h2 class="accordion-header" id="headingGallery">
+                        <button class="accordion-button collapsed rounded-3 fw-bold" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseGallery" aria-expanded="false"
+                            aria-controls="collapseGallery">
+                            <i class="bi bi-images me-2 text-main"></i> Галерея локации (6 фото)
+                        </button>
+                    </h2>
+                    <div id="collapseGallery" class="accordion-collapse collapse" aria-labelledby="headingGallery"
+                        data-bs-parent="#galleryAccordion">
+                        <div class="accordion-body rounded-bottom-3 pt-4">
+
+                            <div class="row g-3">
+
+                                <!-- Фото 1 -->
+                                <div class="col-12 col-sm-6 col-md-4">
+                                    <div class="gallery-card">
+                                        <img src="../../images/leap-castle/main-tower.jpg"
+                                            alt="Фасад" class="gallery-img">
+                                        <div class="gallery-caption">Вид на главную башню замка</div>
+                                    </div>
+                                </div>
+
+                                <!-- Фото 2 -->
+                                <div class="col-12 col-sm-6 col-md-4">
+                                    <div class="gallery-card">
+                                        <img src="../../images/leap-castle/ruins.jpg"
+                                            alt="Залы" class="gallery-img">
+                                        <div class="gallery-caption">Руины внутренних палат</div>
+                                    </div>
+                                </div>
+
+                                <!-- Фото 3 -->
+                                <div class="col-12 col-sm-6 col-md-4">
+                                    <div class="gallery-card">
+                                        <img src="../../images/leap-castle/entrance.jpg"
+                                            alt="Свод" class="gallery-img">
+                                            <div class="gallery-caption">Замок Лип 1919</div>
+                                    </div>
+                                </div>
+
+                                <!-- Фото 4 -->
+                                <div class="col-12 col-sm-6 col-md-4">
+                                    <div class="gallery-card">
+                                        <img src="../../images/leap-castle/clocktower-window.jpg"
+                                            alt="Часовня" class="gallery-img">
+                                        <div class="gallery-caption">Оконный проем «Кровавой Часовня»</div>
+                                    </div>
+                                </div>
+
+                                <!-- Фото 5 -->
+                                <div class="col-12 col-sm-6 col-md-4">
+                                    <div class="gallery-card">
+                                        <img src="../../images/leap-castle/entrance2.jpg"
+                                            alt="Вход" class="gallery-img">
+                                    </div>
+                                </div>
+
+                                <!-- Фото 6 -->
+                                <div class="col-12 col-sm-6 col-md-4">
+                                    <div class="gallery-card">
+                                        <img src="../../images/leap-castle/around.jpg"
+                                            alt="Окрестности" class="gallery-img">
+                                        <div class="gallery-caption">Окрестности замка и горы Слив Блум</div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
