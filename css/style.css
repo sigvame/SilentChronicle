@@ -539,3 +539,113 @@ body {
         scroll-snap-align: center !important;
     }
 }
+
+
+/* =========================================
+   УНИКАЛЬНЫЕ СТИЛИ ДЛЯ СТРАНИЦЫ ЧЕРНОБЫЛЬ
+   ========================================= */
+
+/* Моноширинный архивный шрифт для текста статьи */
+.archive-text,
+.archive-text p,
+.archive-text li,
+.archive-text .lead {
+    font-family: 'Courier New', Courier, monospace !important;
+    color: #b0afb3 !important;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+/* Заголовки */
+.archive-title {
+    font-family: 'Cinzel', serif !important;
+    color: var(--text-main) !important;
+    text-transform: uppercase;
+}
+
+/* Кастомные маркеры списка */
+.archive-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.archive-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+
+.archive-list li::before {
+    content: '>';
+    position: absolute;
+    left: 0;
+    color: #39ff14;
+    font-weight: bold;
+}
+
+.archive-list li strong {
+    color: var(--text-main) !important;
+}
+
+/* Блок сводных данных */
+.archive-facts-section {
+    background-color: var(--card-bg) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Точечный разделитель */
+.dot-divider {
+    border: none;
+    border-top: 2px dotted #26212e;
+    color: #26212e;
+    background-color: transparent;
+    height: 1px;
+    width: 50%;
+    margin: 4rem auto;
+    text-align: center;
+}
+
+.dot-divider::after {
+    content: '... ••• ...';
+    display: inline-block;
+    position: relative;
+    top: -12px;
+    padding: 0 10px;
+    background-color: var(--bg-color);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* Аккордеон */
+.archive-accordion .accordion-button {
+    background-color: var(--card-bg) !important;
+    color: #39ff14 !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-family: 'Courier New', Courier, monospace !important;
+    text-transform: uppercase;
+}
+
+.archive-accordion .accordion-button:not(.collapsed) {
+    background-color: #2a2533 !important;
+}
+
+.archive-accordion .accordion-body {
+    background-color: var(--card-bg) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: none;
+}
+
+.legend-item-box {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.legend-item-box h3 {
+    color: #39ff14 !important;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
