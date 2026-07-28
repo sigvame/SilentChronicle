@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кёльнский собор — Silent Chronicle</title>
+
+    <!-- Шрифты: Cinzel & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Стили -->
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <style>
+        
+        /* Дополнительный класс для ограничения ширины фото на ПК */
+        @media (min-width: 768px) {
+            .floating-lead-image {
+                max-width: 42%;
+            }
+        }
+
+        /* Увеличение заголовков h2 в пикселях с сохранением обычного рубленого шрифта Inter */
+        .article-content h2.card-title,
+        main h2.card-title {
+            font-family: 'Inter', sans-serif !important;
+            font-size: 32px !important;
+            font-weight: 400 !important;
+            line-height: 1.3;
+        }
+
+        @media (max-width: 768px) {
+
+            .article-content h2.card-title,
+            main h2.card-title {
+                font-size: 24px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- НАВБАР -->
+    <nav class="navbar custom-navbar sticky-top">
+        <div class="container navbar-container">
+
+            <!-- Кнопка «Назад» на главную -->
+            <a href="../../index.html" class="btn-back">
+                <i class="bi bi-arrow-left"></i>
+                <span>Назад</span>
+            </a>
+
+            <!-- Логотип -->
+            <a href="../../index.html" class="logo">
+                <span>SILENT</span>
+                <span>CHRONICLE</span>
+            </a>
+
+            <!-- Пустой блок для центровки -->
+            <div style="width: 75px;"></div>
+        </div>
+    </nav>
+
+    <!-- ГЛАВНЫЙ КОНТЕНТ -->
+    <main class="container my-4 my-md-5">
+
+        <!-- HEADER ЛОКАЦИИ -->
+        <header class="mb-4 text-start">
+            <span class="badge-tag d-inline-block mb-2">Европа • Собор • Средневековье</span>
+            <h1 class="hero-title d-block mb-2">Кёльнский собор (Kölner Dom)</h1>
+            <p class="location-label mb-0">
+                <i class="bi bi-geo-alt"></i> Кёльн, Северный Рейн-Вестфалия, Германия
+            </p>
+        </header>
+
+        <!-- ОСНОВНОЙ БЛОК -->
+        <article class="article-content clearfix">
+
+            <!-- ГЛАВНОЕ ФОТО С ОБТЕКАНИЕМ -->
+            <div class="float-md-start floating-lead-image me-md-4 mb-4 col-12">
+                <div class="article-img-wrapper rounded-3 overflow-hidden shadow-sm">
+                    <img src="../../images/cologne-cathedral/cologne-cathedral-main.jpg" alt="Кёльнский собор"
+                        class="img-fluid w-100 article-img">
+                </div>
+                <figcaption class="figure-caption text-center small text-muted mt-2">
+                    <i>Готический силуэт Кёльнского собора над рекой Рейн.</i>
+                </figcaption>
+            </div>
+
+            <!-- ВСТУПЛЕНИЕ -->
+            <p class="lead text-main mb-4">
+                Кёльнский собор (Kölner Dom) — это абсолютный шедевр готической архитектуры и один из самых узнаваемых
+                храмов мира, внесенный в список Всемирного наследия ЮНЕСКО.
+            </p>
+
+            <p class="text-muted mb-4">
+                Возвышающийся в самом сердце Кёльна, он поражает воображение своими размерами: его башни достигают
+                высоты более 157 метров, делая собор долгое время самым высоким зданием на планете. Главной христианской
+                святыней храма является золотая рака Трёх Волхвов (Царей), в которой хранятся мощи библейских мудрецов,
+                пришедших с дарами к младенцу Христу.
+            </p>
+
+            <!-- ИНФОБОКС И ФАКТЫ -->
+            <div class="row g-4 my-4">
+                <div class="col-12 col-md-6">
+                    <div class="custom-card p-3 rounded-3 h-100">
+                        <h3 class="card-title h5 mb-3">Информация</h3>
+                        <ul class="list-unstyled text-muted mb-0 small d-flex flex-column gap-2">
+                            <li><strong class="text-main">Официальное название:</strong> Kölner Dom</li>
+                            <li><strong class="text-main">Год закладки:</strong> 1248 год</li>
+                            <li><strong class="text-main">Период строительства:</strong> 1248–1880 гг. (632 года с перерывом)</li>
+                            <li><strong class="text-main">Высота башен:</strong> 157,38 метров</li>
+                            <li><strong class="text-main">Статус:</strong> Кафедральный храм / Объект ЮНЕСКО</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="custom-card border-start border-3 border-warning p-3 rounded-3 h-100">
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="bi bi-box-seam text-warning me-2 fs-5"></i>
+                            <h4 class="h6 mb-0 text-uppercase fw-bold text-light">Главная святыня</h4>
+                        </div>
+                        <p class="small text-muted mb-0">
+                            Изначально собор возводился как монументальный реликварий для хранения бесценной
+                            христианской святыни — мощей Трех Царей, которые архиепископ Рейнальд фон Дассель привез в
+                            Кёльн в 1164 году. Новый храм должен был стать архитектурным воплощением Небесного
+                            Иерусалима на земле.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-5 border-secondary">
+
+            <section class="mb-5">
+                <div class="row g-4 align-items-center">
+            
+                    <!-- Левая колонка с хроникой -->
+                    <div class="col-12 col-lg-7">
+                        <h2 class="card-title h4 mb-4">История и хронология строительства</h2>
+            
+                        <!-- Контейнер таймлайна с кастомными стилями -->
+                        <div
+                            class="custom-timeline position-relative ps-4 d-flex flex-column gap-4 border-start border-2 border-secondary border-opacity-25">
+            
+                            <!-- Событие 1 -->
+                            <div class="timeline-item position-relative">
+                                <div class="timeline-dot position-absolute rounded-circle bg-warning"></div>
+                                <h3 class="h6 mb-1 text-main fw-bold">Начало стройки</h3>
+                                <div class="fst-italic text-muted mb-2">1248 год</div>
+                                <p class="small text-muted mb-0">
+                                    Архиепископ Конрад фон Гохштаден заложил первый камень в фундамент грандиозного
+                                    собора, который должен был затмить все европейские храмы своей роскошью и вместить
+                                    паломников со всей Европы. Руководить проектом начал легендарный мастер Герхард.
+                                </p>
+                            </div>
+            
+                            <!-- Событие 2 -->
+                            <div class="timeline-item position-relative">
+                                <div class="timeline-dot position-absolute rounded-circle bg-secondary"></div>
+                                <h3 class="h6 mb-1 text-main fw-bold">Многолетний перерыв</h3>
+                                <div class="fst-italic text-muted mb-2">XVI век (с 1560 года)</div>
+                                <p class="small text-muted mb-0">
+                                    К 1560 году темпы строительства резко замедлились из-за нехватки финансирования и
+                                    изменения религиозно-политической обстановки в Европе. Стройка остановилась почти на
+                                    триста лет. Недостроенный собор с огромным строительным краном на вершине башни стал
+                                    привычной деталью пейзажа Кёльна.
+                                </p>
+                            </div>
+            
+                            <!-- Событие 3 -->
+                            <div class="timeline-item position-relative">
+                                <div class="timeline-dot position-absolute rounded-circle bg-info"></div>
+                                <h3 class="h6 mb-1 text-main fw-bold">Возобновление работ</h3>
+                                <div class="fst-italic text-muted mb-2">1842 год (XIX век)</div>
+                                <p class="small text-muted mb-0">
+                                    Интерес к готике вспыхнул с новой силой в эпоху романтизма. В 1842 году король
+                                    Пруссии Фридрих Вильгельм IV выделил средства на продолжение работ. По найденным
+                                    оригинальным средневековым чертежам мастера Герхарда достроили нефы и вознесли ввысь
+                                    знаменитые башни.
+                                </p>
+                            </div>
+            
+                            <!-- Событие 4 -->
+                            <div class="timeline-item position-relative">
+                                <div class="timeline-dot position-absolute rounded-circle bg-success"></div>
+                                <h3 class="h6 mb-1 text-main fw-bold">Официальное открытие</h3>
+                                <div class="fst-italic text-muted mb-2">Октябрь 1880 года</div>
+                                <p class="small text-muted mb-0">
+                                    В присутствии кайзера (императора) Вильгельма I состоялось торжественное открытие полностью
+                                    завершенного собора. Строительство заняло ровно 632 года, 2 месяца и 21 день с перерыво
+                                    включительно.
+                                </p>
+                            </div>
+            
+                        </div>
+                    </div>
+            
+                    <!-- Правая колонка с 2 фото -->
+                    <div class="col-12 col-lg-5">
+                        <div class="d-flex flex-column gap-3">
+                            <figure class="mb-0">
+                                <div class="article-img-wrapper rounded-3 overflow-hidden shadow-sm">
+                                    <img src="../../images/cologne-cathedral/history-1.jpg" alt="Недостроенный Кёльнский собор"
+                                        class="img-fluid w-100">
+                                </div>
+                                <figcaption class="figure-caption text-center small text-muted mt-2">
+                                    <i>Стройка собора, 1809 год.</i>
+                                </figcaption>
+                            </figure>
+            
+                            <figure class="mb-0">
+                                <div class="article-img-wrapper rounded-3 overflow-hidden shadow-sm">
+                                    <img src="../../images/cologne-cathedral/history-2.jpg" alt="Торжественное открытие собора"
+                                        class="img-fluid w-100">
+                                </div>
+                                <figcaption class="figure-caption text-center small text-muted mt-2">
+                                    <i>Стройка собора, 1855 год.</i>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>  
+            </section>
+            <hr class="my-5 border-secondary">
+
+            <!-- СЕКЦИЯ: ИСПЫТАНИЕ ВОЙНОЙ -->
+            <section class="mb-5">
+                <h2 class="card-title h4 mb-3">Испытание войной: Кёльнский собор в XX веке</h2>
+                <p class="text-muted">
+                    Во время Первой и Второй мировых войн Кёльнский собор пережил тяжелейшие испытания. Хотя сам город
+                    Кёльн был практически полностью уничтожен в ходе сотен воздушных налетов союзников, храм выстоял.
+                </p>
+
+                <!-- ФАКТ ПРО КЁЛЬНСКУЮ ПЛОМБУ (С ОБТЕКАНИЕМ И УХОДОМ ВНИЗ НА МОБИЛКАХ) -->
+                <div class="d-flex flex-column d-md-block clearfix">
+                    <div class="float-md-end ms-md-4 mb-3 col-12 col-md-6 order-last">
+                        <div class="custom-card border-start border-3 border-primary p-3 rounded-3">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="bi bi-shield-exclamation text-primary me-2 fs-5"></i>
+                                <h4 class="h6 mb-0 text-uppercase fw-bold text-light">«Кёльнская пломба»</h4>
+                            </div>
+                            <p class="small text-muted mb-0">
+                                В ноябре 1943 года мощная фугасная бомба выбила огромный кусок кладки у основания
+                                северной башни. Чтобы предотвратить обрушение, в 1944 году дыру срочно заложили
+                                обычным красным кирпичом. Эта «заплатка» десятилетиями напоминала о войне, пока ее не
+                                облицевали камнем в начале XXI века.
+                            </p>
+                        </div>
+                    </div>
+
+                    <p class="text-muted order-1">
+                        За годы Второй мировой войны в собор попало около 70
+                        зажигательных и 14 фугасных авиабомб. На крыше собора круглосуточно дежурили добровольцы и
+                        пожарные. Их задачей было моментально сбрасывать вниз зажигательные бомбы, не давая им прожечь
+                        кровлю и вызвать масштабный пожар.
+                    </p>
+
+                    <p class="text-muted order-2">
+                        Так же существует распространенный миф, будто пилоты союзников
+                        специально щадили собор и использовали его массивные башни как главный ориентир для навигации.
+                        Историки опровергают это: никаких приказов щадить храм не существовало, а собор выжил благодаря
+                        невероятной прочности своего каменного каркаса.
+                    </p>
+
+                    <p class="text-muted order-3 mb-0">
+                        Сооружение выстояло, однако ударные волны от взрывов выбили почти все витражи и мозаики.
+                        Спасти удалось лишь самую ценную часть средневековых стекол, которые демонтировали
+                        и спрятали в хранилищах еще до начала массированных бомбежек. <br><br>
+                    </p>
+                </div>
+            </section>
+
+            <!-- КАРТОЧКИ: ЛЕГЕНДА И ВЕЧНЫЙ РЕМОНТ -->
+            <section class="my-5">
+                <div class="accordion" id="legendsAccordion">
+                    <div class="accordion-item border-0">
+                        <h2 class="accordion-header" id="headingLegends">
+                            <button class="accordion-button collapsed rounded-3 fw-bold" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapseLegends" aria-expanded="false"
+                                aria-controls="collapseLegends">
+                                <i class="bi bi-book-half me-2 text-main"></i> Легенды и особенности собора
+                            </button>
+                        </h2>
+                        <div id="collapseLegends" class="accordion-collapse collapse" aria-labelledby="headingLegends"
+                            data-bs-parent="#legendsAccordion">
+                            <div class="accordion-body rounded-bottom-3 pt-4">
+
+                                <div class="row g-4">
+
+                                    <!-- Карточка 1: Сделка с дьяволом -->
+                                    <div class="col-12 col-md-6">
+                                        <div
+                                            class="custom-card p-3 rounded-3 h-100 d-flex flex-column border-start border-2 border-warning">
+                                            <h3 class="h6 text-main fw-bold mb-2">
+                                                <i class="bi bi-lightning-charge text-warning me-1"></i> Легенда об
+                                                архитекторе и дьяволе
+                                            </h3>
+                                            <p class="small text-muted mb-0">
+                                                Предание гласит, что мастер Герхард никак не мог составить чертеж идеального храма и от отчаяния
+                                                заключил сделку с дьяволом. Нечистый пообещал закончить чертежи взамен на душу человека (а также его жены и ребенка) в
+                                                момент, когда собор будет достроен. Сделка сорвалась из-за хитрости жены, которая сымитировала утреннее
+                                                пение петуха раньше времени. Разъяренный дьявол проклял храм, пообещав, что как только Кёльнский собор будет достроен до
+                                                конца, наступит конец света.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Карточка 2: Материал и ремонт -->
+                                    <div class="col-12 col-md-6">
+                                        <div class="custom-card p-3 rounded-3 h-100 d-flex flex-column">
+                                            <h3 class="h6 text-main fw-bold mb-2">
+                                                <i class="bi bi-tools me-1"></i> Трахит и вечный ремонт
+                                            </h3>
+                                            <p class="small text-muted mb-0">
+                                                Это классический фольклорный сюжет, и собор уже много лет достроен. Однако он в основном построен из трахита — вулканического камня. Под воздействием
+                                                осадков и выхлопов он темнеет и разрушается. Из-за непрерывной
+                                                реставрации собор всегда окружен строительными лесами, отчего в шутку
+                                                говорят: «Работа над собором никогда не закончится».
+                                            </p>
+                                            <p class="small text-muted mb-0">
+                                                Самого мастера никто не проклинал — он
+                                                сорвался с лесов во время строительства и погиб на месте.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- СЕКЦИЯ: СОВРЕМЕННОСТЬ -->
+            <section class="mb-4">
+                <h2 class="card-title h4 mb-3">Современное положение локации</h2>
+                <p class="text-muted">
+                    Сегодня Кёльнский собор — это действующий кафедральный храм, центр притяжения миллионов туристов и
+                    паломников со всего мира. Он находится под постоянным надзором специализированной мастерской
+                    (Dombauhütte), где потомственные каменщики, архитекторы и реставраторы ежедневно следят за
+                    состоянием здания.
+                </p>
+                <p class="text-muted">
+                    Собор по-прежнему возвышается над Рейном, олицетворяя стойкость, духовную силу и триумф
+                    человеческого мастерства.
+                </p>
+            </section>
+        </article>
+
+        <!-- РАЗДЕЛЬНАЯ ЛИНИЯ -->
+        <hr class="my-5 border-secondary">
+
+    <!-- РАЗВОРАЧИВАЮЩАЯСЯ ГАЛЕРЕЯ -->
+    <section class="gallery-accordion cologne-gallery">
+        <div class="accordion" id="galleryAccordion">
+            <div class="accordion-item border-0">
+                <h2 class="accordion-header" id="headingGallery">
+                    <button class="accordion-button collapsed rounded-3 fw-bold" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseGallery" aria-expanded="false" aria-controls="collapseGallery">
+                        <i class="bi bi-images me-2 text-main"></i> Галерея локации
+                    </button>
+                </h2>
+                <div id="collapseGallery" class="accordion-collapse collapse" aria-labelledby="headingGallery"
+                    data-bs-parent="#galleryAccordion">
+                    <div class="accordion-body rounded-bottom-3 pt-4">
+    
+                        <div class="row g-3">
+    
+                            <!-- Фото 1 -->
+                            <div class="col-12 col-sm-6 col-md-4">
+                                <div class="gallery-card rounded-3 shadow-sm">
+                                    <img src="../../images/cologne-cathedral/cologne-1.jpg" alt="Кёльнский собор фасад"
+                                        class="gallery-img">
+                                    <div class="gallery-caption"><i>Главный фасад и шпили собора</i></div>
+                                </div>
+                            </div>
+    
+                            <!-- Фото 2 -->
+                            <div class="col-12 col-sm-6 col-md-4">
+                                <div class="gallery-card rounded-3 shadow-sm">
+                                    <img src="../../images/cologne-cathedral/cologne-2.jpg" alt="Интерьер собора"
+                                        class="gallery-img">
+                                    <div class="gallery-caption"><i>Внутреннее убранство и готические своды</i></div>
+                                </div>
+                            </div>
+    
+                            <!-- Фото 3 -->
+                            <div class="col-12 col-sm-6 col-md-4">
+                                <div class="gallery-card rounded-3 shadow-sm">
+                                    <img src="../../images/cologne-cathedral/cologne-3.jpg" alt="Витражи собора"
+                                        class="gallery-img">
+                                    <div class="gallery-caption"><i>Витражи Кёльнского собора</i></div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-6 col-md-4">
+                                <div class="gallery-card rounded-3 shadow-sm">
+                                    <img src="../../images/cologne-cathedral/cologne-4.jpg" alt="Витражи собора" class="gallery-img">
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-6 col-md-4">
+                                <div class="gallery-card rounded-3 shadow-sm">
+                                    <img src="../../images/cologne-cathedral/cologne-5.jpg" alt="Витражи собора" class="gallery-img">
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-6 col-md-4">
+                                <div class="gallery-card rounded-3 shadow-sm">
+                                    <img src="../../images/cologne-cathedral/cologne-6.jpg" alt="Витражи собора" class="gallery-img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
