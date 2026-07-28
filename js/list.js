@@ -3,7 +3,7 @@ const originalPlaces = [
   {
     title: "Замок Лип (Leap Castle)",
     categories: ["europe", "castle", "medieval"],
-    tag: "Европа • Замок",
+    tag: "Европа • Замок • Средневековье",
     country: "📍 Ирландия",
     desc: "Ирландия. Самый проклятый замок с кровавой историей междоусобиц, скрытой темницей и легендами о призрачном «Элементале».",
     image: "images/leap-castle/leap-castle.jpg",
@@ -39,7 +39,7 @@ const originalPlaces = [
   {
     title: "Остров Хасима (Гункандзима)",
     categories: ["asia", "island", "city"],
-    tag: "Азия • Остров",
+    tag: "Азия • Остров • Город",
     country: "📍 Япония",
     desc: "Заброшенный шахтерский остров-крепость, полностью оставленный жителями после закрытия угольных шахт.",
     image: "images/gunkandzima/gunkandzima.jpg",
@@ -48,11 +48,20 @@ const originalPlaces = [
   {
     title: "Замок Моосхам (Moosham Castle)",
     categories: ["europe", "castle", "medieval"],
-    tag: "Европа • Замок",
+    tag: "Европа • Замок • Средневековье",
     country: "📍 Австрия",
     desc: "Мрачная цитадель ведьм, инквизиции и оборотней. Древняя австрийская крепость XIII века, прославившаяся масштабными судами над колдовством и мистическими легендами.",
     image: "images/moosham-castle/moosham-castle.jpg",
     link: "places/europe/moosham-castle.html"
+  },
+  {
+    title: "Кёльнский собор (Kölner Dom)",
+    categories: ["europe", "cathedral", "medieval"],
+    tag: "Европа • Собор • Средневековье",
+    country: "📍 Германия",
+    desc: "Величественный шедевр готики и святыня Трёх Царей, строившийся более шести веков и чудом выстоявший в эпицентре Второй мировой войны.",
+    image: "images/cologne-cathedral/cologne-cathedral.jpg",
+    link: "places/europe/cologne-cathedral.html"
   }
 ];
 
