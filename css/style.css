@@ -541,6 +541,9 @@ body {
 }
 
 
+
+
+
 /* =========================================
    УНИКАЛЬНЫЕ СТИЛИ ДЛЯ СТРАНИЦЫ ЧЕРНОБЫЛЬ
    ========================================= */
@@ -648,4 +651,19 @@ body {
     font-size: 1rem;
     text-transform: uppercase;
     margin-bottom: 0.5rem;
+}
+
+/* Адаптация галереи под вертикальные фото только для этой страницы */
+.cologne-gallery .gallery-card {
+    aspect-ratio: 3 / 4;
+    /* Сохраняет пропорции вертикального фото */
+    position: relative;
+    overflow: hidden;
+}
+
+.cologne-gallery .gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Фото заполнит блок без искажений */
 }
