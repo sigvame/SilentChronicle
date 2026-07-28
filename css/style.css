@@ -667,3 +667,26 @@ body {
     object-fit: cover;
     /* Фото заполнит блок без искажений */
 }
+
+/* Дополнительный класс для ограничения ширины фото на ПК */
+@media (min-width: 768px) {
+    .floating-lead-image {
+        max-width: 42%;
+    }
+}
+
+/* Фикс пропорций и вертикального формата для фото */
+.article-img-wrapper img,
+.article-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    /* Картинка заполняет блок без сжатия и сплющивания */
+    object-position: center !important;
+    /* Центрирование кадра */
+}
+
+/* Если у обертки задана фиксированная высота — убираем её для гибкости */
+.article-img-wrapper {
+    height: auto !important;
+}
