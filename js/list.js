@@ -19,7 +19,7 @@ const originalPlaces = [
     link: "places/asia/inunaki.html"
   },
   {
-    title: "Психиатрическая больница Конджиам (Gonjiam)",
+    title: "Психиатрическая больница Гонджиам (Gonjiam)",
     categories: ["asia", "hospital"],
     tag: "Азия • Больница",
     country: "📍 Южная Корея",
