@@ -44,5 +44,15 @@ const originalPlaces = [
     desc: "Заброшенный шахтерский остров-крепость, полностью оставленный жителями после закрытия угольных шахт.",
     image: "images/gunkandzima/gunkandzima.jpg",
     link: "places/asia/gunkandzima.html"
+  },
+  {
+    title: "Замок Моосхам (Moosham Castle)",
+    categories: ["europe", "castle", "medieval"],
+    tag: "Европа • Замок",
+    country: "📍 Австрия",
+    desc: "Мрачная цитадель ведьм, инквизиции и оборотней. Древняя австрийская крепость XIII века, прославившаяся масштабными судами над колдовством и мистическими легендами.",
+    image: "images/moosham-castle/moosham-castle.jpg",
+    link: "places/europe/moosham-castle.html"
   }
 ];
+
