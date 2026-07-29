@@ -108,3 +108,7 @@
     border: 1px solid #d4af37;
     flex-shrink: 0;
 }
+
+.spqr-badge {
+    font-size: clamp(0.7rem, 2.5vw, 1rem);
+}
