@@ -112,3 +112,11 @@
 .spqr-badge {
     font-size: clamp(0.7rem, 2.5vw, 1rem);
 }
+
+/* Золотая заливка при наведении */
+.btn-chip.conq:hover {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #0c0b0e !important;
+    /* !important принудительно перебивает text-warning */
+}
