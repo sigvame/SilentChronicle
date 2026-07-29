@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru" data-bs-theme="dark">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +20,6 @@
     <link rel="stylesheet" href="../../../css/style.css">
     <link rel="stylesheet" href="../../css/ancient-style.css">
 </head>
-
 <body class="roman-theme">
 
     <!-- НАВБАР -->
@@ -47,7 +45,7 @@
                 </a>
             </div>
 
-            <!-- Правая плашка SPQR (видна на всех устройствах) -->
+            <!-- Правая плашка SPQR -->
             <div style="flex: 1; min-width: 0;" class="text-end">
                 <div class="spqr-badge d-inline-block">
                     <span>S • P • Q • R</span>
@@ -99,7 +97,7 @@
         </div>
     </section>
 
-    <!-- ОСНОВНОЙ КОНТЕНТ (ДВЕ КОЛОНКИ: ВВЕДЕНИЕ, ТЕРРИТОРИИ, ЛИЧНОСТИ, СИМВОЛЫ) -->
+    <!-- ОСНОВНОЙ КОНТЕНТ  -->
     <main class="container my-5">
         <div class="row g-4">
 
@@ -122,13 +120,13 @@
 
                     <!-- Место под фото №1 -->
                     <figure class="my-4">
-                        <div class="article-img-wrapper rounded-3 overflow-hidden shadow-sm w-80 mx-auto">
+                        <div class="article-img-wrapper rounded-3 overflow-hidden shadow-sm mx-auto" style="max-width: 550px;">
                             <img src="../../images/roman-empire/roman-empire-forum.jpg" alt="Панорама Древнего Рима"
                                 class="img-fluid w-100 article-img border border-warning">
                         </div>
                         <figcaption class="figure-caption text-center small text-muted mt-2">
                             <i>Вид на Римский форум и Палатинский холм.</i>
-                        </figcaption>
+                        </figcaption>           
                     </figure>
 
                     <h2 class="roman-h2 mt-5">Территориальный охват земель</h2>
@@ -334,7 +332,7 @@
                 </div>      
             </div>
 
-        <!-- ПОЛНОШИРИННАЯ СЕКЦИЯ 2: ПОДРОБНАЯ ХРОНОЛОГИЯ -->
+        <!-- ПОЛНОШИРИННАЯ СЕКЦИЯ 2: ХРОНОЛОГИЯ -->
         <section class="mt-5 pt-4 border-top border-warning border-opacity-25 w-100">
             <h2 class="roman-h2 text-center mb-4"><i class="bi bi-hourglass-split me-2"></i>Хронология истории
                 империи</h2>
@@ -461,7 +459,7 @@
             </div>
         </section>
 
-        <!-- ПОЛНОШИРИННАЯ СЕКЦИЯ 3: ЧТО РИМ ДАЛ МИРУ И КАКОЕ НАСЛЕДИЕ ОСТАВИЛ -->
+        <!-- СЕКЦИЯ 3: ЧТО РИМ ДАЛ МИРУ И КАКОЕ НАСЛЕДИЕ ОСТАВИЛ -->
         <section class="roman-legacy-section mt-5 pt-4 border-top border-warning border-opacity-25 w-100">
             <h2 class="roman-h2 text-center mb-4"><i class="bi bi-bank me-2"></i>Что Рим дал миру и какое наследие
                 оставил?</h2>
@@ -470,81 +468,73 @@
                 всех ключевых сферах жизни:
             </p>
 
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                <div class="col">
-                    <div class="roman-card p-4 h-100 rounded-3">
-                        <h5 class="text-warning fw-bold mb-2"><i class="bi bi-journal-bookmark me-2"></i>Римское право
-                        </h5>
-                        <p class="small text-light-50 mb-0">
-                            Фундаментальная юридическая система, введшая концепцию презумпции невиновности, равноправия
-                            сторон в суде, четкого разделения публичного и частного права, а также защиты частной
-                            собственности.
-                        </p>
-                    </div>
+            <div class="d-flex flex-column d-md-block clearfix mb-4">
+            
+                <!-- Блок с фото (на ПК справа с обтеканием, на мобильных снизу) -->
+                <div class="float-md-end ms-md-4 mb-3 col-12 col-md-5 floating-lead-image order-last">
+                    <figure class="figure w-100 mb-0">
+                        <div class="article-img-wrapper rounded-3 overflow-hidden shadow-sm">
+                            <img src="../../images/roman-empire/colosseum-legacy.jpg" alt="Наследие Римской Империи"
+                                class="img-fluid w-100 article-img border border-warning">
+                        </div>
+                        <figcaption class="figure-caption text-center small text-muted mt-2">
+                            <i>Колизей — памятник античного Рима, сохранившийся до наших дней.</i>
+                        </figcaption>
+                    </figure>
                 </div>
-
-                <div class="col">
-                    <div class="roman-card p-4 h-100 rounded-3">
-                        <h5 class="text-warning fw-bold mb-2"><i class="bi bi-translate me-2"></i>Латинский язык</h5>
-                        <p class="small text-light-50 mb-0">
-                            Прародитель всей романской языковой группы (итальянский, испанский, французский,
-                            портуальский, румынский) и фундаментальная международная база для научной, юридической и
-                            медицинской терминологии.
-                        </p>
-                    </div>
+            
+                <!-- Карточка 1 -->
+                <div class="roman-card p-4 rounded-3 mb-3 order-1">
+                    <h5 class="text-warning fw-bold mb-2"><i class="bi bi-journal-bookmark me-2"></i>Римское право</h5>
+                    <p class="small text-light-50 mb-0">
+                        Фундаментальная юридическая система, введшая концепцию презумпции невиновности, равноправия
+                        сторон в суде, четкого разделения публичного и частного права, а также защиты частной
+                        собственности.
+                    </p>
                 </div>
-
-                <div class="col">
-                    <div class="roman-card p-4 h-100 rounded-3">
-                        <h5 class="text-warning fw-bold mb-2"><i class="bi bi-building me-2"></i>Архитектурные формы
-                        </h5>
-                        <p class="small text-light-50 mb-0">
-                            Монументальные арочные конструкции, инженерные купола, каменные мосты, стадионы и
-                            эффективные системы водоснабжения были переняты человечеством именно у римлян.
-                        </p>
-                    </div>
+            
+                <!-- Карточка 2 -->
+                <div class="roman-card p-4 rounded-3 mb-3 order-2">
+                    <h5 class="text-warning fw-bold mb-2"><i class="bi bi-translate me-2"></i>Латинский язык</h5>
+                    <p class="small text-light-50 mb-0">
+                        Прародитель всей романской языковой группы (итальянский, испанский, французский,
+                        португальский, румынский) и фундаментальная международная база для научной, юридической и
+                        медицинской терминологии.
+                    </p>
                 </div>
-
-                <div class="col">
-                    <div class="roman-card p-4 h-100 rounded-3">
-                        <h5 class="text-warning fw-bold mb-2"><i class="bi bi-calendar3 me-2"></i>Календарная система
-                        </h5>
-                        <p class="small text-light-50 mb-0">
-                            Юлианский календарь, введенный Юлием Цезарем, лежал в основе европейского летоисчисления на
-                            протяжении многих веков и стал непосредственной базой для современного григорианского
-                            календаря.
-                        </p>
-                    </div>
+            
+                <!-- Карточка 3 -->
+                <div class="roman-card p-4 rounded-3 mb-3 order-3">
+                    <h5 class="text-warning fw-bold mb-2"><i class="bi bi-building me-2"></i>Архитектурные формы</h5>
+                    <p class="small text-light-50 mb-0">
+                        Монументальные арочные конструкции, инженерные купола, каменные мосты, стадионы и
+                        эффективные системы водоснабжения были переняты человечеством именно у римлян.
+                    </p>
                 </div>
-
-                <div class="col-md-12 col-lg-8">
-                    <div class="roman-card p-4 h-100 rounded-3">
-                        <h5 class="text-warning fw-bold mb-2"><i class="bi bi-globe me-2"></i>Христианство как мировая
-                            религия</h5>
-                        <p class="small text-light-50 mb-0">
-                            Именно внутри Римской империи христианство проделало путь от небольшой и преследуемой общины
-                            до официальной государственной религии, ставшей духовной и институциональной основой всей
-                            европейской культуры.
-                        </p>
-                    </div>
+            
+                <!-- Карточка 4 -->
+                <div class="roman-card p-4 rounded-3 mb-3 order-4">
+                    <h5 class="text-warning fw-bold mb-2"><i class="bi bi-calendar3 me-2"></i>Календарная система</h5>
+                    <p class="small text-light-50 mb-0">
+                        Юлианский календарь, введенный Юлием Цезарем, лежал в основе европейского летоисчисления на
+                        протяжении многих веков и стал непосредственной базой для современного григорианского
+                        календаря.
+                    </p>
                 </div>
+            
+                <!-- Карточка 5 -->
+                <div class="roman-card p-4 rounded-3 mb-3 order-5">
+                    <h5 class="text-warning fw-bold mb-2"><i class="bi bi-globe me-2"></i>Христианство как мировая религия</h5>
+                    <p class="small text-light-50 mb-0">
+                        Именно внутри Римской империи христианство проделало путь от небольшой и преследуемой общины
+                        до официальной государственной религии, ставшей духовной и институциональной основой всей
+                        европейской культуры.
+                    </p>
+                </div>      
             </div>
-
-            <!-- Место под фото -->
-            <figure class="my-4 my-md-5">
-                <div class="article-img-wrapper rounded-3 overflow-hidden shadow-sm w-75 mx-auto">
-                    <img src="../../images/roman-empire/colosseum-legacy.jpg" alt="Наследие Римской Империи"
-                        class="img-fluid w-100 article-img border border-warning">
-                </div>
-                <figcaption class="figure-caption text-center small text-muted mt-2">
-                    <i>Колизей — памятник античного Рима, сохранившийся до наших дней.</i>
-                </figcaption>   
-            </figure>
-        </section>
     </main>
 
     <!-- Скрипты -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
