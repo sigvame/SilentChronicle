@@ -1,5 +1,5 @@
 // База данных заброшенных мест (исходная)
-const originalPlaces = [
+const ruinsPlaces = [
   {
     title: "Замок Лип (Leap Castle)",
     categories: ["europe", "castle", "medieval"],
