@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silent Chronicle — Римская империя</title>
+
+    <!-- Шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Иконки & Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../css/ancient-style.css">
+</head>
+
+<body class="roman-theme">
+
+    <!-- НАВБАР -->
+    <nav class="navbar custom-navbar sticky-top">
+        <div class="container navbar-container d-flex align-items-center justify-content-between position-relative">
+
+            <!-- Левая кнопка -->
+            <div style="flex: 1; min-width: 0;" class="text-start">
+                <a href="../../index-ac-world.html"
+                    class="btn btn-outline-secondary btn-sm rounded-pill px-2 px-sm-3 text-nowrap">
+                    <i class="bi bi-arrow-left me-1"></i>
+                    <span class="d-none d-sm-inline">Назад в архив</span>
+                    <span class="d-sm-none">Назад</span>
+                </a>
+            </div>
+
+            <!-- Логотип: в строку на ПК, в колонку на телефоне -->
+            <div class="text-center mx-1 mx-sm-3">
+                <a href="../../../index.html"
+                    class="logo text-center d-flex flex-column flex-sm-row align-items-center gap-1 gap-sm-2">
+                    <span>SILENT</span>
+                    <span>CHRONICLE</span>
+                </a>
+            </div>
+
+            <!-- Правая плашка SPQR (видна на всех устройствах) -->
+            <div style="flex: 1; min-width: 0;" class="text-end">
+                <div class="spqr-badge d-inline-block">
+                    <span>S • P • Q • R</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ГЛАВНАЯ ОБЛОЖКА (HERO SECTION) -->
+    <header class="roman-hero relative-container text-center text-white py-5">
+        <div class="hero-overlay"></div>
+        <div class="container relative-content py-md-5">
+            <span class="badge badge-roman text-uppercase px-3 py-2 mb-3">Империя • Античность</span>
+            <h1 class="roman-title display-3 fw-bold mb-3">IMPERIUM ROMANUM</h1>
+            <p class="lead col-md-10 mx-auto text-light-50">
+                Великая Римская империя: Геополитика, хронология, могущество и мировое наследие. Возникнув из небольшого
+                общинного поселения на холмах у реки Тибр, Рим превратился в мощнейшую трансконтинентальную державу.
+            </p>
+        </div>
+    </header>
+
+    <!-- КРАТКАЯ СТАТИСТИКА / МЕТРИКИ -->
+    <section class="container my-4">
+        <div class="row row-cols-2 row-cols-md-4 g-3 text-center">
+            <div class="col">
+                <div class="roman-card p-3 rounded-3 h-100 d-flex flex-column justify-content-center">
+                    <span class="roman-stat-number">5.0 млн км²</span>
+                    <span class="d-block small text-muted">Территория на пике</span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="roman-card p-3 rounded-3 h-100 d-flex flex-column justify-content-center">
+                    <span class="roman-stat-number">27 до н.э. — 476 н.э.</span>
+                    <span class="d-block small text-muted">Западная империя</span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="roman-card p-3 rounded-3 h-100 d-flex flex-column justify-content-center">
+                    <span class="roman-stat-number">Mare Nostrum</span>
+                    <span class="d-block small text-muted">Внутреннее море</span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="roman-card p-3 rounded-3 h-100 d-flex flex-column justify-content-center">
+                    <span class="roman-stat-number">1453 г.</span>
+                    <span class="d-block small text-muted">Падение Константинополя</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ОСНОВНОЙ КОНТЕНТ (ДВЕ КОЛОНКИ: ВВЕДЕНИЕ, ТЕРРИТОРИИ, ЛИЧНОСТИ, СИМВОЛЫ) -->
+    <main class="container my-5">
+        <div class="row g-4">
+
+            <!-- Левая колонка -->
+            <div class="col-lg-8">
+                <article class="roman-article">
+                    <h2 class="roman-h2">Введение</h2>
+                    <p>
+                        Римская империя по праву считается одной из самых грандиозных и влиятельных цивилизаций в
+                        истории человечества. Возникнув из небольшого общинного поселения на холмах у реки Тибр, Рим
+                        превратился в мощнейшую трансконтинентальную державу. Это государство создало уникальную систему
+                        управления, армию, правовую базу и культуру, ставшую основой современной европейской
+                        цивилизации.
+                    </p>
+                    <p>
+                        Успех Рима заключался в его удивительной гибкости: он умел не просто завоевывать новые
+                        территории, но и эффективно интегрировать их в единое правовое и экономическое пространство,
+                        превращая бывших врагов в верных граждан государства.
+                    </p>
+
+                    <!-- Место под фото №1 -->
+                    <figure class="my-4">
+                        <div class="article-img-wrapper rounded-3 overflow-hidden shadow-sm w-75 mx-auto">
+                            <img src="../../images/roman-empire/roman-empire-forum.jpg" alt="Панорама Древнего Рима"
+                                class="img-fluid w-100 article-img border border-warning">
+                        </div>
+                        <figcaption class="figure-caption text-center small text-muted mt-2">
+                            <i>Вид на Римский форум и Палатинский холм.</i>
+                        </figcaption>
+                    </figure>
+
+                    <h2 class="roman-h2 mt-5">Территориальный охват земель: Краткий обзор и детализация</h2>
+                    <p>
+                        Если говорить кратко, Римская империя на пике своего могущества охватывала территории Европы,
+                        Северной Африки и Ближнего Востока. Естественными границами государства выступали Атлантический
+                        океан на западе, реки Рейн и Дунай на севере, сирийские и аравийские пустыни на востоке и пески
+                        Сахары на юге.
+                    </p>
+                    <p>
+                        Детальный анализ географического охвата демонстрирует грандиозный масштаб государства, площадь
+                        которого превышала пять миллионов квадратных километров:
+                    </p>
+                    <ul class="text-light-50 mb-4">
+                        <li class="mb-3"><strong class="text-warning">Европейские провинции:</strong> Под прямым
+                            контролем Рима находились территории современных Италии, Испании, Португалии, Франции
+                            (Галлии), Бельгии, Швейцарии, Австрии, Венгрии, Румынии (Дакии), Греции и всех Балканских
+                            государств. На севере римляне смогли закрепиться в Британии, защитив границы мощным Валом
+                            Адриана.
+                        </li>
+                        <li class="mb-3"><strong class="text-warning">Азиатские владения:</strong> В Азии империя
+                            удерживала полуостров Малая Азия (современная Турция), Сирию, Финикию, Палестину, часть
+                            Аравийского полуострова и на короткое время Месопотамию.</li>
+                        <li class="mb-3"><strong class="text-warning">Африканский континент:</strong> Рим контролировал
+                            всю северную береговую линию Африки, включая Египет (главную житницу империи), Ливию, Алжир
+                            и Марокко.</li>
+                        <li><strong class="text-warning">Феномен «Нашего моря» (Mare Nostrum):</strong> Римская империя
+                            стала единственным государством в истории, полностью окружившим своими землями Средиземное
+                            море. Оно превратилось во внутреннее транспортное шоссе государства, обеспечивавшее
+                            безопасную торговлю между провинциями.</li>
+                    </ul>
+
+                    <!-- Место под фото №2 -->
+                    <figure class="my-4">
+                        <div class="article-img-wrapper rounded-3 overflow-hidden shadow-sm">
+                            <img src="../../images/roman-empire/roman-empire-map.jpg" alt="Карта Римской Империи"
+                                class="img-fluid w-100 article-img border border-warning">
+                        </div>
+                        <figcaption class="figure-caption text-center small text-muted mt-2">
+                            <i>Карта Римской империи на пике могущества.</i>
+                        </figcaption>
+                    </figure>
+                </article>
+            </div>
+
+            <!-- Правая колонка -->
+            <div class="col-lg-4">
+                <!-- Блок великих правителей -->
+                <div class="roman-card p-4 rounded-3 mb-4">
+                    <h4 class="h5 roman-gold-title border-bottom border-warning pb-2 mb-3">
+                        <i class="bi bi-person-workspace me-2"></i>Ключевые личности
+                    </h4>
+
+                    <div class="mb-3 pb-2 border-bottom border-secondary border-opacity-25">
+                        <h6 class="mb-1 fw-bold text-warning">Гай Юлий Цезарь</h6>
+                        <p class="small text-muted mb-0">Выдающийся полководец и политик, покоривший Галлию и
+                            сосредоточивший в своих руках единоличную власть, что подготовило неизбежный падение
+                            республики и переход к империализму.</p>
+                    </div>
+
+                    <div class="mb-3 pb-2 border-bottom border-secondary border-opacity-25">
+                        <h6 class="mb-1 fw-bold text-warning">Октавиан Август</h6>
+                        <p class="small text-muted mb-0">Первый официальный император Рима, создавший систему
+                            принципата. Он грамотно реформировал армию, завершил эпохи кровавых гражданских войн и
+                            подарил империи многолетний период мира.</p>
+                    </div>
+
+                    <div>
+                        <h6 class="mb-1 fw-bold text-warning">Константин I Великий</h6>
+                        <p class="small text-muted mb-0">Император-реформатор, легализовавший христианство и перенесший
+                            столицу государства в Новый Рим (Константинополь), что предопределило ход всей средневековой
+                            европейской истории.</p>
+                    </div>
+                </div>
+
+                <!-- Место под фото (в правой колонке) -->
+                <figure class="mb-4">
+                    <div class="article-img-wrapper rounded-3 overflow-hidden shadow-sm">
+                        <img src="../../images/roman-empire/roman-empire-first-imperator.jpg"
+                            alt="Бюст Октавиана Августа" class="img-fluid w-100 article-img border border-warning">
+                    </div>
+                    <figcaption class="figure-caption text-center small text-muted mt-2">
+                        <i>Октавиан Август — первый император.</i>
+                    </figcaption>
+                </figure>
+
+                <!-- Символика -->
+                <div class="roman-card p-4 rounded-3 mb-4">
+                    <h4 class="h5 roman-gold-title border-bottom border-warning pb-2 mb-3">
+                        <i class="bi bi-shield-shaded me-2"></i>Символы могущества и власти
+                    </h4>
+                    <ul class="list-unstyled small mb-0">
+                        <li class="mb-3">
+                            <strong class="text-warning">Римский орел (Aquila):</strong>
+                            <span class="d-block text-muted">Главный священный символ легиона. Потеря аквилы в бою
+                                считалась высочайшим позором и неизбежно вела к расформированию воинской части.</span>
+                        </li>
+                        <li class="mb-3">
+                            <strong class="text-warning">Фасции (Fasces):</strong>
+                            <span class="d-block text-muted">Пучки вязовых прутьев с воткнутым топором, которые носили
+                                ликторы. Символизировали право высшей власти карать проступки и преступления.</span>
+                        </li>
+                        <li class="mb-3">
+                            <strong class="text-warning">Аббревиатура SPQR:</strong>
+                            <span class="d-block text-muted">«Senatus Populusque Romanus» — государственная формула
+                                законности власти от имени Сената и всех свободных граждан Рима.</span>
+                        </li>
+                        <li class="mb-3">
+                            <strong class="text-warning">Капитолийская волчица:</strong>
+                            <span class="d-block text-muted">Легендарный зверь, выкормивший основателей города Ромула и
+                                Рема, олицетворяя божественное происхождение и бессмертие Рима.</span>
+                        </li>
+                        <li>
+                            <strong class="text-warning">Триумфальная арка:</strong>
+                            <span class="d-block text-muted">Монументальное сооружение для торжественного въезда
+                                полководцев-победителей как высшее проявление воинской славы.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Место под фото (в правой колонке) -->
+                <figure class="mb-4">
+                    <div class="article-img-wrapper rounded-3 overflow-hidden shadow-sm">
+                        <img src="../../images/roman-empire/roman-empire-spqr-eagle.jpg" alt="Римская символика"
+                            class="img-fluid w-100 article-img border border-warning">
+                    </div>
+                    <figcaption class="figure-caption text-center small text-muted mt-2">
+                        <i>Римский орел и штандарт SPQR.</i>
+                    </figcaption>
+                </figure>
+            </div>
+
+        </div>
+
+        <!-- ПОЛНОШИРИННАЯ СЕКЦИЯ 1: В ЧЕМ ЗАКЛЮЧАЛИСЬ ВЕЛИЧИЕ И СИЛА ИМПЕРИИ -->
+        <section class="mt-5 pt-4 border-top border-warning border-opacity-25 w-100">
+            <h2 class="roman-h2 text-center mb-4"><i class="bi bi-award me-2"></i>В чем заключались величие и сила
+                империй?</h2>
+            <p class="text-center text-muted col-lg-10 mx-auto mb-4">
+                Могущество Рима строилось на нескольких фундаментальных факторах, сделавших его непревзойденной державой
+                античного мира:
+            </p>
+
+            <div class="d-flex flex-column d-md-block clearfix mb-4">
+            
+                <!-- Блок с фото (на ПК справа с обтеканием, на мобильных снизу благодаря order-last) -->
+                <div class="float-md-end ms-md-4 mb-3 col-12 col-md-5 floating-lead-image order-last">
+                    <figure class="figure w-100 mb-0">
+                        <div class="article-img-wrapper rounded-3 overflow-hidden shadow-sm">
+                            <img src="../../images/roman-empire/roman-aqueduct.jpg" alt="Римский акведук"
+                                class="img-fluid w-100 article-img border border-warning">
+                        </div>
+                        <figcaption class="figure-caption text-center small text-muted mt-2">
+                            <i>Римский акведук Пон-дю-Гар.</i>
+                        </figcaption>
+                    </figure>
+                </div>
+            
+                <!-- Карточка 1 -->
+                <div class="roman-card p-4 rounded-3 mb-3 order-1">
+                    <h5 class="text-warning fw-bold mb-2">1. Непревзойденная армия</h5>
+                    <p class="small text-light-50 mb-0">Римский легион являлся самой эффективной военной машиной древнего мира
+                        благодаря железной дисциплине, непрерывным тренировкам, строгому стандарту снаряжения и передовому
+                        саперно-инженерному искусству.</p>
+                </div>
+            
+                <!-- Карточка 2 -->
+                <div class="roman-card p-4 rounded-3 mb-3 order-2">
+                    <h5 class="text-warning fw-bold mb-2">2. Инженерный гений</h5>
+                    <p class="small text-light-50 mb-0">Римляне изобрели и довели до идеала прочный водостойкий бетон, который
+                        позволил возводить грандиозные многоэтажные сооружения вроде Колизея, Пантеона и акведуков, стоящих веками.
+                    </p>
+                </div>
+            
+                <!-- Карточка 3 -->
+                <div class="roman-card p-4 rounded-3 mb-3 order-3">
+                    <h5 class="text-warning fw-bold mb-2">3. Разветвленная сеть дорог</h5>
+                    <p class="small text-light-50 mb-0">Более восьмидесяти тысяч километров капитальных мощеных дорог связывали
+                        столицу с самыми отдаленными провинциями, обеспечивая невероятную скорость переброски войск и развитие
+                        торговли.</p>
+                </div>
+            
+                <!-- Карточка 4 -->
+                <div class="roman-card p-4 rounded-3 mb-3 order-4">
+                    <h5 class="text-warning fw-bold mb-2">4. Эффективное администрирование</h5>
+                    <p class="small text-light-50 mb-0">Рим успешно интегрировал элиты покоренных народов, даруя им гражданство,
+                        привлекавший к управлению провинциями и постепенно стирая грань между завоевателями и подчиненными.</p>
+                </div>
+            
+                <!-- Карточка 5 -->
+                <div class="roman-card p-4 rounded-3 mb-3 order-5">
+                    <h5 class="text-warning fw-bold mb-2">5. Высокий уровень урбанизации</h5>
+                    <p class="small text-light-50 mb-0">Сложнейшие акведуки доставляли миллионы литров чистой воды в города, а
+                        подземная канализация, общественные термы, цирки и театры формировали качество жизни граждан, недостижимое
+                        для Европы вплоть до Нового времени.</p>
+                </div>      
+            </div>
+
+        <!-- ПОЛНОШИРИННАЯ СЕКЦИЯ 2: ПОДРОБНАЯ ХРОНОЛОГИЯ -->
+        <section class="mt-5 pt-4 border-top border-warning border-opacity-25 w-100">
+            <h2 class="roman-h2 text-center mb-4"><i class="bi bi-hourglass-split me-2"></i>Подробная хронология истории
+                империи</h2>
+            <p class="text-center text-muted col-lg-10 mx-auto mb-5">
+                История Римской империи охватывает многовековой путь от становления монархии до упадка и падения под
+                давлением внутренних кризисов и внешних вторжений.
+            </p>
+
+            <div class="roman-timeline w-100">
+
+                <!-- Событие 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content roman-card p-4 rounded-3">
+                        <span class="badge text-bg-warning mb-2">27 г. до н.э. — 180 г. н.э.</span>
+                        <h5 class="text-warning fw-bold mb-2">Рождение Империи и золотой век «Пакс Романа»</h5>
+                        <p class="small text-muted mb-2">
+                            После победы в гражданских войнах Октавиан Август сосредоточил в своих руках высшую
+                            гражданскую и военную власть, основав систему принципата. Официально республика сохранилась,
+                            но фактически Рим стал империей.
+                        </p>
+                        <p class="small text-muted mb-0">
+                            В этот двухвековой период, известный как «Римский мир» (Pax Romana), империя переживала
+                            небывалый экономический и культурный расцвет. По всей державе строились мосты, дороги и
+                            акведуки, а внутренние конфликты практически прекратились.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Событие 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content roman-card p-4 rounded-3">
+                        <span class="badge text-bg-warning mb-2">43 г. н.э. — 117 г. н.э.</span>
+                        <h5 class="text-warning fw-bold mb-2">Эпоха великой экспансии: От Британии до Месопотамии</h5>
+                        <p class="small text-muted mb-2">
+                            В 43 году при императоре Клавдии началось знаменитое вторжение в Британию, завершившееся
+                            подчинением большинства местных племен и строительством фортификационных линий.
+                        </p>
+                        <p class="small text-muted mb-0">
+                            Своего наивысшего территориального расцвета Рим достиг в 117 году при императоре-полководце
+                            Траяне. После сокрушительных войн против даков и Парфянского царства границы империи
+                            раздвинулись от туманного Альбиона до Персидского залива.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Событие 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content roman-card p-4 rounded-3">
+                        <span class="badge text-bg-warning mb-2">212 г. н.э. — 284 г. н.э.</span>
+                        <h5 class="text-warning fw-bold mb-2">Эдикт Каракаллы и Кризис третьего века</h5>
+                        <p class="small text-muted mb-2">
+                            В 212 году император Каракалла издал знаменитый эдикт, даровавший полное римское гражданство
+                            абсолютно всем свободным жителям провинций, что навсегда изменило социальную структуру
+                            государства.
+                        </p>
+                        <p class="small text-muted mb-0">
+                            Однако с 235 года империя погрузилась в полувековой «Кризис третьего века». Это было время
+                            тотального экономического упадка, гиперинфляции, непрерывных нападений варваров и чехарды из
+                            десятков «солдатских императоров», свергавших друг друга.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Событие 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content roman-card p-4 rounded-3">
+                        <span class="badge text-bg-warning mb-2">284 г. н.э. — 330 г. н.э.</span>
+                        <h5 class="text-warning fw-bold mb-2">Реформы Диоклетиана и религиозный поворот Константина</h5>
+                        <p class="small text-muted mb-2">
+                            Император Диоклетиан сумел вытащить страну из хаоса, установив жесткий режим домината и
+                            разделение власти (тетрархию). Позже Константин I Великий окончательно изменил вектор
+                            развития мировой цивилизации.
+                        </p>
+                        <p class="small text-muted mb-0">
+                            В 313 году Миланским эдиктом он официально легализовал христианство, а в 330 году перенес
+                            столицу государства в специально основанный город Константинополь на проливе Босфор, сделав
+                            его центром нового античного мира.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Событие 5 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content roman-card p-4 rounded-3">
+                        <span class="badge text-bg-warning mb-2">395 г. н.э. — 476 г. н.э.</span>
+                        <h5 class="text-warning fw-bold mb-2">Раздел империи, падение Рима и конец Древнего мира</h5>
+                        <p class="small text-muted mb-2">
+                            В 395 году после смерти императора Феодосия I империя навсегда распалась на Западную и
+                            Восточную. На Запад обрушилась волна Великого переселения народов: в 410 году Вестготы, а в
+                            455 вандалы жестоко разграбили древнюю столицу.
+                        </p>
+                        <p class="small text-muted mb-0">
+                            В 476 году германский военачальник Одоакр сверг последнего 16-летнего императора Ромула
+                            Августула. Это событие стало официальной исторической точкой окончания эпохи Античности и
+                            начала Средневековья.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Событие 6 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content roman-card p-4 rounded-3">
+                        <span class="badge text-bg-warning mb-2">1453 г. н.э.</span>
+                        <h5 class="text-warning fw-bold mb-2">Падение Константинополя и финал римского наследия</h5>
+                        <p class="small text-muted mb-2">
+                            В то время как Западная империя пала в V веке, Восточная (Византийская империя)
+                            просуществовала еще ровно тысячу лет, бережно сохраняя римские законы, культуру и
+                            государственные традиции.
+                        </p>
+                        <p class="small text-muted mb-0">
+                            Лишь в мае 1453 года османские войска под предводительством султана Мехмеда II штурмом взяли
+                            неприступный Константинополь. Падение города подвело окончательную черту под более чем
+                            двухтысячелетней историей Римского государства.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ПОЛНОШИРИННАЯ СЕКЦИЯ 3: ЧТО РИМ ДАЛ МИРУ И КАКОЕ НАСЛЕДИЕ ОСТАВИЛ -->
+        <section class="roman-legacy-section mt-5 pt-4 border-top border-warning border-opacity-25 w-100">
+            <h2 class="roman-h2 text-center mb-4"><i class="bi bi-bank me-2"></i>Что Рим дал миру и какое наследие
+                оставил?</h2>
+            <p class="text-center text-muted col-lg-10 mx-auto mb-5">
+                Наследие Римской империи сформировало фундамент современной западной цивилизации и прослеживается во
+                всех ключевых сферах жизни:
+            </p>
+
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <div class="col">
+                    <div class="roman-card p-4 h-100 rounded-3">
+                        <h5 class="text-warning fw-bold mb-2"><i class="bi bi-journal-bookmark me-2"></i>Римское право
+                        </h5>
+                        <p class="small text-light-50 mb-0">
+                            Фундаментальная юридическая система, введшая концепцию презумпции невиновности, равноправия
+                            сторон в суде, четкого разделения публичного и частного права, а также защиты частной
+                            собственности.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="roman-card p-4 h-100 rounded-3">
+                        <h5 class="text-warning fw-bold mb-2"><i class="bi bi-translate me-2"></i>Латинский язык</h5>
+                        <p class="small text-light-50 mb-0">
+                            Прародитель всей романской языковой группы (итальянский, испанский, французский,
+                            портуальский, румынский) и фундаментальная международная база для научной, юридической и
+                            медицинской терминологии.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="roman-card p-4 h-100 rounded-3">
+                        <h5 class="text-warning fw-bold mb-2"><i class="bi bi-building me-2"></i>Архитектурные формы
+                        </h5>
+                        <p class="small text-light-50 mb-0">
+                            Монументальные арочные конструкции, инженерные купола, каменные мосты, стадионы и
+                            эффективные системы водоснабжения были переняты человечеством именно у римлян.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="roman-card p-4 h-100 rounded-3">
+                        <h5 class="text-warning fw-bold mb-2"><i class="bi bi-calendar3 me-2"></i>Календарная система
+                        </h5>
+                        <p class="small text-light-50 mb-0">
+                            Юлианский календарь, введенный Юлием Цезарем, лежал в основе европейского летоисчисления на
+                            протяжении многих веков и стал непосредственной базой для современного григорианского
+                            календаря.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-lg-8">
+                    <div class="roman-card p-4 h-100 rounded-3">
+                        <h5 class="text-warning fw-bold mb-2"><i class="bi bi-globe me-2"></i>Христианство как мировая
+                            религия</h5>
+                        <p class="small text-light-50 mb-0">
+                            Именно внутри Римской империи христианство проделало путь от небольшой и преследуемой общины
+                            до официальной государственной религии, ставшей духовной и институциональной основой всей
+                            европейской культуры.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Место под фото -->
+            <figure class="my-4 my-md-5">
+                <div class="article-img-wrapper rounded-3 overflow-hidden shadow-sm w-75 mx-auto">
+                    <img src="../../images/roman-empire/colosseum-legacy.jpg" alt="Наследие Римской Империи"
+                        class="img-fluid w-100 article-img border border-warning">
+                </div>
+                <figcaption class="figure-caption text-center small text-muted mt-2">
+                    <i>Колизей — памятник античного Рима, сохранившийся до наших дней.</i>
+                </figcaption>   
+            </figure>
+        </section>
+
+    </main>
+
+    <!-- Скрипты -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

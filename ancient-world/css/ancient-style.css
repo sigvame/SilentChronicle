@@ -1,0 +1,110 @@
+/* ==========================================
+   РИМСКАЯ ИМПЕРИЯ — СПЕЦИАЛЬНЫЕ СТИЛИ
+   ========================================== */
+
+/* Бэдж SPQR в шапке */
+.spqr-badge {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #d4af37;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    padding: 4px 12px;
+    border-radius: 4px;
+    background: rgba(212, 175, 55, 0.05);
+}
+
+/* Обложка (Hero) */
+.roman-hero {
+    background: linear-gradient(180deg, rgba(20, 15, 10, 0.8), #121212),
+        url('../../images/roman-empire/main.jpg') center/cover no-repeat;
+    border-bottom: 2px solid #d4af37;
+}
+
+.roman-title {
+    font-family: 'Cinzel', serif;
+    color: #f8f9fa;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.badge-roman {
+    background-color: #800020;
+    /* Пурпурный императорский цвет */
+    color: #f8f9fa;
+    border: 1px solid #d4af37;
+    font-family: 'Cinzel', serif;
+}
+
+/* Карточки метрик и информации */
+.roman-card {
+    background: #1a1a1a;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: flow-root;
+}
+
+.roman-stat-number {
+    font-family: 'Cinzel', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #d4af37;
+    display: block;
+}
+
+/* Оформление заголовков и текста */
+.roman-h2,
+.roman-h3,
+.roman-gold-title {
+    font-family: 'Cinzel', serif;
+    color: #d4af37;
+}
+
+/* Цитаты цезарей */
+.roman-quote {
+    background: rgba(128, 0, 32, 0.15);
+    border-left: 4px solid #d4af37;
+}
+
+.quote-icon {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2rem;
+    color: rgba(212, 175, 55, 0.2);
+}
+
+.italic-text {
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+/* СТИЛИ ТАЙМЛАЙНА (ХРОНОЛОГИЧЕСКОЙ ЛЕНТЫ) */
+.roman-timeline {
+    position: relative;
+    padding-left: 20px;
+    border-left: 2px solid rgba(212, 175, 55, 0.3);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -26px;
+    top: 15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #d4af37;
+    box-shadow: 0 0 8px #d4af37;
+}
+
+/* Аватары правителей */
+.ruler-avatar {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #d4af37;
+    flex-shrink: 0;
+}
