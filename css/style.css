@@ -694,7 +694,11 @@ body {
 /* =========================================
    КНОПКА «НАВЕРХ»
    ========================================= */
-.btn-scroll-top {
+.btn-scroll-top,
+.btn-scroll-top:hover,
+.btn-scroll-top:focus,
+.btn-scroll-top:active,
+.btn-scroll-top:focus-visible {
     position: fixed;
     bottom: 25px;
     right: 25px;
@@ -702,8 +706,8 @@ body {
     height: 44px;
     border-radius: 50%;
     background-color: var(--bg-color) !important;
-    border: 1px solid var(--border-color);
-    color: var(--ancient-purple);
+    border: 1px solid var(--ancient-purple) !important;
+    color: var(--text-main) !important;
     font-size: 1.5rem;
     display: flex;
     align-items: center;
@@ -711,38 +715,23 @@ body {
     cursor: pointer;
     z-index: 1000;
 
-    /* Начальное состояние (скрыта) */
+    /* Убираем все тени и системную обводку */
+    box-shadow: none !important;
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent;
+    /* Убираем синюю вспышку на iOS/Android */
+
+    /* Плавность появления */
     opacity: 0;
     visibility: hidden;
     transform: translateY(15px);
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
 }
 
-/* Класс активации при скролле */
+/* Показ кнопки при скролле */
 .btn-scroll-top.show {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
+    transform: translateY(0);  
 }
-
-/* Эффект при наведении */
-.btn-scroll-top:hover {
-    background-color: var(--ancient-purple);
-    border-color: var(--ancient-purple);
-    box-shadow: 0 0 15px rgba(155, 108, 201, 0.4);
-    transform: translateY(-3px);
-}
-
-/* Адаптив для мобильных устройств */
-@media (max-width: 576px) {
-    .btn-scroll-top {
-        bottom: 15px;
-        right: 15px;
-        width: 38px;
-        height: 38px;
-        font-size: 1.3rem;
-    }
-}
-
 
