@@ -690,3 +690,59 @@ body {
 .article-img-wrapper {
     height: auto !important;
 }
+
+/* =========================================
+   КНОПКА «НАВЕРХ»
+   ========================================= */
+.btn-scroll-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--bg-color) !important;
+    border: 1px solid var(--border-color);
+    color: var(--ancient-purple);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+
+    /* Начальное состояние (скрыта) */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+}
+
+/* Класс активации при скролле */
+.btn-scroll-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Эффект при наведении */
+.btn-scroll-top:hover {
+    background-color: var(--ancient-purple);
+    border-color: var(--ancient-purple);
+    color: var(--bg-color);
+    box-shadow: 0 0 15px rgba(155, 108, 201, 0.4);
+    transform: translateY(-3px);
+}
+
+/* Адаптив для мобильных устройств */
+@media (max-width: 576px) {
+    .btn-scroll-top {
+        bottom: 15px;
+        right: 15px;
+        width: 38px;
+        height: 38px;
+        font-size: 1.3rem;
+    }
+}
+
