@@ -8,8 +8,7 @@ function shuffleArray(array) {
   return shuffled;
 }
 
-// 1. ОПРЕДЕЛЯЕМ ИСХОДНЫЙ МАССИВ И КЛЮЧИ ДЛЯ ХРАНИЛИЩА
-// Автоматически подхватывает нужную переменную данных с текущей страницы
+// Подтягиваем места
 let originalPlaces = [];
 let storageKeyPrefix = 'default';
 
@@ -23,11 +22,9 @@ if (typeof ancientPlaces !== 'undefined') {
   originalPlaces = places;
 }
 
-// Уникальные ключи для sessionStorage под каждый раздел
 const SHUFFLED_STORAGE_KEY = `shuffled_places_${storageKeyPrefix}`;
 const ACTIVE_CATEGORY_KEY = `active_category_${storageKeyPrefix}`;
 
-// Достаем перемешанные данные из sessionStorage или создаем новые
 function getSessionPlaces() {
   const savedPlaces = sessionStorage.getItem(SHUFFLED_STORAGE_KEY);
   if (savedPlaces) {
@@ -39,14 +36,28 @@ function getSessionPlaces() {
 }
 
 let places = [];
+let fuse = null; // Тут храним экземпляр Fuse
 
-// Функция для нормализации текста (убирает разницу между е и ё, приводит к нижнему регистру)
-function normalizeText(str) {
-  if (!str) return '';
-  return str.toLowerCase().replaceAll('ё', 'е');
+// Настройки Fuse.js
+function initFuse() {
+  const options = {
+    // Включаем поиск по названию, описанию и тегам
+    keys: ['title', 'desc', 'tag', 'country'],
+    // Насколько строгим должен быть поиск (0.0 — точное совпадение, 1.0 — найдёт что угодно)
+    // 0.4 дает идеальный баланс: прощает 1-2 опечатки и не выдает мусор
+    threshold: 0.4,
+    // Насколько сильно учитывать расстояние опечатки от начала слова
+    distance: 100,
+    // Минимальное количество символов для запуска нечеткого поиска
+    minMatchCharLength: 2,
+    // Игнорировать разницу регистра
+    isCaseSensitive: false
+  };
+
+  fuse = new Fuse(places, options);
 }
 
-// Генерация карточек
+// Карточки
 function generateCardsHTML(items) {
   if (items.length === 0) {
     return `<div class="col-12 text-center text-muted py-5">Ничего не найдено</div>`;
@@ -76,7 +87,7 @@ function generateCardsHTML(items) {
   `).join('');
 }
 
-// Функция закрытия мобильного меню (любого типа)
+// Закрываем меню на мобилках
 function closeMobileMenu() {
   const mobileMenuEl = document.getElementById('mobileMenu');
   if (mobileMenuEl) {
@@ -91,7 +102,7 @@ function closeMobileMenu() {
   }
 }
 
-// Функция фильтрации и отображения по категории
+// Переключение категорий
 function filterAndRender(targetCategory) {
   const container = document.getElementById('places-container');
   if (!container) return;
@@ -118,32 +129,35 @@ function filterAndRender(targetCategory) {
   closeMobileMenu();
 }
 
-// Функция живого поиска по названию и описанию
+// Новая функция поиска с поддержкой опечаток
 function handleSearch(query) {
   const container = document.getElementById('places-container');
   if (!container) return;
 
-  const cleanQuery = normalizeText(query).trim();
+  const cleanQuery = query.trim().replaceAll('ё', 'е').replaceAll('Ё', 'Е');
 
+  // Если строка пустая — возвращаем выбранную категорию
   if (!cleanQuery) {
     const savedCategory = sessionStorage.getItem(ACTIVE_CATEGORY_KEY) || 'all';
     filterAndRender(savedCategory);
     return;
   }
 
-  const searchedPlaces = places.filter(place => 
-    normalizeText(place.title).includes(cleanQuery) || 
-    normalizeText(place.desc).includes(cleanQuery) ||
-    normalizeText(place.tag).includes(cleanQuery)
-  );
-
-  container.innerHTML = generateCardsHTML(searchedPlaces);
+  // Если Fuse подключен, прогоняем через него
+  if (fuse) {
+    const results = fuse.search(cleanQuery);
+    // Fuse возвращает объекты вида [{ item: place, refIndex: 0 }], поэтому вытаскиваем сам item
+    const searchResults = results.map(result => result.item);
+    container.innerHTML = generateCardsHTML(searchResults);
+  }
 }
 
-// Инициализация при загрузке DOM
+// Запуск при старте
 document.addEventListener('DOMContentLoaded', () => {
-  // Загружаем зафиксированный на эту сессию порядок карточек
   places = getSessionPlaces();
+
+  // Инициализируем Fuse после того, как достали места
+  initFuse();
 
   const savedCategory = sessionStorage.getItem(ACTIVE_CATEGORY_KEY) || 'all';
   filterAndRender(savedCategory);
@@ -164,9 +178,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+// Кнопка Наверх
 const btnScrollToTop = document.getElementById('btnScrollToTop');
 
-// Отслеживание скролла
 window.addEventListener('scroll', () => {
     if (window.scrollY > 300) {
         btnScrollToTop.classList.add('show');
@@ -175,20 +189,16 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Плавный скролл + авто-сброс фокуса с задержкой
 let focusTimeout;
 
 btnScrollToTop.addEventListener('click', function () {
-    // 1. Запускаем скролл
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
     });
 
-    // 2. Сбрасываем предыдущий таймер, если кликнули несколько раз подряд
     clearTimeout(focusTimeout);
 
-    // 3. Ждем 1500 миллисекунд (1.5 секунды) и снимаем фокус
     focusTimeout = setTimeout(() => {
         this.blur();
     }, 1500); 
