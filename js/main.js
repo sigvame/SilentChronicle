@@ -166,19 +166,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const btnScrollToTop = document.getElementById('btnScrollToTop');
 
-    // Отслеживание скролла
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-            btnScrollToTop.classList.add('show');
-        } else {
-            btnScrollToTop.classList.remove('show');
-        }
+// Отслеживание скролла
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        btnScrollToTop.classList.add('show');
+    } else {
+        btnScrollToTop.classList.remove('show');
+    }
+});
+
+// Плавный скролл + принудительный сброс фокуса
+btnScrollToTop.addEventListener('click', function () {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
     });
 
-    // Плавный скролл наверх при клике
-    btnScrollToTop.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-  });
+    // Снимаем фокус с кнопки, чтобы на телефоне не залипал hover/focus
+    this.blur();
+});
