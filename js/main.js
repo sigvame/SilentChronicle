@@ -1,5 +1,3 @@
-
-
 // Функция для случайного перемешивания массива
 function shuffleArray(array) {
   const shuffled = [...array];
@@ -10,14 +8,33 @@ function shuffleArray(array) {
   return shuffled;
 }
 
-// Получаем места: либо достаем уже перемешанные из sessionStorage, либо перемешиваем и сохраняем
+// 1. ОПРЕДЕЛЯЕМ ИСХОДНЫЙ МАССИВ И КЛЮЧИ ДЛЯ ХРАНИЛИЩА
+// Автоматически подхватывает нужную переменную данных с текущей страницы
+let originalPlaces = [];
+let storageKeyPrefix = 'default';
+
+if (typeof ancientPlaces !== 'undefined') {
+  originalPlaces = ancientPlaces;
+  storageKeyPrefix = 'ancient';
+} else if (typeof ruinsPlaces !== 'undefined') {
+  originalPlaces = ruinsPlaces;
+  storageKeyPrefix = 'ruins';
+} else if (typeof places !== 'undefined' && Array.isArray(places)) {
+  originalPlaces = places;
+}
+
+// Уникальные ключи для sessionStorage под каждый раздел
+const SHUFFLED_STORAGE_KEY = `shuffled_places_${storageKeyPrefix}`;
+const ACTIVE_CATEGORY_KEY = `active_category_${storageKeyPrefix}`;
+
+// Достаем перемешанные данные из sessionStorage или создаем новые
 function getSessionPlaces() {
-  const savedPlaces = sessionStorage.getItem('shuffled_places');
+  const savedPlaces = sessionStorage.getItem(SHUFFLED_STORAGE_KEY);
   if (savedPlaces) {
     return JSON.parse(savedPlaces);
   }
   const newlyShuffled = shuffleArray(originalPlaces);
-  sessionStorage.setItem('shuffled_places', JSON.stringify(newlyShuffled));
+  sessionStorage.setItem(SHUFFLED_STORAGE_KEY, JSON.stringify(newlyShuffled));
   return newlyShuffled;
 }
 
@@ -88,7 +105,7 @@ function filterAndRender(targetCategory) {
 
   container.innerHTML = generateCardsHTML(filteredPlaces);
 
-  sessionStorage.setItem('active_category', targetCategory);
+  sessionStorage.setItem(ACTIVE_CATEGORY_KEY, targetCategory);
 
   document.querySelectorAll('.filter-btn').forEach(btn => {
     if (btn.dataset.category === targetCategory) {
@@ -109,7 +126,7 @@ function handleSearch(query) {
   const cleanQuery = normalizeText(query).trim();
 
   if (!cleanQuery) {
-    const savedCategory = sessionStorage.getItem('active_category') || 'all';
+    const savedCategory = sessionStorage.getItem(ACTIVE_CATEGORY_KEY) || 'all';
     filterAndRender(savedCategory);
     return;
   }
@@ -128,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Загружаем зафиксированный на эту сессию порядок карточек
   places = getSessionPlaces();
 
-  const savedCategory = sessionStorage.getItem('active_category') || 'all';
+  const savedCategory = sessionStorage.getItem(ACTIVE_CATEGORY_KEY) || 'all';
   filterAndRender(savedCategory);
 
   const filterButtons = document.querySelectorAll('.filter-btn');
