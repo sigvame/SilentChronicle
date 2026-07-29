@@ -175,13 +175,21 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Плавный скролл + принудительный сброс фокуса
+// Плавный скролл + авто-сброс фокуса с задержкой
+let focusTimeout;
+
 btnScrollToTop.addEventListener('click', function () {
+    // 1. Запускаем скролл
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
     });
 
-    // Снимаем фокус с кнопки, чтобы на телефоне не залипал hover/focus
-    this.blur();
+    // 2. Сбрасываем предыдущий таймер, если кликнули несколько раз подряд
+    clearTimeout(focusTimeout);
+
+    // 3. Ждем 1500 миллисекунд (1.5 секунды) и снимаем фокус
+    focusTimeout = setTimeout(() => {
+        this.blur();
+    }, 1500); 
 });
