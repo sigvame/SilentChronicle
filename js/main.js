@@ -163,3 +163,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+const btnScrollToTop = document.getElementById('btnScrollToTop');
+
+    // Отслеживание скролла
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            btnScrollToTop.classList.add('show');
+        } else {
+            btnScrollToTop.classList.remove('show');
+        }
+    });
+
+    // Плавный скролл наверх при клике
+    btnScrollToTop.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+  });
