@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silent Chronicle — Древний мир</title>
+
+    <!-- Шрифты: Cinzel (заголовки) + Inter (текст) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Общие кастомные стили (из родительской папки) -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- НАВБАР -->
+    <nav class="navbar custom-navbar sticky-top">
+        <div class="container navbar-container d-flex align-items-center justify-content-between">
+
+            <!-- Логотип -->
+            <a href="../index.html" class="logo">
+                <span>SILENT</span>
+                <span>CHRONICLE</span>
+            </a>
+
+            <!-- Поиск -->
+            <div class="search-box me-2 me-md-0">
+                <input type="text" id="search-input" class="form-control form-control-dark"
+                    placeholder="Поиск по древнему миру...">
+            </div>
+
+            <!-- Кнопка Бургера (Только для мобильных) -->
+            <button class="navbar-toggler custom-toggler d-md-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#mobileMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- БУРГЕР-МЕНЮ ДЛЯ МОБИЛЬНЫХ -->
+    <div class="offcanvas offcanvas-top text-bg-dark h-auto rounded-bottom-4" tabindex="-1" id="mobileMenu"
+        aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header border-bottom border-secondary pb-2">
+            <h5 class="offcanvas-title h6 fw-bold text-uppercase" id="mobileMenuLabel">Категории</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Закрыть"></button>
+        </div>
+        <div class="offcanvas-body py-3">
+            <div class="d-flex flex-wrap gap-2 justify-content-start">
+                <button class="btn btn-chip filter-btn active" data-category="all">Все</button>
+                <button class="btn btn-chip filter-btn" data-category="empires">Империи</button>
+                <button class="btn btn-chip filter-btn" data-category="peoples">Народы и племена</button>
+                <button class="btn btn-chip filter-btn" data-category="wonders-old">Древние чудеса</button>
+                <button class="btn btn-chip filter-btn" data-category="wonders-new">Новые чудеса</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ГЛАВНЫЙ КОНТЕЙНЕР -->
+    <main class="container my-3 my-md-4">
+
+        <!-- HEADER С ПЕРЕКЛЮЧАТЕЛЕМ АРХИВОВ -->
+        <header class="text-center my-4 my-md-5">
+            <h1 class="display-5 fw-bold hero-title">SILENT CHRONICLE</h1>
+            <p class="text-muted col-md-8 mx-auto small-desc mb-3">
+                Хроники великих цивилизаций, древних народов и исчезнувших чудес света.
+            </p>
+
+            <!-- Переключатель глобальных архивов -->
+            <div
+                class="archive-switcher d-inline-flex p-1 bg-dark-subtle border border-secondary border-opacity-25 rounded-pill mt-2 shadow-sm">
+                <!-- Ссылка на главный архив заброшек -->
+                <a href="../index.html" class="btn btn-sm btn-chip text-muted rounded-pill px-3 py-1">
+                    <i class="bi bi-journal-bookmark me-1"></i> Хроники руин
+                </a>
+
+                <!-- Активный архив (Древний мир) -->
+                <a href="index-ac-world.html" class="btn btn-sm btn-chip active rounded-pill px-3 py-1">
+                    <i class="bi bi-bank me-1"></i> Древний мир
+                </a>
+            </div>
+        </header>
+
+        <!-- ФИЛЬТР КАТЕГОРИЙ (Для ПК и планшетов) -->
+        <div class="category-scroll-wrapper d-none d-md-flex gap-2 mb-4">
+            <button class="btn btn-chip filter-btn active" data-category="all">Все</button>
+            <button class="btn btn-chip filter-btn" data-category="empires">Империи</button>
+            <button class="btn btn-chip filter-btn" data-category="antic">Античность</button>
+            <button class="btn btn-chip filter-btn" data-category="peoples">Народы и племена</button>
+            <button class="btn btn-chip filter-btn" data-category="wonders-old">Древние чудеса</button>
+            <button class="btn btn-chip filter-btn" data-category="wonders-new">Новые чудеса</button>
+            <!-- Ссылка-кнопка переход на Завоевателей -->
+            <a href="conquerors.html" class="btn btn-chip border-warning text-warning">
+                <i class="bi bi-award me-1"></i> Полководцы
+            </a>
+        </div>
+
+        <!-- Контейнер для автоматической загрузки карточек через JS -->
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-2 g-sm-3" id="places-container">
+            <!-- Карточки будут сгенерированы автоматически -->
+        </div>
+
+    </main>
+
+    <!-- Подключаем Bootstrap JS и единый скрипт Древнего мира -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/ancient-list.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
