@@ -730,7 +730,6 @@ body {
 .btn-scroll-top:hover {
     background-color: var(--ancient-purple);
     border-color: var(--ancient-purple);
-    color: var(--bg-color);
     box-shadow: 0 0 15px rgba(155, 108, 201, 0.4);
     transform: translateY(-3px);
 }
@@ -745,4 +744,5 @@ body {
         font-size: 1.3rem;
     }
 }
+
 
