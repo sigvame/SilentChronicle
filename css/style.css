@@ -694,11 +694,12 @@ body {
 /* =========================================
    КНОПКА «НАВЕРХ»
    ========================================= */
-.btn-scroll-top,
-.btn-scroll-top:hover,
-.btn-scroll-top:focus,
-.btn-scroll-top:active,
-.btn-scroll-top:focus-visible {
+/* =========================================
+   КНОПКА «НАВЕРХ»
+   ========================================= */
+
+/* 1. Обычное состояние кнопки */
+.btn-scroll-top {
     position: fixed;
     bottom: 25px;
     right: 25px;
@@ -715,23 +716,30 @@ body {
     cursor: pointer;
     z-index: 1000;
 
-    /* Убираем все тени и системную обводку */
     box-shadow: none !important;
     outline: none !important;
     -webkit-tap-highlight-color: transparent;
-    /* Убираем синюю вспышку на iOS/Android */
 
-    /* Плавность появления */
     opacity: 0;
     visibility: hidden;
     transform: translateY(15px);
-    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    transition: all 0.4s ease !important;
 }
 
 /* Показ кнопки при скролле */
 .btn-scroll-top.show {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);  
+    transform: translateY(0);
 }
 
+/* 2. Состояние при наведении (ПК) и нажатии/фокусе (телефоны и ПК) */
+.btn-scroll-top:hover,
+.btn-scroll-top:focus,
+.btn-scroll-top:active {
+    background-color: var(--card-bg) !important;
+    border-color: var(--ancient-purple) !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 12px rgba(155, 108, 201, 0.6) !important;
+    transform: translateY(-3px);
+}
