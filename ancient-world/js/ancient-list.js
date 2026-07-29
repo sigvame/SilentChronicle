@@ -6,6 +6,6 @@ const ancientPlaces = [
         country: "📍 Территории более 40 стран",
         desc: "Величайшая империя античности: Европа, Азия и Африка под властью Рима.",
         image: "#",
-        link: "#"
+        link: "pages/empires/roman-empire.html"
       },
 ];
