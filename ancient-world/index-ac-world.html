@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru" data-bs-theme="dark">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,7 +24,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
 </head>
-
 <body>
 
     <!-- НАВБАР -->
@@ -95,21 +93,22 @@
             </div>
         </header>
 
-        <!-- КНОПКА «ПОЛКОВОДЦЫ» (Всегда спереди над статьями и категориями) -->
-        <div class="d-flex justify-content-start mb-3">
-            <a href="conquerors-index.html" class="btn btn-chip conq btn-conq fw-medium px-3 py-2">
+        <!-- БЛОК КАТЕГОРИЙ И КНОПКИ ПОЛКОВОДЦЫ -->
+        <div class="category-scroll-wrapper d-flex flex-wrap align-items-center gap-2 mb-4">
+            <!-- Кнопка видна ВСЕГДА (и на смартфонах, и на ПК) -->
+            <a href="conquerors-index.html" class="btn btn-chip conq btn-conq fw-medium me-1">
                 <i class="bi bi-award me-1"></i> Полководцы
             </a>
-        </div>
 
-        <!-- ФИЛЬТР КАТЕГОРИЙ (Для ПК и планшетов) -->
-        <div class="category-scroll-wrapper d-none d-md-flex gap-2 mb-4">
-            <button class="btn btn-chip filter-btn active" data-category="all">Все</button>
-            <button class="btn btn-chip filter-btn" data-category="empires">Империи</button>
-            <button class="btn btn-chip filter-btn" data-category="antic">Античность</button>
-            <button class="btn btn-chip filter-btn" data-category="peoples">Народы и племена</button>
-            <button class="btn btn-chip filter-btn" data-category="wonders-old">Древние чудеса</button>
-            <button class="btn btn-chip filter-btn" data-category="wonders-new">Новые чудеса</button>
+            <!-- Фильтры категорий: скрываются на смартфонах (уходят в бургер), а на ПК встают в один ряд с Полководцами -->
+            <div class="d-none d-md-flex flex-wrap gap-2">
+                <button class="btn btn-chip filter-btn active" data-category="all">Все</button>
+                <button class="btn btn-chip filter-btn" data-category="empires">Империи</button>
+                <button class="btn btn-chip filter-btn" data-category="antic">Античность</button>
+                <button class="btn btn-chip filter-btn" data-category="peoples">Народы и племена</button>
+                <button class="btn btn-chip filter-btn" data-category="wonders-old">Древние чудеса</button>
+                <button class="btn btn-chip filter-btn" data-category="wonders-new">Новые чудеса</button>
+            </div>
         </div>
 
         <!-- Контейнер для автоматической загрузки карточек через JS -->
@@ -128,5 +127,4 @@
     <script src="js/ancient-list.js"></script>
     <script src="../js/main.js"></script>
 </body>
-
 </html>
