@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silent Chronicle — Гай Юлий Цезарь</title>
+
+    <!-- Шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Иконки & Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Подключение существующих стилей -->
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../css/ancient-style.css">
+</head>
+
+<body class="roman-theme">
+
+    <!-- НАВБАР -->
+    <nav class="navbar custom-navbar sticky-top">
+        <div class="container navbar-container d-flex align-items-center justify-content-between position-relative">
+            <div style="flex: 1; min-width: 0;" class="text-start">
+                <a href="../../index-ac-world.html"
+                    class="btn btn-outline-secondary btn-sm rounded-pill px-2 px-sm-3 text-nowrap">
+                    <i class="bi bi-arrow-left me-1"></i>
+                    <span class="d-none d-sm-inline">Назад в архив</span>
+                    <span class="d-sm-none">Назад</span>
+                </a>
+            </div>
+
+            <div class="text-center mx-1 mx-sm-3">
+                <a href="../../../index.html"
+                    class="logo text-center d-flex flex-column flex-sm-row align-items-center gap-1 gap-sm-2">
+                    <span>SILENT</span>
+                    <span>CHRONICLE</span>
+                </a>
+            </div>
+
+            <div style="flex: 1; min-width: 0;" class="text-end">
+                <div class="spqr-badge d-inline-block">
+                    <span>S • P • Q • R</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- АВТОРСКИЙ HERO: ДВУХКОЛОНОЧНАЯ ОБЛОЖКА -->
+    <header class="roman-hero py-5 border-bottom border-warning border-opacity-25">
+        <div class="container py-md-4">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-7 text-start">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <span class="badge badge-roman text-uppercase px-3 py-2">Диктатор • Полководец • Понтифик</span>
+                        <span class="text-warning small font-monospace">100 — 44 гг. до н.э.</span>
+                    </div>
+                    <h1 class="roman-title display-3 fw-bold text-white mb-3">ГАЙ ЮЛИЙ ЦЕЗАРЬ</h1>
+                    <p class="lead text-light-50 mb-4 fs-5">
+                        Полководец, диктатор и архитектор новой эпохи. Человек, переписавший историю Средиземноморья,
+                        уничтоживший вековую республику и заложивший фундамент величайшей Империи.
+                    </p>
+                    <div class="roman-quote p-3 rounded-3 position-relative">
+                        <i class="bi bi-quote quote-icon"></i>
+                        <p class="italic-text mb-0 text-light">«Veni, vidi, vici» — Пришел, увидел, победил.</p>
+                    </div>
+                </div>
+
+                <!-- ФОТО №1: Главный портрет/бюст Цезаря -->
+                <div class="col-lg-5">
+                    <figure class="mb-0">
+                        <div
+                            class="article-img-wrapper rounded-3 overflow-hidden shadow-lg border border-warning border-opacity-50">
+                            <img src="../../images/julius-caesar/caesar-portrait.jpg" alt="Бюст Юлия Цезаря"
+                                class="img-fluid w-100 object-fit-cover" style="max-height: 420px;">
+                        </div>
+                        <figcaption class="figure-caption text-center small text-muted mt-2">
+                            <i>Статуя Великого Цезаря — символа эпохи перехода от Республики к Империи.</i>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- МЕТРИКИ И БЫСТРЫЕ ФАКТЫ -->
+    <section class="container my-5">
+        <div class="row row-cols-2 row-cols-md-4 g-3 text-center">
+            <div class="col">
+                <div class="roman-card p-3 rounded-3 h-100 d-flex flex-column justify-content-center">
+                    <span class="roman-stat-number">Dictator Perpetuo</span>
+                    <span class="d-block small text-muted">Пожизненный диктатор</span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="roman-card p-3 rounded-3 h-100 d-flex flex-column justify-content-center">
+                    <span class="roman-stat-number">Legio X Equestris</span>
+                    <span class="d-block small text-muted">Элитный X легион</span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="roman-card p-3 rounded-3 h-100 d-flex flex-column justify-content-center">
+                    <span class="roman-stat-number">45 до н.э.</span>
+                    <span class="d-block small text-muted">Введение Календаря</span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="roman-card p-3 rounded-3 h-100 d-flex flex-column justify-content-center">
+                    <span class="roman-stat-number">23 ранения</span>
+                    <span class="d-block small text-muted">Иды марта (15 марта 44 г.)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ОСНОВНОЙ КОНТЕНТ -->
+    <main class="container my-5">
+        <div class="row g-5">
+
+            <!-- ЛЕВАЯ КОЛОНКА: Основная история -->
+            <div class="col-lg-8">
+                <article class="roman-article">
+
+                    <!-- Введение -->
+                    <h2 class="roman-h2">Введение</h2>
+                    <p class="fs-5 text-light-50">
+                        Гай Юлий Цезарь — ключевая фигура мировой истории. Выдающийся полководец, оратор, писатель и
+                        государственный деятель, он кардинально изменил вектор развития Европы и Средиземноморья. Его
+                        имя стало синонимом единовластия, а масштабные военные реформы и политические решения привели к
+                        демонтажу вековых институтов Римской республики и открыли путь к созданию Великого Рима.
+                    </p>
+
+                    <hr class="my-5 border-warning border-opacity-25">
+
+                    <!-- Юность и Сулла -->
+                    <h2 class="roman-h2">Происхождение, юность и испытание Суллой</h2>
+                    <p>
+                        Родившись около 100 года до н.э., Цезарь происходил из древнего патрицианского рода Юлиев,
+                        возводившего свою родословную к богине Венере. Несмотря на знатность, семья не обладала
+                        колоссальными богатствами. Благодаря матери Альбуции Цезарь получил блестящее образование:
+                        изучил ораторское искусство, греческую литературу, философию и военную науку.
+                    </p>
+                    <p>
+                        Юность Цезаря пришлась на суровую эпоху диктатуры Суллы. Оказавшись под ударом из-за родства с
+                        популярным вождем Гаем Марием (его тетка Юлия была его женой), молодой Цезарь категорически
+                        отказался выполнить требование диктатора — развестись с женой Корнелией. Это решение едва не
+                        стоило ему жизни. Скрываясь в горах, Цезарь лишь благодаря заступничеству влиятельных
+                        родственников и весталок получил помилование. Тогда Сулла и произнес пророческие слова:
+                    </p>
+
+                    <blockquote class="roman-quote p-4 rounded-3 my-4">
+                        <i class="bi bi-quote quote-icon"></i>
+                        <p class="mb-1 text-light italic-text">«В этом мальчишке сидит сотня Мариев».</p>
+                        <small class="text-warning font-monospace">— Луций Корнелий Сулла</small>
+                    </blockquote>
+
+                    <!-- ФОТО №2: Пленжение у пиратов / Восток -->
+                    <div class="row align-items-center g-4 my-4">
+                        <div class="col-md-6">
+                            <p class="mb-0">
+                                После смерти Суллы Цезарь отправился на Восток. По пути на остров Родос он попал в плен
+                                к киликийским пиратам. Когда разбойники потребовали за него 20 талантов выкупа, Цезарь
+                                со смехом заявил, что они не знают, кого поймали, и предложил заплатить 50. Находясь в
+                                плену, он вел себя как хозяин, писал стихи и шутливо обещал распять пиратов — что
+                                немедленно и сделал, едва получив freedom и снарядив флот.
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <figure class="mb-0">
+                                <div
+                                    class="article-img-wrapper rounded-3 overflow-hidden shadow-sm border border-warning">
+                                    <img src="../../images/julius-caesar/caesar-pirates.jpg" alt="Цезарь в плену"
+                                        class="img-fluid w-100 article-img">
+                                </div>
+                                <figcaption class="figure-caption text-center small text-muted mt-2">
+                                    <i>Цезарь среди киликийских пиратов. <br>Рисунок М. Энникё.</i>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+
+                    <hr class="my-5 border-warning border-opacity-25">
+
+                    <!-- Триумвират и Заговор Катилины -->
+                    <h2 class="roman-h2">Cursus honorum и Первый триумвират</h2>
+                    <p>
+                        Вернувшись в Рим, Цезарь стремительно продвигался по традиционной лестнице государственных
+                        должностей (<span class="latin-phrase">cursus honorum</span>). Защищая интересы плебеев,
+                        устраивая пышные гладиаторские бои и проявив себя в качестве талантливого адвоката, он завоевал
+                        любовь простого народа.
+                    </p>
+                    <p>
+                        В 63 году до н.э. в Риме вспыхнул заговор Катилины — попытка захвата власти обедневшими
+                        нобилями.
+                        Цезарь проявил невероятное мужество в Сенате: выступая против смертной казни для заговорщиков
+                        без
+                        суда, он отстаивал буквы закона даже под угрозой расправы со стороны оптимиматов. В тот же год
+                        он добился пожизненного титула **Великого Понтифика** (главного жреца Рима), что закрепило его
+                        сакральный авторитет.
+                    </p>
+                    <p>
+                        Успешно проявив себя в качестве пропретора Дальней Испании, он вернулся в Рим за триумфом и
+                        консульством. В 60 году до н.э. Цезарь заключил тайный альянс с победоносным полководцем Гнеем
+                        Помпеем и богатейшим человеком Рима Марком Крассом. Этот союз, вошедший в историю как **Первый
+                        триумвират**, позволил Цезарю стать консулом на 59 год до н.э. и провести важнейшие аграрные
+                        законы в пользу ветеранов Помпея и городской бедноты.
+                    </p>
+                </article>
+            </div>
+
+
+            <!-- ПРАВАЯ КОЛОНКА: Персоны, Реформы, Хронология -->
+            <div class="col-lg-4">
+
+                <!-- БЛОК 1: Рубикон и Гражданская война -->
+                <div class="roman-card p-4 rounded-3 mb-4">
+                    <h4 class="h5 roman-gold-title border-bottom border-warning pb-2 mb-3">
+                        <i class="bi bi-water me-2"></i>Гражданская война
+                    </h4>
+
+                    <div class="mb-3">
+                        <span class="badge text-bg-warning mb-2">10 января 49 г. до н.э.</span>
+                        <h6 class="fw-bold text-light mb-1">«Alea iacta est»</h6>
+                        <p class="small text-muted mb-0">
+                            Переход через реку Рубикон с легендарными словами «Жребий брошен». Начало войне против
+                            Сената и Помпея.
+                        </p>
+                    </div>
+
+                    <!-- ФОТО №4: В правой колонке -->
+                    <figure class="mb-3">
+                        <div class="article-img-wrapper rounded-3 overflow-hidden">
+                            <img src="../../images/julius-caesar/rubicon-crossing.jpg" alt="Переход через Рубикон"
+                                class="img-fluid w-100 border border-warning">
+                        </div>
+                        <figcaption class="figure-caption text-center small text-muted mt-1">
+                            <i>Цезарь перед переходом через Рубикон.</i>
+                        </figcaption>
+                    </figure>
+
+                    <ul class="list-unstyled small text-muted mb-0">
+                        <li class="mb-2"><strong class="text-warning">48 г. до н.э.:</strong> Победа при Фарсале над
+                            Помпеем.</li>
+                        <li class="mb-2"><strong class="text-warning">Египет:</strong> Альянс и любовь с Клеопатрой VII.
+                        </li>
+                        <li class="mb-2"><strong class="text-warning">Азия:</strong> Блицкриг против Фарнака («Veni,
+                            vidi, vici»).</li>
+                        <li class="mb-0"><strong class="text-warning">45 г. до н.э.:</strong> Победа при Мунде и конец
+                            войны.</li>
+                    </ul>
+                </div>
+
+                <!-- БЛОК 2: Великие реформы Цезаря -->
+                <div class="roman-card p-4 rounded-3 mb-4">
+                    <h4 class="h5 roman-gold-title border-bottom border-warning pb-2 mb-3">
+                        <i class="bi bi-sliders me-2"></i>Реформы Диктатуры
+                    </h4>
+                    <ul class="list-unstyled small mb-0">
+                        <li class="mb-3">
+                            <strong class="text-warning d-block">Юлианский календарь</strong>
+                            <span class="text-muted">Введение 365 дней с високосным годом при участии Созигена.</span>
+                        </li>
+                        <li class="mb-3">
+                            <strong class="text-warning d-block">Расширение Сената</strong>
+                            <span class="text-muted">Увеличение мест до 900 за счет провинциальной элиты.</span>
+                        </li>
+                        <li class="mb-3">
+                            <strong class="text-warning d-block">Градостроительство</strong>
+                            <span class="text-muted">Строительство Нового Форума Цезаря и храма
+                                Венеры-Родительницы.</span>
+                        </li>
+                        <li class="mb-3">
+                            <strong class="text-warning d-block">Земли ветеранам</strong>
+                            <span class="text-muted">Раздача земель и списание долгов беднякам.</span>
+                        </li>
+                        <li class="mb-0">
+                            <strong class="text-warning d-block">Clementia (Милосердие)</strong>
+                            <span class="text-muted">Политика прощения бывших политических врагов.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- БЛОК 3: Иды марта -->
+                <div class="roman-card p-4 rounded-3 border-danger border-opacity-50">
+                    <h4 class="h5 text-danger border-bottom border-danger pb-2 mb-3">
+                        <i class="bi bi-x-circle me-2"></i>Иды Марта (Гибель)
+                    </h4>
+                    <p class="small text-muted mb-2">
+                        <strong>15 марта 44 года до н.э.</strong> Заговор аристократов под предводительством Брута и
+                        Кассия в курии Помпея.
+                    </p>
+                    <p class="small text-muted mb-0">
+                        Цезарю было нанесено 23 ранения. Его последними словами стали: <i>«И ты, дитя мое?»</i> (Kai sy,
+                        teknon?).
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <section class="mt-5 pt-4 border-top border-warning border-opacity-25 w-100">
+            <!-- Гражданская война: глубокое погружение -->
+            <h2 class="roman-h2">Гражданская война и падение Республики</h2>
+            <p>
+                После триумфального завершения Галльской войны Сенат, подстрекаемый Помпеем и
+                сенаторами-оптиматами,
+                потребовал от Цезаря сложить полномочия и распустить легионы. Вернуться в Рим частным лицом
+                означало отдать себя под суд обвинителей.
+            </p>
+            <p>
+                Приняв судьбоносное решение, 10 января 49 г. до н.э. Цезарь перешел Рубикон. Помпей и Сенат
+                бежали
+                в Грецию, не приняв боя в Италии. Последовала молниеносная кампания:
+            </p>
+            
+            <div class="roman-card p-4 rounded-3 my-4 border-warning border-opacity-25">
+                <h5 class="text-warning mb-3 fw-bold"><i class="bi bi-diagram-3 me-2"></i>Главные сражения
+                    Гражданской войны</h5>
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-2"><strong class="text-light">Битва при Фарсале (48 г. до н.э.):</strong>
+                        Несмотря на двухкратное превосходство армии Помпея, Цезарь гениально разгромил его
+                        конницу и заставил бежать.</li>
+                    <li class="mb-2"><strong class="text-light">Египетский узел:</strong> Прибыв в Александрию,
+                        Цезарь вмешался в династическую войну, поддержал Клеопатру VII, пережил опасную
+                        Александрийскую войну и возвел ее на престол.</li>
+                    <li class="mb-2"><strong class="text-light">Битва при Тапсе (46 г. до н.э.):</strong>
+                        Разгром республиканских войск в Африке, завершившийся самоубийством Катона Утического.
+                    </li>
+                    <li class="mb-0"><strong class="text-light">Битва при Мунде (45 г. до н.э.):</strong> Самое
+                        жестокое сражение в Испании против сыновей Помпея. Цезарь сам бросился в бой со словами:
+                        <i>«Я часто сражался за победу, но при Мунде впервые сражался за жизнь»</i>.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- СЕКЦИЯ: ГАЛЛЬСКАЯ ВОЙНА -->
+        <section class="mt-5 pt-4 border-top border-warning border-opacity-25 w-100">
+            <h2 class="roman-h2 text-center mb-3">Военный триумф: Галльская война (58–50 гг. до н.э.)</h2>
+            <p class="text-center text-muted col-lg-10 mx-auto mb-4">
+                Получив в управление Галлию (территория современной Франции, Бельгии и Северной Италии), Цезарь
+                возглавил несколько легионов и начал масштабную кампанию, навсегда раздвинувшую границы
+                античного мира.
+            </p>
+
+            <!-- Фотография во всю ширину блока -->
+            <figure class="my-4">
+                <div class="row justify-content-center g-0">
+                    <div class="col-12 col-lg-8">
+                        <div class="article-img-wrapper rounded-3 overflow-hidden shadow-sm border border-warning">
+                            <img src="../../images/julius-caesar/caesar-alesia.jpg" alt="Осада Алезии"
+                                class="img-fluid w-100 article-img">
+                        </div>
+                        <figcaption class="figure-caption text-center small text-muted mt-2">
+                            <i>Осада Алезии (52 г. до н.э.) — сдача Верцингеторига Юлию Цезарю.</i>
+                        </figcaption>
+                    </div>
+                </div>
+            </figure>
+
+            <!-- 3 карточки равномерно по ширине всей страницы -->
+            <div class="row g-3 mb-4">
+                <div class="col-md-4">
+                    <div class="roman-card p-3 rounded-3 h-100">
+                        <h6 class="text-warning fw-bold mb-1"><i class="bi bi-bridge me-1"></i>Форсирование Рейна</h6>
+                        <p class="small text-muted mb-0">Построил монументальный мост через реку за считанные дни для
+                            устрашения
+                            германцев.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="roman-card p-3 rounded-3 h-100">
+                        <h6 class="text-warning fw-bold mb-1"><i class="bi bi-compass me-1"></i>Походы в Британию</h6>
+                        <p class="small text-muted mb-0">Первый римский полководец, совершивший высадку на Туманный
+                            Альбион.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="roman-card p-3 rounded-3 h-100">
+                        <h6 class="text-warning fw-bold mb-1"><i class="bi bi-shield-lock me-1"></i>Осада Алезии</h6>
+                        <p class="small text-muted mb-0">Возвел двойную линию стен и разгромил превосходящие силы
+                            Верцингеторига.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ПОЛНОШИРИННАЯ СЕКЦИЯ: НАСЛЕДИЕ В ТАБЛИЧНОМ И КАРТОЧНОМ ВИДЕ -->
+        <section class="mt-5 pt-4 border-top border-warning border-opacity-25 w-100">
+            <h2 class="roman-h2 text-center mb-4"><i class="bi bi-bank me-2"></i>Наследие Цезаря в истории</h2>
+            <p class="text-center text-muted col-lg-8 mx-auto mb-5">
+                Гибель диктатора не вернула республику, но открыла путь Октавиану Августу. Вклад Цезаря навсегда
+                сформировал облик Европы:
+            </p>
+
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3">
+                <div class="col">
+                    <div class="roman-card p-4 rounded-3 h-100">
+                        <div class="text-warning fs-3 mb-2"><i class="bi bi-translate"></i></div>
+                        <h5 class="roman-gold-title h6 mb-2">Титулы и язык</h5>
+                        <p class="small text-muted mb-0">Имя «Цезарь» стало основой для титулов «Кайзер» и «Царь». Месяц
+                            июль назван в его честь.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="roman-card p-4 rounded-3 h-100">
+                        <div class="text-warning fs-3 mb-2"><i class="bi bi-calendar3"></i></div>
+                        <h5 class="roman-gold-title h6 mb-2">Календарь</h5>
+                        <p class="small text-muted mb-0">Юлианский календарь оставался главным в Европе на протяжении
+                            1600 лет.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="roman-card p-4 rounded-3 h-100">
+                        <div class="text-warning fs-3 mb-2"><i class="bi bi-journal-text"></i></div>
+                        <h5 class="roman-gold-title h6 mb-2">Литература</h5>
+                        <p class="small text-muted mb-0">«Записки о Галльской войне» стали классическим эталоном
+                            латинской прозы.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="roman-card p-4 rounded-3 h-100">
+                        <div class="text-warning fs-3 mb-2"><i class="bi bi-globe-europe-africa"></i></div>
+                        <h5 class="roman-gold-title h6 mb-2">Геополитика</h5>
+                        <p class="small text-muted mb-0">Покоренная Галлия навсегда вошла в орбиту античной и
+                            европейской цивилизации.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Скрипты -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
