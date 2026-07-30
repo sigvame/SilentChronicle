@@ -80,9 +80,9 @@
                 Хроники великих цивилизаций, древних народов и исчезнувших чудес света.
             </p>
 
-            <!-- Переключатель глобальных архивов и разделов -->
+            <!-- Переключатель глобальных архивов -->
             <div
-                class="archive-switcher d-inline-flex flex-wrap justify-content-center p-1 bg-dark-subtle border border-secondary border-opacity-25 rounded-pill mt-2 shadow-sm gap-1">
+                class="archive-switcher d-inline-flex p-1 bg-dark-subtle border border-secondary border-opacity-25 rounded-pill mt-2 shadow-sm">
                 <!-- Ссылка на главный архив заброшек -->
                 <a href="../index.html" class="btn btn-sm btn-chip text-muted rounded-pill px-3 py-1">
                     <i class="bi bi-journal-bookmark me-1"></i> Хроники руин
@@ -92,13 +92,15 @@
                 <a href="index-ac-world.html" class="btn btn-sm btn-chip active rounded-pill px-3 py-1">
                     <i class="bi bi-bank me-1"></i> Древний мир
                 </a>
-
-                <!-- Кнопка «Полководцы» — всегда на виду над статьями -->
-                <a href="conquerors-index.html" class="btn btn-sm btn-chip border-warning text-warning rounded-pill px-3 py-1">
-                    <i class="bi bi-award me-1"></i> Полководцы
-                </a>
             </div>
         </header>
+
+        <!-- ОТДЕЛЬНАЯ КНОПКА «ПОЛКОВОДЦЫ» (Прижата влево, видна на ПК и телефоне) -->
+        <div class="d-flex justify-content-start mb-3">
+            <a href="conquerors-index.html" class="btn btn-chip border-warning text-warning fw-medium px-3 py-2">
+                <i class="bi bi-award me-1"></i> Полководцы
+            </a>
+        </div>
 
         <!-- ФИЛЬТР КАТЕГОРИЙ (Для ПК и планшетов) -->
         <div class="category-scroll-wrapper d-none d-md-flex gap-2 mb-4">
