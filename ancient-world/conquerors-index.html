@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru" data-bs-theme="dark">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +8,8 @@
     <!-- Шрифты: Cinzel (заголовки) + Inter (текст) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Inter:wght@300;400;500&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Inter:wght@300;400;500&display=swap"
         rel="stylesheet">
 
     <!-- Bootstrap Icons -->
@@ -24,7 +24,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
 </head>
-
 <body>
 
     <!-- НАВБАР -->
@@ -64,8 +63,6 @@
                 <button class="btn btn-chip filter-btn" data-category="rome">Рим</button>
                 <button class="btn btn-chip filter-btn" data-category="greece">Греция и Македония</button>
                 <button class="btn btn-chip filter-btn" data-category="east">Восток</button>
-                
-                
             </div>
         </div>
     </div>
@@ -73,35 +70,28 @@
     <!-- ГЛАВНЫЙ КОНТЕЙНЕР -->
     <main class="container my-3 my-md-4">
 
-        <!-- HEADER С ПЕРЕКЛЮЧАТЕЛЕМ АРХИВОВ -->
+        <!-- HEADER -->
         <header class="text-center my-4 my-md-5">
-            <h1 class="display-5 fw-bold hero-title">ПОЛКОВОДЦЫ И ЗАВОЕВАТЕЛИ</h1>
-            <p class="text-muted col-md-8 mx-auto small-desc mb-3">
+            <h1 class="display-5 fw-bold hero-title">SILENT CHRONICLE</h1>
+            <p class="text-muted col-md-8 mx-auto small-desc mb-0">
                 Великие стратеги, диктаторы и правители, менявшие карты континентов и ход человеческой истории.
             </p>
-
-            <!-- Переключатель архивов с быстрым возвратом в Древний Мир -->
-            <div
-                class="archive-switcher d-inline-flex p-1 bg-dark-subtle border border-secondary border-opacity-25 rounded-pill mt-2 shadow-sm">
-                <!-- Возврат на Древний мир -->
-                <a href="index-ac-world.html" class="btn btn-sm btn-chip text-muted rounded-pill px-3 py-1">
-                    <i class="bi bi-bank me-1"></i> Древний мир
-                </a>
-
-                
-            </div>
         </header>
 
-        <!-- ФИЛЬТР КАТЕГОРИЙ (Для ПК и планшетов) -->
-        <div class="category-scroll-wrapper d-none d-md-flex align-items-center justify-content-between gap-2 mb-4">
-            <div class="d-flex gap-2">
+        <!-- БЛОК КАТЕГОРИЙ И КНОПКИ ДРЕВНИЙ МИР -->
+        <div class="category-scroll-wrapper d-flex flex-wrap align-items-center gap-2 mb-4">
+            <!-- Кнопка видна ВСЕГДА (и на смартфонах, и на ПК) -->
+            <a href="index-ac-world.html" class="btn btn-chip conq btn-conq fw-medium me-1">
+                <i class="bi bi-bank me-1"></i> Древний мир
+            </a>
+
+            <!-- Фильтры категорий: скрываются на смартфонах (уходят в бургер), а на ПК встают в один ряд с Древним миром -->
+            <div class="d-none d-md-flex flex-wrap gap-2">
                 <button class="btn btn-chip filter-btn active" data-category="all">Все</button>
                 <button class="btn btn-chip filter-btn" data-category="rome">Рим</button>
                 <button class="btn btn-chip filter-btn" data-category="greece">Греция и Македония</button>
                 <button class="btn btn-chip filter-btn" data-category="east">Восток</button>
             </div>
-
-            
         </div>
 
         <!-- Контейнер для автоматической загрузки карточек через JS -->
@@ -120,5 +110,4 @@
     <script src="js/conquerors-list.js"></script>
     <script src="../js/main.js"></script>
 </body>
-
 </html>
