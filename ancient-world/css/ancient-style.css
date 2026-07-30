@@ -118,5 +118,27 @@
     background-color: #ffc107;
     border-color: #ffc107;
     color: #0c0b0e !important;
-    /* !important принудительно перебивает text-warning */
+}
+
+/* Дополнительные акценты для статьи Цезаря */
+
+/* Выравнивание латинских крылатых фраз */
+.latin-phrase {
+    font-family: 'Cinzel', serif;
+    color: #d4af37;
+    font-size: 0.9em;
+}
+
+/* Оформление цитат */
+.roman-quote {
+    background: rgba(128, 0, 32, 0.15);
+    border-left: 3px solid #d4af37;
+}
+
+.quote-icon {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 2.2rem;
+    color: rgba(212, 175, 55, 0.15);
 }
