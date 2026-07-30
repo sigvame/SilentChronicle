@@ -12,12 +12,15 @@ function shuffleArray(array) {
 let originalPlaces = [];
 let storageKeyPrefix = 'default';
 
-if (typeof ancientPlaces !== 'undefined') {
-  originalPlaces = ancientPlaces;
-  storageKeyPrefix = 'ancient';
-} else if (typeof ruinsPlaces !== 'undefined') {
+if (typeof ruinsPlaces !== 'undefined') {
   originalPlaces = ruinsPlaces;
   storageKeyPrefix = 'ruins';
+} else if (typeof ancientPlaces !== 'undefined') {
+  originalPlaces = ancientPlaces;
+  storageKeyPrefix = 'ancient';
+} else if (typeof conquerorsPlaces !== 'undefined') {
+  originalPlaces = conquerorsPlaces;
+  storageKeyPrefix = 'conquerors';
 } else if (typeof places !== 'undefined' && Array.isArray(places)) {
   originalPlaces = places;
 }
