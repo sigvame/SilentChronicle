@@ -22,7 +22,6 @@
     <link rel="stylesheet" href="../../css/style.css">
 
     <style>
-        /* Дополнительный класс для ограничения ширины фото на ПК, чтобы текст красиво обтекал */
         @media (min-width: 768px) {
             .floating-lead-image {
                 max-width: 42%;
@@ -36,7 +35,7 @@
     <nav class="navbar custom-navbar sticky-top">
         <div class="container navbar-container">
 
-            <!-- Кнопка «Назад» на главную -->
+            <!-- Кнопка Назад на главную -->
             <a href="../../index.html" class="btn-back">
                 <i class="bi bi-arrow-left"></i>
                 <span>Назад</span>
@@ -55,8 +54,6 @@
 
     <!-- ГЛАВНЫЙ КОНТЕНТ -->
     <main class="container my-4 my-md-5">
-
-        <!-- HEADER ЛОКАЦИИ -->
         <header class="mb-4 text-start">
             <span class="badge-tag d-inline-block mb-2">Европа • Замок</span>
             <h1 class="hero-title d-block mb-2">Замок Лип (Leap Castle)</h1>
@@ -67,8 +64,6 @@
 
         <!-- ОСНОВНОЙ БЛОК -->
         <article class="article-content clearfix">
-
-            <!-- ГЛАВНОЕ ФОТО С ОБТЕКАНИЕМ (Слева на ПК, на всю ширину на мобилках) -->
             <div class="float-md-start floating-lead-image me-md-4 mb-4 col-12">
                 <div class="article-img-wrapper rounded-3 overflow-hidden shadow-sm">
                     <img src="../../images/leap-castle/leap-castle.jpg" alt="Замок Лип"
@@ -79,7 +74,7 @@
                 </figcaption>
             </div>
 
-            <!-- ВСТУПЛЕНИЕ (Начнет обтекать фото сразу с первых строк) -->
+            <!-- ВСТУПЛЕНИЕ -->
             <p class="lead text-main mb-4">
                 Каменные стены замка Лип хранят в себе гнетущую атмосферу средневековой жестокости, которую невозможно
                 спутать ни с чем другим. Возведенный прямо на скалистом выступе над древним друидическим святилищем,
@@ -108,6 +103,7 @@
                     стратегией: задолго до появления первой каменной кладки кельтские друиды проводили на этой высоте
                     свои таинственные обряды, считая скалу местом перекрестка духовных сил.
                 </p>
+
                 <p class="text-muted">
                     Само название «Лип» восходит к ирландскому наименованию <em>Léim Uí Chorbhmaic</em>, что переводится
                     как «Прыжок О’Кэрролла». Согласно старинному преданию, записанному в местной хронике, два брата из
@@ -131,6 +127,7 @@
                         </ul>
                     </div>
                 </div>
+
                 <div class="col-12 col-md-6">
                     <div class="custom-card border-start border-3 border-purple p-3 rounded-3 h-100">
                         <div class="d-flex align-items-center mb-2">
@@ -157,6 +154,7 @@
                     по имени Джон). В один из дней брат-священник проводил семейную мессу для своих сторонников в
                     домовой церкви на самом верхнем ярусе центральной башни.
                 </p>
+
                 <p class="text-muted">
                     Ослепленный яростью и жаждой власти Тейг с вооруженными людьми ворвался в помещение прямо во время
                     святого причастия. Не обращая внимания на алтарь и священные молитвы, Тейг вонзил свой меч в
@@ -188,6 +186,7 @@
                     пленников, неугодных гостей и даже наемников из сторонних кланов (например, наемников Максвини), с
                     которыми расплачивались смертью сразу после завершения пира.
                 </p>
+                
                 <p class="text-muted">
                     На дне узкой камнерезной шахты на глубине нескольких метров были вертикально вмонтированы острые
                     железные и деревянные пики. Ублиет был спроектирован так, чтобы падающие с высоты
@@ -196,7 +195,7 @@
                 </p>
             </section>
 
-            <!-- ВСТАВКА ЦИТАТЫ / ДНЕВНИКА -->
+            <!-- ВСТАВКА ЦИТАТЫ -->
             <blockquote class="blockquote custom-card p-4 rounded-3 border-start border-3 border-purple my-4">
                 <p class="mb-2 text-light font-italic small fs-6">
                     «Существо было размером с крупную овцу, с темным истощенным лицом, напоминающим человеческое, но с
@@ -218,6 +217,7 @@
                     своими ритуалами она тревожила спящую в стенах древнюю темную сущность, известную как «Элементаль»
                     (The Elemental) или «Оно» (It).
                 </p>
+
                 <p class="text-muted">
                     Исследователи мистического фольклора выдвигают версию, что Элементаль представляет собой древнее
                     друидическое заградительное заклятие или духа-хранителя земли, созданного для защиты от иноземных
@@ -226,7 +226,7 @@
                 </p>
             </section>
 
-            <!-- ТРИ ИСТОРИИ С АДАПТИВНЫМ СКРОЛЛОМ НА МОБИЛЬНЫХ -->
+            <!-- ТРИ ИСТОРИИ -->
             <section class="my-5">
                 <div class="accordion" id="legendsAccordion">
                     <div class="accordion-item border-0">
@@ -237,10 +237,10 @@
                                 <i class="bi bi-book-half me-2 text-main"></i> Легенды и призраки замка Лип
                             </button>
                         </h2>
+
                         <div id="collapseLegends" class="accordion-collapse collapse" aria-labelledby="headingLegends"
                             data-bs-parent="#legendsAccordion">
                             <div class="accordion-body rounded-bottom-3 pt-4">
-
                                 <div class="row g-4">
 
                                     <!-- Карточка 1: Красная Дама -->
@@ -250,6 +250,7 @@
                                                 <img src="../../images/leap-castle/ladder.jpg" alt="Красная Дама"
                                                     class="img-fluid w-100">
                                             </div>
+
                                             <h3 class="h6 text-main fw-bold mb-2">Призрак «Красной Дамы»</h3>
                                             <p class="small text-muted mb-0">
                                                 <i>На фото виден узкий каменный проход с аутентичной винтовой лестницей.
@@ -268,6 +269,7 @@
                                                 <img src="../../images/leap-castle/rooms.jpg" alt="Сводчатые залы"
                                                     class="img-fluid w-100">
                                             </div>
+
                                             <h3 class="h6 text-main fw-bold mb-2">Сводчатые переходы подземелий</h3>
                                             <p class="small text-muted mb-0">
                                                 <i>На снимке показаны мрачные каменные своды нижних ярусов. Из-за
@@ -285,6 +287,7 @@
                                                 <img src="../../images/leap-castle/oubliette.jpg" alt="Ублиет"
                                                     class="img-fluid w-100">
                                             </div>
+
                                             <h3 class="h6 text-main fw-bold mb-2">Темница-ублиет (Oubliette)</h3>
                                             <p class="small text-muted mb-0">
                                                 <i>Вертикальная потайная шахта за Кровавой часовней. Извлекаемые из неё
@@ -294,9 +297,7 @@
                                             </p>
                                         </div>
                                     </div>
-
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -311,6 +312,7 @@
                     так как семьи Дарби ассоциировалась с английским господством. В течение почти семидесяти лет древнее
                     строение оставалось обугленным и покинутым каменным остовом.
                 </p>
+
                 <p class="text-muted">
                     В 1991 году руины замка выкупил известный ирландский музыкант Шон Райан. Он приложил огромные усилия
                     к частной реконструкции помещений и проживает там со своей семьей. Шон открыто
@@ -321,7 +323,6 @@
             </section>
         </article>
 
-        <!-- РАЗДЕЛЬНАЯ ЛИНИЯ -->
         <hr class="my-5 border-secondary">
 
         <!-- РАЗВОРАЧИВАЮЩАЯСЯ ГАЛЕРЕЯ (6 ФОТО) -->
@@ -335,10 +336,10 @@
                             <i class="bi bi-images me-2 text-main"></i> Галерея локации (6 фото)
                         </button>
                     </h2>
+
                     <div id="collapseGallery" class="accordion-collapse collapse" aria-labelledby="headingGallery"
                         data-bs-parent="#galleryAccordion">
                         <div class="accordion-body rounded-bottom-3 pt-4">
-
                             <div class="row g-3">
 
                                 <!-- Фото 1 -->
@@ -353,7 +354,7 @@
                                 <!-- Фото 2 -->
                                 <div class="col-12 col-sm-6 col-md-4">
                                     <div class="gallery-card">
-                                        <img src="../../images/leap-castle/ruins.jpg" alt="Залы" class="gallery-img">
+                                        <img src="../../images/leap-castle/ruins.jpg" alt="Подвалы" class="gallery-img">
                                         <div class="gallery-caption"><i>Подвальные ходы замка</i></div>
                                     </div>
                                 </div>
@@ -361,7 +362,7 @@
                                 <!-- Фото 3 -->
                                 <div class="col-12 col-sm-6 col-md-4">
                                     <div class="gallery-card">
-                                        <img src="../../images/leap-castle/entrance.jpg" alt="Свод" class="gallery-img">
+                                        <img src="../../images/leap-castle/entrance.jpg" alt="Архивное фото" class="gallery-img">
                                         <div class="gallery-caption"><i>Замок Лип (архивное фото 1919 г.)</i></div>
                                     </div>
                                 </div>
@@ -405,5 +406,4 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
