@@ -1,25 +1,24 @@
 :root {
-    /* Античная палитра */
     --bg-color: #0c0b0e;
-    /* Чистый тёмно-угольный фон */
+    /* Основной тёмный фон страницы */
     --card-bg: #141219;
-    /* Плотный цвет старого гранита */
+    /* Фон карточек и блоков */
     --border-color: #26212e;
-    /* Сдержанная тёмно-фиолетовая граница */
-
+    /* Цвет контуров и рамок */
     --text-main: #dfdad6;
-    /* Тёплый светло-серый (пергаментный) */
+    /* Основной цвет текста */
     --text-muted: #8e8899;
-    /* Приглушенный пыльный */
-
+    /* Цвет второстепенного текста */
     --ancient-purple: #9b6cc9;
-    /* Элегантный аметист */
+    /* Фиолетовый акцентный цвет */
     --ancient-hover: #b48be0;
+    /* Фиолетовый цвет при наведении */
 }
 
 /* =========================================
-   1. ГЛОБАЛЬНЫЕ СТИЛИ
+   1. БАЗОВЫЕ НАСТРОЙКИ СТРАНИЦЫ
    ========================================= */
+
 body {
     background-color: var(--bg-color);
     color: var(--text-main);
@@ -27,7 +26,7 @@ body {
     margin: 0;
 }
 
-/* Высеченный каменный шрифт для заголовков */
+/* Градиентный текст для логотипа и заглавного титла */
 .hero-title,
 .logo span:first-child {
     font-family: 'Cinzel', serif;
@@ -37,24 +36,24 @@ body {
             #d1cad8 40%,
             #8e829e 70%,
             #9b6cc9 100%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: relative;
 }
 
 .hero-title {
-    font-size: clamp(1.8rem, 4vw, 2.8rem);
-    padding-bottom: 0.8rem;
+    font-size: clamp(28px, 4vw, 45px);
+    padding-bottom: 13px;
     border-bottom: 1px dashed rgba(155, 108, 201, 0.25);
     display: inline-block;
 }
 
 .small-desc {
-    font-size: 0.9rem;
-    margin-top: 0.8rem;
+    font-size: 14px;
+    margin-top: 13px;
 }
 
-/* Общие элементы статей */
 .article-content p {
     font-weight: 300;
     line-height: 1.8;
@@ -65,19 +64,20 @@ body {
 }
 
 /* =========================================
-   2. НАВБАР И МЕНЮ
+   2. ВЕРХНЕЕ МЕНЮ И ПОИСК (NAVBAR)
    ========================================= */
+
 .custom-navbar {
     background-color: rgba(20, 18, 25, 0.98);
     border-bottom: 1px solid var(--border-color);
-    padding: 0.5rem 0;
+    padding: 8px 0;
 }
 
 .navbar-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 0.5rem;
+    gap: 8px;
 }
 
 /* Логотип */
@@ -90,12 +90,12 @@ body {
 }
 
 .logo span:first-child {
-    font-size: 1.1rem;
+    font-size: 18px;
     font-weight: 700;
 }
 
 .logo span:last-child {
-    font-size: 0.7rem;
+    font-size: 11px;
     color: var(--text-muted);
     letter-spacing: 1px;
 }
@@ -103,20 +103,20 @@ body {
 @media (min-width: 768px) {
     .logo {
         flex-direction: row;
-        gap: 0.4rem;
+        gap: 6px;
         align-items: center;
     }
 }
 
-/* Кнопка «Назад» (на страницах локаций) */
+/* Кнопка возврата Назад */
 .btn-back {
     display: inline-flex;
     align-items: center;
-    gap: 0.4rem;
+    gap: 6px;
     color: var(--text-muted);
     text-decoration: none;
-    font-size: 0.85rem;
-    padding: 0.2rem 0.6rem;
+    font-size: 14px;
+    padding: 3px 10px;
     border: 1px solid var(--border-color);
     border-radius: 4px;
     background-color: var(--bg-color);
@@ -128,25 +128,23 @@ body {
     border-color: var(--ancient-purple);
 }
 
-/* Поиск (на главной) */
+/* Поле поиска */
 .search-box {
     flex-grow: 1;
     max-width: 180px;
-    /* Мобильная версия */
-    margin: 0 0.5rem;
+    margin: 0 8px;
 }
 
 .form-control-dark {
     background-color: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.15);
     color: #fff;
-    font-size: 0.8rem;
-    padding: 0.25rem 0.6rem;
+    font-size: 13px;
+    padding: 4px 10px;
     border-radius: 4px;
     transition: all 0.3s ease;
 }
 
-/* Эффект при фокусе поиска */
 .form-control-dark:focus {
     background-color: rgba(0, 0, 0, 0.4);
     border-color: var(--ancient-purple);
@@ -159,7 +157,6 @@ body {
     color: #888;
 }
 
-/* Адаптив поиска для планшетов и ПК */
 @media (min-width: 400px) {
     .search-box {
         max-width: 150px;
@@ -169,18 +166,18 @@ body {
 @media (min-width: 576px) {
     .search-box {
         max-width: 260px;
-        margin: 0 0.5rem;
+        margin: 0 8px;
     }
 }
 
-/* Бургер-тогглер */
+/* Кнопка бургера для мобилок */
 .custom-toggler {
     border-color: var(--border-color);
-    padding: 0.25rem 0.5rem;
-    font-size: 0.9rem;
+    padding: 4px 8px;
+    font-size: 14px;
 }
 
-/* Выпадающее меню (Offcanvas) */
+/* Выпадающее мобильное меню */
 .offcanvas.offcanvas-top {
     max-height: 40vh !important;
     background-color: rgba(18, 18, 18, 0.85) !important;
@@ -196,9 +193,9 @@ body {
 }
 
 /* =========================================
-   3. КАРТОЧКИ (ГЛАВНАЯ)
+   3. КАРТОЧКИ СТАТЕЙ И ИХ ЭЛЕМЕНТЫ
    ========================================= */
-/* Делаем всю карточку кликабельной ссылкой */
+
 .card-clickable-link {
     text-decoration: none;
     color: inherit;
@@ -213,7 +210,6 @@ body {
     overflow: hidden;
     transition: border-color 0.2s ease, transform 0.2s ease;
     height: 100%;
-    /* Для выравнивания в сетке */
 }
 
 .custom-card:hover {
@@ -242,7 +238,6 @@ body {
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
 }
 
-/* Тэг категории на фото */
 .badge-tag {
     position: absolute;
     top: 8px;
@@ -252,27 +247,26 @@ body {
     color: var(--ancient-purple);
     padding: 2px 8px;
     border-radius: 3px;
-    font-size: 0.7rem;
+    font-size: 11px;
     font-weight: 500;
 }
 
 .card-title {
     font-family: 'Cinzel', serif;
     color: #f0ebf5;
-    margin-bottom: 0.4rem;
-    font-size: 1.3rem;
-    /* Обычный размер для карточки */
+    margin-bottom: 6px;
+    font-size: 21px;
 }
 
 .location-label {
-    font-size: 0.75rem;
+    font-size: 12px;
     color: var(--text-muted);
 }
 
 .card-link-text {
     color: var(--ancient-purple);
     font-weight: 500;
-    font-size: 0.85rem;
+    font-size: 14px;
 }
 
 .custom-card:hover .card-link-text {
@@ -280,23 +274,23 @@ body {
     text-decoration: underline;
 }
 
-/* Адаптив карточек для мобилок */
 @media (max-width: 576px) {
     .card-img-wrapper {
         height: 120px;
     }
 
     .card-title {
-        font-size: 1.1rem;
+        font-size: 18px;
     }
 }
 
 /* =========================================
-   4. ФИЛЬТРЫ-ЧИПЫ (ГЛАВНАЯ)
+   4. КНОПКИ-ФИЛЬТРЫ И КАТЕГОРИИ
    ========================================= */
+
 .category-scroll-wrapper {
     overflow-x: auto;
-    padding-bottom: 0.5rem;
+    padding-bottom: 8px;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -305,9 +299,9 @@ body {
     border: 1px solid var(--border-color);
     color: var(--text-main);
     border-radius: 12px;
-    padding: 0.25rem 0.9rem;
+    padding: 4px 14px;
     white-space: nowrap;
-    font-size: 0.8rem;
+    font-size: 13px;
     transition: all 0.2s ease;
 }
 
@@ -319,45 +313,49 @@ body {
     font-weight: 600;
 }
 
-/* Запрещаем кнопкам растягиваться в оффканвасе */
 .offcanvas-body .btn-chip {
     width: auto !important;
     flex-grow: 0 !important;
 }
 
 /* =========================================
-   5. ЭЛЕМЕНТЫ СТАТЕЙ (ЛОКАЦИИ)
+   5. ОФОРМЛЕНИЕ МАТЕРИАЛОВ ВНУТРИ СТАТЕЙ
    ========================================= */
-/* Главное фото с обтеканием */
+
+/* Картинка с обтеканием вверху статьи */
 .floating-lead-image {
-    col-12: 100%;
-    margin-bottom: 1.5rem;
+    width: 100%;
+    margin-bottom: 24px;
 }
 
 @media (min-width: 768px) {
     .floating-lead-image {
         max-width: 42%;
-        /* Фиксированный размер на ПК */
-        margin-right: 1.5rem !important;
-        /* me-md-4 */
+        margin-right: 24px !important;
     }
 }
 
-/* Обертки изображений в статьях */
+/* Рамки для изображений и их размеры */
 .article-img-wrapper {
-    border-radius: 0.5rem;
-    /* rounded-3 */
+    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
-    /* shadow-sm */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .075);
+    height: auto !important;
+}
+
+.article-img-wrapper img,
+.article-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
 }
 
 .article-content figure {
     max-width: 750px;
-    /* Максимальная ширина фото в центре статьи */
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 2rem;
+    margin-bottom: 32px;
 }
 
 .article-content figure img {
@@ -365,41 +363,37 @@ body {
     height: auto;
 }
 
-/* Блок цитаты */
+/* Цитаты */
 .blockquote {
     background-color: var(--card-bg);
-    padding: 1.5rem;
-    /* p-4 */
-    border-radius: 0.5rem;
-    /* rounded-3 */
+    padding: 24px;
+    border-radius: 8px;
     border-left: 3px solid var(--ancient-purple) !important;
-    /* border-start border-3 border-purple */
-    margin: 2rem 0;
+    margin: 32px 0;
 }
 
 .blockquote p {
     font-style: italic;
-    font-size: 1.1rem;
+    font-size: 18px;
     color: #fff;
-    /* text-light */
     line-height: 1.6;
 }
 
 .blockquote-footer {
     color: var(--text-muted);
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
+    font-size: 14px;
+    margin-top: 8px;
 }
 
-/* Хронология (чистый стиль без линий) */
+/* Хронологическая шкала */
 .timeline-clean-section {
-    margin-top: 2rem;
+    margin-top: 32px;
 }
 
 .timeline-clean-item {
     position: relative;
     padding-left: 25px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 24px;
 }
 
 .timeline-clean-item:last-child {
@@ -414,21 +408,19 @@ body {
     height: 10px;
     border-radius: 50%;
     background-color: #8b5cf6 !important;
-    /* Акцентный фиолетовый */
     box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
 }
 
-/* Аккордеон легенд */
+/* Раскрывающиеся списки (Аккордеоны) */
 .accordion-item.border-0 {
     border: none;
 }
 
 .accordion-button {
     font-weight: 700;
-    border-radius: 0.5rem !important;
-    /* rounded-3 */
+    border-radius: 8px !important;
     box-shadow: none !important;
-    padding: 1rem 1.25rem;
+    padding: 16px 20px;
 }
 
 .accordion-button.collapsed {
@@ -438,20 +430,16 @@ body {
 
 .accordion-button:not(.collapsed) {
     background-color: #2a2533;
-    /* Немного светлее фона */
     color: #fff;
 }
 
 .accordion-body {
-    padding-top: 1.5rem;
-    /* pt-4 */
-    border-radius: 0 0 .5rem .5rem !important;
-    /* rounded-bottom-3 */
+    padding-top: 24px;
+    border-radius: 0 0 8px 8px !important;
     background-color: #1a1621;
-    /* Чуть отличается от основного фона карты */
 }
 
-/* Галерея (на фото) */
+/* Фотогалерея */
 .gallery-card {
     position: relative;
     border-radius: 8px;
@@ -471,7 +459,6 @@ body {
     transform: scale(1.05);
 }
 
-/* Подпись на самом фото (слева внизу) */
 .gallery-caption {
     position: absolute;
     bottom: 0;
@@ -480,14 +467,12 @@ body {
     padding: 24px 12px 10px 12px;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
     color: #e0e0e0;
-    font-size: 0.85rem;
+    font-size: 13px;
     text-align: left;
     pointer-events: none;
     font-style: italic;
-    /* Чтобы все подписи были курсивом */
 }
 
-/* Стилизация аккордеона галереи */
 .gallery-accordion .accordion-button {
     background-color: var(--card-bg);
     color: #fff;
@@ -496,37 +481,34 @@ body {
 
 .gallery-accordion .accordion-button:not(.collapsed) {
     background-color: #2a2533;
-    /* Чуть светлее фона */
     color: #fff;
 }
 
 .gallery-accordion .accordion-body {
     background-color: #1a1621;
-    /* Чуть отличается от основного фона карты */
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-top: none;
 }
 
 /* =========================================
-   6. СПЕЦИФИЧНЫЕ СТИЛИ (ДЛЯ ОДНОЙ СТРАНИЦЫ)
+   6. ИНДИВИДУАЛЬНЫЕ СТИЛИ ДЛЯ ОТДЕЛЬНЫХ СТРАНИЦ
    ========================================= */
 
-/*--- Стили для страницы Гонджиам (выделение первого абзаца) ---*/
+/* Гонджиам: акцент в шапке */
 .gonjiam-header-accent {
     border-left: 4px solid #8b5cf6;
-    padding-left: 1rem;
+    padding-left: 16px;
 }
 
-/*--- Стили для страницы Хасима (адаптивный скролл историй на мобильных) ---*/
+/* Хасима: горизонтальный скролл на мобильных */
 @media (max-width: 767.98px) {
     .story-scroll-container {
         display: flex;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
-        gap: 1rem;
-        padding-bottom: 1rem;
+        gap: 16px;
+        padding-bottom: 16px;
         scrollbar-width: none;
-        /* Отступы, чтобы крайние карточки вставали по центру */
         padding-inline: calc(50% - 42.5%);
     }
 
@@ -540,15 +522,7 @@ body {
     }
 }
 
-
-
-
-
-/* =========================================
-   УНИКАЛЬНЫЕ СТИЛИ ДЛЯ СТРАНИЦЫ ЧЕРНОБЫЛЬ
-   ========================================= */
-
-/* Моноширинный архивный шрифт для текста статьи */
+/* Чернобыль: архивный терминальный стиль */
 .archive-text,
 .archive-text p,
 .archive-text li,
@@ -559,14 +533,12 @@ body {
     letter-spacing: 0.5px;
 }
 
-/* Заголовки */
 .archive-title {
     font-family: 'Cinzel', serif !important;
     color: var(--text-main) !important;
     text-transform: uppercase;
 }
 
-/* Кастомные маркеры списка */
 .archive-list {
     list-style: none;
     padding-left: 0;
@@ -590,13 +562,11 @@ body {
     color: var(--text-main) !important;
 }
 
-/* Блок сводных данных */
 .archive-facts-section {
     background-color: var(--card-bg) !important;
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
-/* Точечный разделитель */
 .dot-divider {
     border: none;
     border-top: 2px dotted #26212e;
@@ -604,7 +574,7 @@ body {
     background-color: transparent;
     height: 1px;
     width: 50%;
-    margin: 4rem auto;
+    margin: 64px auto;
     text-align: center;
 }
 
@@ -616,11 +586,10 @@ body {
     padding: 0 10px;
     background-color: var(--bg-color);
     font-family: 'Courier New', Courier, monospace;
-    font-size: 0.8rem;
+    font-size: 13px;
     color: var(--text-muted);
 }
 
-/* Аккордеон */
 .archive-accordion .accordion-button {
     background-color: var(--card-bg) !important;
     color: #39ff14 !important;
@@ -642,21 +611,19 @@ body {
 .legend-item-box {
     background-color: rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 1rem;
-    margin-bottom: 1rem;
+    padding: 16px;
+    margin-bottom: 16px;
 }
 
 .legend-item-box h3 {
     color: #39ff14 !important;
-    font-size: 1rem;
+    font-size: 16px;
     text-transform: uppercase;
-    margin-bottom: 0.5rem;
+    margin-bottom: 8px;
 }
 
-/* Адаптация галереи под вертикальные фото только для этой страницы */
 .cologne-gallery .gallery-card {
     aspect-ratio: 3 / 4;
-    /* Сохраняет пропорции вертикального фото */
     position: relative;
     overflow: hidden;
 }
@@ -665,40 +632,12 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Фото заполнит блок без искажений */
-}
-
-/* Дополнительный класс для ограничения ширины фото на ПК */
-@media (min-width: 768px) {
-    .floating-lead-image {
-        max-width: 42%;
-    }
-}
-
-/* Фикс пропорций и вертикального формата для фото */
-.article-img-wrapper img,
-.article-img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    /* Картинка заполняет блок без сжатия и сплющивания */
-    object-position: center !important;
-    /* Центрирование кадра */
-}
-
-/* Если у обертки задана фиксированная высота — убираем её для гибкости */
-.article-img-wrapper {
-    height: auto !important;
 }
 
 /* =========================================
-   КНОПКА «НАВЕРХ»
-   ========================================= */
-/* =========================================
-   КНОПКА «НАВЕРХ»
+   7. КНОПКА НАВЕРХ
    ========================================= */
 
-/* 1. Обычное состояние кнопки */
 .btn-scroll-top {
     position: fixed;
     bottom: 25px;
@@ -709,31 +648,27 @@ body {
     background-color: var(--bg-color) !important;
     border: 1px solid var(--ancient-purple) !important;
     color: var(--text-main) !important;
-    font-size: 1.5rem;
+    font-size: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     z-index: 1000;
-
     box-shadow: none !important;
     outline: none !important;
     -webkit-tap-highlight-color: transparent;
-
     opacity: 0;
     visibility: hidden;
     transform: translateY(15px);
     transition: all 0.4s ease !important;
 }
 
-/* Показ кнопки при скролле */
 .btn-scroll-top.show {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
 
-/* 2. Состояние при наведении (ПК) и нажатии/фокусе (телефоны и ПК) */
 .btn-scroll-top:hover,
 .btn-scroll-top:focus,
 .btn-scroll-top:active {
