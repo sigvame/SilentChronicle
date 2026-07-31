@@ -1,6 +1,6 @@
-/* ==========================================
-   РИМСКАЯ ИМПЕРИЯ — СПЕЦИАЛЬНЫЕ СТИЛИ
-   ========================================== */
+/* =========================================
+   1. ШАПКА И ОБЛОЖКА (HERO-СЕКЦИЯ)
+   ========================================= */
 
 /* Бэдж SPQR в шапке */
 .spqr-badge {
@@ -12,9 +12,10 @@
     padding: 4px 12px;
     border-radius: 4px;
     background: rgba(212, 175, 55, 0.05);
+    font-size: clamp(11px, 2.5vw, 16px);
 }
 
-/* Обложка (Hero) */
+/* Главный баннер (обложка) */
 .roman-hero {
     background: linear-gradient(180deg, rgba(20, 15, 10, 0.8), #121212),
         url('../../images/roman-empire/main.jpg') center/cover no-repeat;
@@ -28,12 +29,38 @@
 }
 
 .badge-roman {
-    background-color: #800020;
-    /* Пурпурный императорский цвет */
+    background-color: #800020; /* Пурпурный цвет */
     color: #f8f9fa;
     border: 1px solid #d4af37;
     font-family: 'Cinzel', serif;
 }
+
+/* =========================================
+   2. ТЕКСТ И ЗАГОЛОВКИ
+   ========================================= */
+
+.roman-h2,
+.roman-h3,
+.roman-gold-title {
+    font-family: 'Cinzel', serif;
+    color: #d4af37;
+}
+
+.italic-text {
+    font-style: italic;
+    font-size: 18px;
+}
+
+/* Латинские цитаты и выражения */
+.latin-phrase {
+    font-family: 'Cinzel', serif;
+    color: #d4af37;
+    font-size: 14px;
+}
+
+/* =========================================
+   3. КАРТОЧКИ И ЦИТАТЫ
+   ========================================= */
 
 /* Карточки метрик и информации */
 .roman-card {
@@ -45,40 +72,32 @@
 
 .roman-stat-number {
     font-family: 'Cinzel', serif;
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 700;
     color: #d4af37;
     display: block;
 }
 
-/* Оформление заголовков и текста */
-.roman-h2,
-.roman-h3,
-.roman-gold-title {
-    font-family: 'Cinzel', serif;
-    color: #d4af37;
-}
-
-/* Цитаты цезарей */
+/* Блок цитаты */
 .roman-quote {
+    position: relative;
     background: rgba(128, 0, 32, 0.15);
-    border-left: 4px solid #d4af37;
+    border-left: 3px solid #d4af37;
 }
 
 .quote-icon {
     position: absolute;
-    top: 10px;
+    top: 5px;
     right: 15px;
-    font-size: 2rem;
-    color: rgba(212, 175, 55, 0.2);
+    font-size: 35px;
+    color: rgba(212, 175, 55, 0.15);
 }
 
-.italic-text {
-    font-style: italic;
-    font-size: 1.1rem;
-}
+/* =========================================
+   4. ВРЕМЕННАЯ ШКАЛАИ АВАТАРЫ
+   ========================================= */
 
-/* СТИЛИ ТАЙМЛАЙНА (ХРОНОЛОГИЧЕСКОЙ ЛЕНТЫ) */
+/* Хронологическая лента событий */
 .roman-timeline {
     position: relative;
     padding-left: 20px;
@@ -101,7 +120,7 @@
     box-shadow: 0 0 8px #d4af37;
 }
 
-/* Аватары правителей */
+/* Фото правителей */
 .ruler-avatar {
     width: 45px;
     height: 45px;
@@ -109,36 +128,13 @@
     flex-shrink: 0;
 }
 
-.spqr-badge {
-    font-size: clamp(0.7rem, 2.5vw, 1rem);
-}
+/* =========================================
+   5. КНОПКИ
+   ========================================= */
 
-/* Золотая заливка при наведении */
+/* Золотистое выделение кнопки при наведении */
 .btn-chip.conq:hover {
     background-color: #ffc107;
     border-color: #ffc107;
     color: #0c0b0e !important;
-}
-
-/* Дополнительные акценты для статьи Цезаря */
-
-/* Выравнивание латинских крылатых фраз */
-.latin-phrase {
-    font-family: 'Cinzel', serif;
-    color: #d4af37;
-    font-size: 0.9em;
-}
-
-/* Оформление цитат */
-.roman-quote {
-    background: rgba(128, 0, 32, 0.15);
-    border-left: 3px solid #d4af37;
-}
-
-.quote-icon {
-    position: absolute;
-    top: 5px;
-    right: 15px;
-    font-size: 2.2rem;
-    color: rgba(212, 175, 55, 0.15);
 }
