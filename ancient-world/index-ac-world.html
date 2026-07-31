@@ -18,7 +18,7 @@
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Общие кастомные стили (из родительской папки) -->
+    <!-- Стили -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="css/ancient-style.css">
 
@@ -95,12 +95,11 @@
 
         <!-- БЛОК КАТЕГОРИЙ И КНОПКИ ПОЛКОВОДЦЫ -->
         <div class="category-scroll-wrapper d-flex flex-wrap align-items-center gap-2 mb-4">
-            <!-- Кнопка видна ВСЕГДА (и на смартфонах, и на ПК) -->
+            <!-- Кнопка видна всегда (и на смартфонах, и на пк) -->
             <a href="conquerors-index.html" class="btn btn-chip conq btn-conq fw-medium me-1">
                 <i class="bi bi-award me-1"></i> Полководцы
             </a>
 
-            <!-- Фильтры категорий: скрываются на смартфонах (уходят в бургер), а на ПК встают в один ряд с Полководцами -->
             <div class="d-none d-md-flex flex-wrap gap-2">
                 <button class="btn btn-chip filter-btn active" data-category="all">Все</button>
                 <button class="btn btn-chip filter-btn" data-category="empires">Империи</button>
@@ -111,9 +110,9 @@
             </div>
         </div>
 
-        <!-- Контейнер для автоматической загрузки карточек через JS -->
+        <!-- Контейнер автоматической загрузки карточек через JS -->
         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-2 g-sm-3" id="places-container">
-            <!-- Карточки будут сгенерированы автоматически -->
+            <!-- Карточки сгенерированы автоматически -->
         </div>
     </main>
 
@@ -122,7 +121,7 @@
         <i class="bi bi-arrow-up-short"></i>
     </button>
 
-    <!-- Подключаем Bootstrap JS и единый скрипт Древнего мира -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/ancient-list.js"></script>
     <script src="../js/main.js"></script>
