@@ -8,7 +8,7 @@ function shuffleArray(array) {
   return shuffled;
 }
 
-// Подтягиваем места
+// Подтягивание места (руины древний мир и тд)
 let originalPlaces = [];
 let storageKeyPrefix = 'default';
 
@@ -39,21 +39,20 @@ function getSessionPlaces() {
 }
 
 let places = [];
-let fuse = null; // Тут храним экземпляр Fuse
+let fuse = null; // экземпляр Fuse
 
 // Настройки Fuse.js
 function initFuse() {
   const options = {
-    // Включаем поиск по названию, описанию и тегам
+    // Поиск по названию, описанию и тегам
     keys: ['title', 'desc', 'tag', 'country'],
-    // Насколько строгим должен быть поиск (0.0 — точное совпадение, 1.0 — найдёт что угодно)
-    // 0.4 дает идеальный баланс: прощает 1-2 опечатки и не выдает мусор
+    // Прощает 1-2 опечатки и не выдает мусор
     threshold: 0.4,
     // Насколько сильно учитывать расстояние опечатки от начала слова
     distance: 100,
     // Минимальное количество символов для запуска нечеткого поиска
     minMatchCharLength: 2,
-    // Игнорировать разницу регистра
+    // Игнорирование регистра
     isCaseSensitive: false
   };
 
@@ -90,7 +89,6 @@ function generateCardsHTML(items) {
   `).join('');
 }
 
-// Закрываем меню на мобилках
 function closeMobileMenu() {
   const mobileMenuEl = document.getElementById('mobileMenu');
   if (mobileMenuEl) {
@@ -132,7 +130,7 @@ function filterAndRender(targetCategory) {
   closeMobileMenu();
 }
 
-// Новая функция поиска с поддержкой опечаток
+// Функция поиска с поддержкой опечаток
 function handleSearch(query) {
   const container = document.getElementById('places-container');
   if (!container) return;
@@ -146,10 +144,8 @@ function handleSearch(query) {
     return;
   }
 
-  // Если Fuse подключен, прогоняем через него
   if (fuse) {
     const results = fuse.search(cleanQuery);
-    // Fuse возвращает объекты вида [{ item: place, refIndex: 0 }], поэтому вытаскиваем сам item
     const searchResults = results.map(result => result.item);
     container.innerHTML = generateCardsHTML(searchResults);
   }
@@ -159,7 +155,6 @@ function handleSearch(query) {
 document.addEventListener('DOMContentLoaded', () => {
   places = getSessionPlaces();
 
-  // Инициализируем Fuse после того, как достали места
   initFuse();
 
   const savedCategory = sessionStorage.getItem(ACTIVE_CATEGORY_KEY) || 'all';
