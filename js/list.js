@@ -62,6 +62,15 @@ const ruinsPlaces = [
     desc: "Величественный шедевр готики и святыня Трёх Царей, строившийся более шести веков и чудом выстоявший в эпицентре Второй мировой войны.",
     image: "images/cologne-cathedral/cologne-cathedral.jpg",
     link: "places/europe/cologne-cathedral.html"
+  },
+  {
+    title: "Замок и Аббатство Линдисфарн",
+    categories: ["europe", "castle", "medieval"],
+    tag: "Европа • Замок • Средневековье",
+    country: "📍 Великобритания",
+    desc: "Остров, который дважды в день отрезает морем от всего мира. Именно здесь в 793 году под небесные знамения «огненных драконов» высадились викинги, заложив начало самой кровавой эпохе Европы.",
+    image: "images/lindisfarne/lindisfarne-castle.jpg",
+    link: "places/europe/lindisfarne-castle.html"
   }
 ];
 
