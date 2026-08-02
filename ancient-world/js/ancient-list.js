@@ -8,4 +8,13 @@ const ancientPlaces = [
         image: "images/roman-empire/roman-empire-main.jpg",
         link: "pages/empires/roman-empire.html"
       },
+      {
+        title: "Британская империя",
+        categories: ["europe", "empires"],
+        tag: "Европа • Империя",
+        country: "📍 Великобритания",
+        desc: "Самое крупное государство в истории человечества, охватывавшее четверть всей суши. История колониальной сверхдержавы, над которой никогда не заходило солнце.",
+        image: "images/british-empire/british-empire-lead.jpg",
+        link: "pages/empires/british-empire.html"
+      }
 ];
