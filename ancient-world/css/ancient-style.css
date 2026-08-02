@@ -29,7 +29,8 @@
 }
 
 .badge-roman {
-    background-color: #800020; /* Пурпурный цвет */
+    background-color: #800020;
+    /* Пурпурный цвет */
     color: #f8f9fa;
     border: 1px solid #d4af37;
     font-family: 'Cinzel', serif;
@@ -137,4 +138,188 @@
     background-color: #ffc107;
     border-color: #ffc107;
     color: #0c0b0e !important;
+}
+
+
+
+
+/* =========================================
+   Стили британской империи
+   ========================================= */
+
+/* Стили Имперской тематики (Золотой акцент) */
+.stat-card {
+    background: linear-gradient(145deg, rgba(255, 193, 7, 0.05) 0%, rgba(0, 0, 0, 0.4) 100%);
+    border: 1px solid rgba(255, 193, 7, 0.2);
+}
+
+.stat-number {
+    font-family: 'Cinzel', serif;
+    color: #ffc107;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.royal-quote {
+    background-color: rgba(255, 193, 7, 0.03);
+    border-left: 4px solid #ffc107;
+}
+
+.imperial-font {
+    font-family: 'Cinzel', Georgia, serif;
+    letter-spacing: 0.8px;
+}
+
+.hero-imperial-card {
+    background: linear-gradient(135deg, rgba(26, 29, 36, 0.95) 0%, rgba(18, 20, 26, 0.98) 100%);
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(212, 175, 55, 0.03);
+    position: relative;
+}
+
+/* Британская золотая рамка-акцент */
+.hero-imperial-card::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    border: 1px solid rgba(212, 175, 55, 0.12);
+    pointer-events: none;
+    border-radius: inherit;
+}
+
+.motto-badge {
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+    color: #d4af37;
+    background: rgba(212, 175, 55, 0.08);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.crown-icon-glow {
+    color: #d4af37;
+    filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.4));
+}
+
+.hero-motto-text .latin-quote {
+    font-style: normal;
+    letter-spacing: 0.8px;
+    display: inline-block;
+}
+
+/* ==========================================
+   Стили заголовков, подзаголовков и переходов
+   ========================================== */
+
+/* Шапка секции */
+.section-header {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.section-header.header-centered {
+    text-align: center;
+}
+
+/* Бейдж-метка над заголовком */
+.section-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #6366f1;
+    background: rgba(99, 102, 241, 0.1);
+    border-radius: 9999px;
+    margin-bottom: 0.75rem;
+}
+
+/* Основной заголовок с анимацией подчёркивания */
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0f172a;
+    position: relative;
+    display: inline-block;
+    margin: 0 0 0.5rem 0;
+}
+
+.section-header:not(.header-centered) .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, #6366f1, #a855f7);
+    border-radius: 2px;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Эффект расширения полосы при наведении на секцию */
+.section-header:not(.header-centered):hover .section-title::after {
+    width: 100%;
+}
+/* Описание/подзаголовок */
+.section-subtitle {
+    font-size: 16px;
+    color: #64748b;
+    max-width: 600px;
+    margin: 8px 0 0 0;
+    line-height: 1.5;
+}
+
+.header-centered .section-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Разделитель между блоками */
+.section-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 56px 0;
+    opacity: 0.7;
+}
+
+.divider-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #cbd5e1, transparent);
+}
+
+.divider-icon {
+    margin: 0 16px;
+    color: #6366f1;
+    font-size: 13.6px;
+}
+
+/* ==========================================
+   Оформление главного имперского заголовка
+   ========================================== */
+
+.main-imperial-heading {
+    letter-spacing: 0.64px;
+    color: #f8fafc;
+    text-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.9),
+        0 0 25px rgba(255, 193, 7, 0.25);
+    position: relative;
+    display: inline-block;
+}
+
+/* Акцентное золотое подчёркивание */
+.main-imperial-heading::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: #ffc107;
+    margin-top: 13.6px;
+    border-radius: 2px;
+    box-shadow: 0 0 12px rgba(255, 193, 7, 0.6);
 }
