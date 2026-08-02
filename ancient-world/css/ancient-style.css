@@ -143,11 +143,11 @@
 
 
 
+
 /* =========================================
    Стили британской империи
    ========================================= */
 
-/* Стили Имперской тематики (Золотой акцент) */
 .stat-card {
     background: linear-gradient(145deg, rgba(255, 193, 7, 0.05) 0%, rgba(0, 0, 0, 0.4) 100%);
     border: 1px solid rgba(255, 193, 7, 0.2);
@@ -231,42 +231,43 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: #6366f1;
-    background: rgba(99, 102, 241, 0.1);
+    color: #ffc107;
+    background: rgba(255, 193, 7, 0.1);
+    border: 1px solid rgba(255, 193, 7, 0.2);
     border-radius: 9999px;
     margin-bottom: 0.75rem;
 }
 
-/* Основной заголовок с анимацией подчёркивания */
+/* Основной заголовок h2 с золотой линией под ВСЕМ заголовком */
 .section-title {
     font-size: 2rem;
     font-weight: 700;
-    color: #0f172a;
+    color: #f8f9fa;
     position: relative;
     display: inline-block;
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 0.75rem 0;
 }
 
-.section-header:not(.header-centered) .section-title::after {
+.section-title::after {
     content: '';
-    position: absolute;
-    bottom: -6px;
-    left: 0;
-    width: 40px;
+    display: block;
+    width: 60px;
     height: 3px;
-    background: linear-gradient(90deg, #6366f1, #a855f7);
+    background-color: #ffc107;
+    margin-top: 10px;
     border-radius: 2px;
-    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 8px rgba(255, 193, 7, 0.4);
 }
 
-/* Эффект расширения полосы при наведении на секцию */
-.section-header:not(.header-centered):hover .section-title::after {
-    width: 100%;
+.header-centered .section-title::after {
+    margin-left: auto;
+    margin-right: auto;
 }
+
 /* Описание/подзаголовок */
 .section-subtitle {
     font-size: 16px;
-    color: #64748b;
+    color: #94a3b8;
     max-width: 600px;
     margin: 8px 0 0 0;
     line-height: 1.5;
@@ -289,12 +290,12 @@
 .divider-line {
     flex: 1;
     height: 1px;
-    background: linear-gradient(90deg, transparent, #cbd5e1, transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 193, 7, 0.3), transparent);
 }
 
 .divider-icon {
     margin: 0 16px;
-    color: #6366f1;
+    color: #ffc107;
     font-size: 13.6px;
 }
 
