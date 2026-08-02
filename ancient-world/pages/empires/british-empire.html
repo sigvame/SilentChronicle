@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Британская империя — Silent Chronicle</title>
 
-    <!-- Шрифты: Playfair Display (для Викторианской/Имперской эстетики) & Inter -->
+    <!-- Шрифты: Playfair Display & Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -27,23 +27,27 @@
     <!-- НАВБАР -->
     <nav class="navbar custom-navbar sticky-top">
         <div class="container navbar-container">
-    
+
             <!-- Кнопка Назад на главную -->
             <div style="flex: 1; min-width: 0;" class="text-start">
-                <a href="../../index-ac-world.html" class="btn btn-outline-secondary btn-sm rounded-pill px-2 px-sm-3 text-nowrap">
+                <a href="../../index-ac-world.html"
+                    class="btn btn-outline-secondary btn-sm rounded-pill px-2 px-sm-3 text-nowrap">
                     <i class="bi bi-arrow-left me-1"></i>
                     <span class="d-none d-sm-inline">Назад в архив</span>
                     <span class="d-sm-none">Назад</span>
                 </a>
             </div>
-    
-            <!-- Логотип -->
-            <a href="../../index.html" class="logo">
-                <span>SILENT</span>
-                <span>CHRONICLE</span>
-            </a>
-    
-            <!-- Пустой блок для центровки -->
+
+            <!-- Логотип (по центру) -->
+            <div class="text-center mx-1 mx-sm-3 d-flex justify-content-center">
+                <a href="../../index.html"
+                    class="logo text-center d-flex flex-column flex-sm-row align-items-center gap-1 gap-sm-2">
+                    <span>SILENT</span>
+                    <span>CHRONICLE</span>
+                </a>
+            </div>
+
+            <!-- Правый блок -->
             <div style="flex: 1; min-width: 0;" class="text-end">
                 <div class="spqr-badge d-inline-block">
                     <span class="small">BRITISH • EMP.</span>
@@ -69,12 +73,14 @@
 
                     <!-- Имперский заголовок -->
                     <h1 class="main-imperial-heading imperial-font display-4 fw-bold mb-3">
-                        Британская Империя               </h1>
+                        Британская Империя
+                    </h1>
 
                     <!-- Подзаголовок -->
                     <p class="hero-motto-text imperial-font fs-5 text-warning-emphasis mb-4">
-                        <span class="latin-quote"><i>«Imperium super quod sol numquam occidit»</i></span> — Империя, над которой никогда не заходит
-                        солнце                
+                        <span class="latin-quote"><i>«Imperium super quod sol numquam occidit»</i></span> — Империя, над
+                        которой никогда не заходит
+                        солнце
                     </p>
 
                     <div class="d-flex flex-wrap gap-3 text-body-secondary small">
@@ -202,8 +208,8 @@
                             стало названием целой эпохи, воплощавшей строгие моральные устои, уверенность в культурном
                             превосходстве и беспрецедентный экономический подъем.
                         </p>
-                        <a href="../conquerors/queen-viktoria.html" class="card-link-text text-decoration-none d-inline-block mt-2"
-                            style="font-size: 0.75rem;">
+                        <a href="../conquerors/queen-viktoria.html"
+                            class="card-link-text text-decoration-none d-inline-block mt-2" style="font-size: 0.75rem;">
                             Читать биографию &rarr;
                         </a>
                     </div>
@@ -692,7 +698,8 @@
                             <li><strong class="text-warning-emphasis">• Трансатлантическое рабство:</strong> До запрета
                                 работорговли в 1807 году английские корабли перевезли свыше 3 миллионов африканских
                                 рабов.</li>
-                            <li><strong class="text-warning-emphasis">• Опиумная трагедия:</strong> Насильственная наркотизация
+                            <li><strong class="text-warning-emphasis">• Опиумная трагедия:</strong> Насильственная
+                                наркотизация
                                 Китая ради балансировки торгового дефицита чая и серебра.</li>
                         </ul>
                     </div>
@@ -701,7 +708,8 @@
                             <li><strong class="text-warning-emphasis">• Экономический голод:</strong> Великий голод в
                                 Ирландии (1845–1849) и голод в Бенгалии (1943), усугубленные принудительным экспортом
                                 продовольствия.</li>
-                            <li><strong class="text-warning-emphasis">• Репрессивные методы:</strong> Жестокие карательные акции
+                            <li><strong class="text-warning-emphasis">• Репрессивные методы:</strong> Жестокие
+                                карательные акции
                                 при подавлении Мау-Мау в Кении и после Восстания сипаев.</li>
                         </ul>
                     </div>
@@ -798,5 +806,10 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Инициализация Bootstrap-тултипов для выплывающих подсказок
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+    </script>
 </body>
 </html>
