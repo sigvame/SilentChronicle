@@ -18,7 +18,7 @@
 /* Главный баннер (обложка) */
 .roman-hero {
     background: linear-gradient(180deg, rgba(20, 15, 10, 0.8), #121212),
-        url('../../images/roman-empire/main.jpg') center/cover no-repeat;
+        url('../../ancient-world/images/roman-empire/roman-empire-main.jpg') center/cover no-repeat;
     border-bottom: 2px solid #d4af37;
 }
 
