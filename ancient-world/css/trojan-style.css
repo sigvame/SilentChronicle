@@ -42,6 +42,10 @@
    ========================================== */
 
 .hero-trojan-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: relative;
     background: radial-gradient(circle at 85% 20%, rgba(200, 125, 83, 0.12) 0%, rgba(13, 17, 23, 0.95) 70%);
     border: 1px solid var(--trojan-border);
@@ -49,6 +53,7 @@
     padding: 48px 40px;
     overflow: hidden;
     backdrop-filter: blur(10px);
+    gap: 12px;
 }
 
 .trojan-watermark {
@@ -66,24 +71,19 @@
     letter-spacing: 5px;
 }
 
-/* .trojan-header-pilaster {
-    width: 5px;
-    background: linear-gradient(180deg, var(--trojan-bronze) 0%, rgba(200, 125, 83, 0.1) 100%);
-    flex-shrink: 0;
-} */
-
 .trojan-header-pilaster {
-    width: 2px;
+    width: 4px;
     background: linear-gradient(180deg, var(--trojan-bronze) 0%, rgba(200, 125, 83, 0.1) 100%);
     border-radius: 4px;
     flex-shrink: 0;
+    align-self: stretch;
 }
 
-@media (min-width: 576px) {
-    .trojan-header-pilaster {
-        width: 4px;
-        /* На ПК вернуть стандартную ширину */
-    }
+.trojan-mobile-line {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--trojan-bronze) 0%, rgba(200, 125, 83, 0.1) 100%);
+    border-radius: 2px;
 }
 
 .trojan-stele-badge {
