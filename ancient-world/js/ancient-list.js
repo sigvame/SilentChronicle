@@ -16,5 +16,14 @@ const ancientPlaces = [
         desc: "Самое крупное государство в истории человечества, охватывавшее четверть всей суши. История колониальной сверхдержавы, над которой никогда не заходило солнце.",
         image: "images/british-empire/british-empire-lead.jpg",
         link: "pages/empires/british-empire.html"
+      },
+      {
+        title: "Троя (Илион)",
+        categories: ["wonders-old"], 
+        tag: "Древние чудеса • Бронзовый век",
+        country: "📍 Турция",
+        desc: "Легендарный город Гомера, считавшийся вымыслом, пока не был раскопан Генрихом Шлиманом. Место эпической Троянской войны, где мифы встретились с реальностью.",
+        image: "images/troy/troy-lead.jpg",
+        link: "pages/wonders_ancient/troy.html"
       }
 ];
