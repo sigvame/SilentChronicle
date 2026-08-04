@@ -1,0 +1,319 @@
+/* ==========================================================================
+   TROJAN HISTORICAL MODULE — SILENT CHRONICLE (FINAL PIXEL VERSION)
+   ========================================================================== */
+
+   :root {
+    --trojan-bronze: #c87d53;
+    --trojan-bronze-glow: rgba(200, 125, 83, 0.15);
+    --trojan-border: rgba(200, 125, 83, 0.35);
+    --trojan-dark-slate: #0d1117;
+}
+
+/* --- Вспомогательные классы --- */
+.border-bronze {
+    border-color: var(--trojan-border) !important;
+}
+
+.text-bronze {
+    color: var(--trojan-bronze) !important;
+}
+
+.badge-bronze {
+    background-color: var(--trojan-bronze-glow);
+    color: #f8fafc;
+    border: 1px solid var(--trojan-border);
+}
+
+.trojan-quote {
+    background-color: rgba(200, 125, 83, 0.04);
+    border-left: 4px solid var(--trojan-bronze);
+}
+
+.stratum-badge {
+    font-family: 'Cinzel', serif;
+    background: rgba(200, 125, 83, 0.15);
+    color: var(--trojan-bronze);
+    border: 1px solid var(--trojan-border);
+    font-size: 13px;
+}
+
+/* ==========================================
+   1. ШАПКА "АРХЕОЛОГИЧЕСКАЯ СТЕЛЛА"
+   ========================================== */
+
+.hero-trojan-header {
+    position: relative;
+    background: radial-gradient(circle at 85% 20%, rgba(200, 125, 83, 0.12) 0%, rgba(13, 17, 23, 0.95) 70%);
+    border: 1px solid var(--trojan-border);
+    border-radius: 16px;
+    padding: 48px 40px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.trojan-watermark {
+    position: absolute;
+    right: -10px;
+    bottom: -30px;
+    font-family: 'Cinzel', serif;
+    font-size: 200px;
+    font-weight: 900;
+    color: var(--trojan-bronze);
+    opacity: 0.03;
+    user-select: none;
+    pointer-events: none;
+    line-height: 0.8;
+    letter-spacing: 5px;
+}
+
+/* .trojan-header-pilaster {
+    width: 5px;
+    background: linear-gradient(180deg, var(--trojan-bronze) 0%, rgba(200, 125, 83, 0.1) 100%);
+    flex-shrink: 0;
+} */
+
+.trojan-header-pilaster {
+    width: 2px;
+    background: linear-gradient(180deg, var(--trojan-bronze) 0%, rgba(200, 125, 83, 0.1) 100%);
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+@media (min-width: 576px) {
+    .trojan-header-pilaster {
+        width: 4px;
+        /* На ПК вернуть стандартную ширину */
+    }
+}
+
+.trojan-stele-badge {
+    position: relative;
+    padding-right: 20px;
+    border-right: 3px solid var(--trojan-bronze);
+    text-align: right;
+}
+
+.trojan-stele-badge::after {
+    content: "𐎓𐎔𐎕";
+    position: absolute;
+    top: -22px;
+    right: 0px;
+    font-size: 14px;
+    color: var(--trojan-bronze);
+    opacity: 0.4;
+    letter-spacing: 4px;
+}
+
+/* ==========================================
+   2. ЗАГОЛОВКИ СЕКЦИЙ (БЕЗ ЖЕЛТЫХ ПОЛОС)
+   ========================================== */
+
+.trojan-section-header {
+    position: relative;
+    border-left: 4px solid var(--trojan-bronze);
+    padding-left: 20px;
+    margin-bottom: 36px;
+}
+
+.trojan-section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #f8fafc;
+    margin: 0px 0px 5px 0px;
+}
+
+.trojan-section-title::after {
+    display: none !important;
+}
+
+.trojan-section-subtitle {
+    font-size: 15px;
+    color: #94a3b8;
+    margin: 0px;
+    line-height: 24px;
+}
+
+/* ==========================================
+   3. ДЕТАЛИЗИРОВАННАЯ ХРОНОЛОГИЯ (TIMELINE)
+   ========================================== */
+
+.trojan-timeline {
+    position: relative;
+    padding-left: 32px;
+    margin: 32px 0px;
+}
+
+.trojan-timeline::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    left: 7px;
+    width: 2px;
+    background: linear-gradient(180deg, var(--trojan-bronze) 0%, rgba(200, 125, 83, 0.3) 70%, transparent 100%);
+    z-index: 1;
+}
+
+.trojan-timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.trojan-timeline-item:last-child {
+    margin-bottom: 0px;
+}
+
+.trojan-timeline-node {
+    position: absolute;
+    left: -24px; 
+    top: 24px;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #0f172a; 
+    border: 2px solid var(--trojan-bronze);
+    box-shadow: 0px 0px 10px rgba(200, 125, 83, 0.4);
+    z-index: 2; 
+}
+
+.trojan-timeline-card {
+    background: rgba(15, 23, 42, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-left: 3px solid var(--trojan-bronze);
+    border-radius: 0px 12px 12px 0px;
+    padding: 24px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.trojan-timeline-card:hover {
+    transform: translateX(4px);
+    border-color: var(--trojan-bronze);
+}
+
+.trojan-timeline-date {
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    color: var(--trojan-bronze);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.trojan-timeline-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #f8fafc;
+    margin-bottom: 12px;
+}
+
+.trojan-timeline-text {
+    font-size: 15px;
+    line-height: 26px;
+    color: #cbd5e1;
+    margin-bottom: 12px;
+}
+
+.trojan-timeline-details {
+    list-style: none;
+    padding-left: 0px;
+    margin-bottom: 0px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding-top: 12px;
+}
+
+.trojan-timeline-details li {
+    position: relative;
+    padding-left: 20px;
+    font-size: 14px;
+    color: #94a3b8;
+    margin-bottom: 6px;
+    line-height: 22px;
+}
+
+.trojan-timeline-details li:last-child {
+    margin-bottom: 0px;
+}
+
+.trojan-timeline-details li::before {
+    content: "‣";
+    position: absolute;
+    left: 0px;
+    color: var(--trojan-bronze);
+    font-size: 18px;
+    line-height: 1;
+}
+
+/* ==========================================
+   4. РАЗДЕЛИТЕЛЬ СЕКЦИЙ
+   ========================================== */
+
+.section-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 48px 0px;
+    opacity: 0.7;
+}
+
+.divider-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--trojan-border), transparent);
+}
+
+.divider-icon {
+    margin: 0px 16px;
+    color: var(--trojan-bronze);
+    font-size: 14px;
+}
+
+/* КАСТОМНЫЙ РАЗДЕЛИТЕЛЬ "ЩИТ ТРОИ" */
+.trojan-hero-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.trojan-hero-divider .divider-line {
+    flex: 1;
+    height: 1px;
+    border: none;
+}
+
+.trojan-hero-divider .divider-line.left {
+    background: linear-gradient(90deg, transparent, var(--trojan-bronze, #cd7f32));
+}
+
+.trojan-hero-divider .divider-line.right {
+    background: linear-gradient(90deg, var(--trojan-bronze, #cd7f32), transparent);
+}
+
+.trojan-hero-divider .divider-emblem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--trojan-bronze, #cd7f32);
+    filter: drop-shadow(0 0 8px rgba(205, 127, 50, 0.4));
+}
+
+.trojan-hero-divider .divider-dot {
+    font-size: 10px;
+    opacity: 0.7;
+}
+
+.trojan-hero-divider .trojan-helmet-icon {
+    width: 22px;
+    height: 22px;
+    transition: transform 0.3s ease;
+}
+
+.trojan-hero-divider:hover .trojan-helmet-icon {
+    transform: scale(1.15);
+}
