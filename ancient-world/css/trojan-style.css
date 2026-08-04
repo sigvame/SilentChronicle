@@ -1,8 +1,4 @@
-/* ==========================================================================
-   TROJAN HISTORICAL MODULE — SILENT CHRONICLE (FINAL PIXEL VERSION)
-   ========================================================================== */
-
-   :root {
+:root {
     --trojan-bronze: #c87d53;
     --trojan-bronze-glow: rgba(200, 125, 83, 0.15);
     --trojan-border: rgba(200, 125, 83, 0.35);
@@ -22,6 +18,22 @@
     background-color: var(--trojan-bronze-glow);
     color: #f8fafc;
     border: 1px solid var(--trojan-border);
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+@media (max-width: 575.98px) {
+    .badge-bronze {
+        font-size: 11px;
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+
+    .spqr-badge {
+        font-size: 11px;
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
 }
 
 .trojan-quote {
@@ -69,6 +81,15 @@
     pointer-events: none;
     line-height: 0.8;
     letter-spacing: 5px;
+}
+
+@media (max-width: 575.98px) {
+    .trojan-watermark {
+        font-size: 125px;
+        bottom: -10px;
+        right: 0;
+        letter-spacing: 2px;
+    }
 }
 
 .trojan-header-pilaster {
