@@ -25,5 +25,14 @@ const ancientPlaces = [
         desc: "Легендарный город Гомера, считавшийся вымыслом, пока не был раскопан Генрихом Шлиманом. Место эпической Троянской войны, где мифы встретились с реальностью.",
         image: "images/troy/troy-lead.jpg",
         link: "pages/wonders_ancient/troy.html"
+      },
+      {
+        title: "Урук (Город Гильгамеша)",
+        categories: ["wonders-old"], 
+        tag: "Древние чудеса • Месопотамия",
+        country: "📍 Современный Ирак",
+        desc: "Первый город и мегаполис в истории человечества. Родина клинописи, колеса и легендарного царя-героя Гильгамеша.",
+        image: "images/uruk/uruk-lead.jpg",
+        link: "pages/wonders_ancient/uruk.html"
       }
 ];
