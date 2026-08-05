@@ -338,3 +338,14 @@
 .trojan-hero-divider:hover .trojan-helmet-icon {
     transform: scale(1.15);
 }
+
+/* аккордеон */
+.trojan-accordion .accordion-button:not(.collapsed) {
+    color: var(--trojan-bronze, #cd7f32) !important;
+    background-color: rgba(255, 255, 255, 0.03) !important;
+    box-shadow: none !important;
+}
+
+.trojan-accordion .accordion-button::after {
+    filter: invert(60%) sepia(50%) saturate(800%) hue-rotate(350deg);
+}
