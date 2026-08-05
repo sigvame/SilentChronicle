@@ -1,0 +1,339 @@
+/* ==========================================================================
+   1. ПЕРЕМЕННЫЕ И НАСТРОЙКИ ТЕМЫ
+   ========================================================================== */
+:root {
+    --uruk-bg-dark: #060b14;
+    --uruk-card-bg: rgba(10, 18, 34, 0.85);
+    --uruk-lapis-deep: #081226;
+    --uruk-lapis-mid: #102a6b;
+    --uruk-lapis-bright: #2563eb;
+    --uruk-gold-main: #f59e0b;
+    --uruk-gold-dark: #b45309;
+    --uruk-clay-warm: #c2410c;
+    --uruk-clay-light: #ea580c;
+    --uruk-border-gold: rgba(245, 158, 11, 0.35);
+    --uruk-border-lapis: rgba(37, 99, 235, 0.30);
+    --uruk-border-clay: rgba(234, 88, 12, 0.30);
+}
+
+/* ==========================================================================
+   2. ГЛАВНАЯ ШАПКА (HERO HEADER)
+   ========================================================================== */
+.uruk-hero-header {
+    position: relative;
+    padding: 48px 36px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #040812 0%, #0d1b3e 45%, #180d05 100%);
+    border: 2px solid var(--uruk-border-gold);
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.85), inset 0px 0px 40px rgba(37, 99, 235, 0.25);
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.uruk-hero-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #b45309 0%, #f59e0b 35%, #2563eb 70%, #b45309 100%);
+}
+
+.uruk-hero-title {
+    font-family: 'Cinzel', serif;
+    font-size: 38px;
+    font-weight: 900;
+    line-height: 48px;
+    letter-spacing: 2px;
+    background: linear-gradient(180deg, #ffffff 0%, #fef3c7 50%, #d97706 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.9);
+}
+
+.uruk-hero-subtitle {
+    font-size: 18px;
+    line-height: 28px;
+    color: #cbd5e1;
+    font-weight: 400;
+    max-width: 850px;
+}
+
+.uruk-watermark-bg {
+    position: absolute;
+    right: -20px;
+    bottom: -30px;
+    font-family: 'Cinzel', serif;
+    font-size: 210px;
+    font-weight: 900;
+    color: #2563eb;
+    opacity: 0.05;
+    user-select: none;
+    pointer-events: none;
+    line-height: 160px;
+}
+
+/* ==========================================================================
+   3. БЕЙДЖИ И ИНФОРМАЦИОННЫЕ МЕТКИ
+   ========================================================================== */
+.badge-gold,
+.badge-lapis,
+.badge-clay {
+    font-size: 12px;
+    padding: 6px 14px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+}
+
+.badge-gold {
+    background-color: rgba(245, 158, 11, 0.15);
+    color: #fef08a;
+    border: 1px solid var(--uruk-border-gold);
+}
+
+.badge-lapis {
+    background-color: rgba(37, 99, 235, 0.15);
+    color: #93c5fd;
+    border: 1px solid var(--uruk-border-lapis);
+}
+
+.badge-clay {
+    background-color: rgba(234, 88, 12, 0.15);
+    color: #fdba74;
+    border: 1px solid var(--uruk-border-clay);
+}
+
+/* ==========================================================================
+   4. ДАШБОРД И СТАТИСТИКА
+   ========================================================================== */
+.stat-box-grand {
+    background: rgba(6, 11, 20, 0.80);
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.stat-number-grand {
+    font-family: 'Cinzel', serif;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 40px;
+    color: #fef08a;
+    text-shadow: 0px 2px 10px rgba(245, 158, 11, 0.3);
+}
+
+.stat-label-grand {
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #94a3b8;
+    margin-top: 6px;
+}
+
+/* ==========================================================================
+   5. ОФОРМЛЕНИЕ ТЕКСТА И ЗАГОЛОВКОВ
+   ========================================================================== */
+.section-title-grand {
+    font-family: 'Cinzel', serif;
+    font-size: 26px;
+    line-height: 34px;
+    font-weight: 700;
+    color: #f8fafc;
+    margin-top: 48px;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.narrative-paragraph {
+    font-size: 16px;
+    line-height: 28px;
+    color: #cbd5e1;
+    margin-bottom: 22px;
+}
+
+.narrative-highlight {
+    color: #f8fafc;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   6. ИНЛАЙН-КАРТОЧКИ И МЕДИА
+   ========================================================================== */
+.inline-image-card {
+    background-color: rgba(10, 18, 34, 0.90);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 10px;
+    margin-bottom: 24px;
+}
+
+.inline-image-card img {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.inline-image-caption {
+    font-size: 13px;
+    line-height: 18px;
+    color: #94a3b8;
+    text-align: center;
+    padding: 10px 8px 4px 8px;
+}
+
+/* ==========================================================================
+   7. ЦИТАТЫ И ЭПОС
+   ========================================================================== */
+.epic-quote-card {
+    background-color: rgba(6, 11, 20, 0.70);
+    border-left: 4px solid var(--uruk-gold-main);
+    border-radius: 0px 8px 8px 0px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+}
+
+.epic-quote-text {
+    font-size: 15px;
+    line-height: 26px;
+    font-style: italic;
+    color: #f1f5f9;
+    margin-bottom: 8px;
+}
+
+.epic-quote-author {
+    font-size: 12px;
+    color: var(--uruk-gold-main);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   8. СПЕЦИАЛЬНЫЕ ПАНЕЛИ (LAPIS, GOLD, RESTORATION)
+   ========================================================================== */
+.lapis-panel {
+    background: linear-gradient(145deg, rgba(16, 42, 107, 0.25) 0%, var(--uruk-card-bg) 100%);
+    border: 1px solid var(--uruk-border-lapis);
+    border-radius: 12px;
+    padding: 28px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    overflow: hidden;
+}
+
+.lapis-panel:hover {
+    border-color: rgba(59, 130, 246, 0.60);
+    transform: translateY(-3px);
+}
+
+.gold-panel {
+    background: linear-gradient(145deg, rgba(180, 83, 9, 0.20) 0%, var(--uruk-card-bg) 100%);
+    border: 1px solid var(--uruk-border-gold);
+    border-radius: 12px;
+    padding: 32px;
+}
+
+/* Карточка "До/После" с плавающим обтеканием */
+.restoration-card-unesco {
+    position: relative;
+    float: left;
+    width: 420px;
+    max-width: 45%;
+    margin-right: 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    background-color: rgba(6, 11, 20, 0.6);
+    border: 1px solid var(--uruk-border-clay, #334155);
+    padding: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.restoration-card-unesco .img-wrapper {
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.restoration-card-unesco .img-wrapper img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    display: block;
+}
+
+.restoration-card-unesco .badge-overlay-before,
+.restoration-card-unesco .badge-overlay-after {
+    position: absolute;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    z-index: 2;
+    background-color: rgba(6, 11, 20, 0.85);
+}
+
+.restoration-card-unesco .badge-overlay-before {
+    top: 12px;
+    left: 12px;
+    color: #fdba74;
+    border: 1px solid var(--uruk-border-clay, #d97706);
+}
+
+.restoration-card-unesco .badge-overlay-after {
+    bottom: 12px;
+    right: 12px;
+    color: #93c5fd;
+    border: 1px solid var(--uruk-border-lapis, #2563eb);
+}
+
+/* ==========================================================================
+   9. АДАПТИВНОСТЬ (MEDIA QUERIES)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .uruk-hero-header {
+        padding: 28px 20px;
+        margin-bottom: 28px;
+    }
+
+    .uruk-hero-title {
+        font-size: 26px;
+        line-height: 34px;
+    }
+
+    .uruk-hero-subtitle {
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    .stat-number-grand {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .section-title-grand {
+        font-size: 20px;
+        line-height: 28px;
+        margin-top: 36px;
+        margin-bottom: 18px;
+    }
+
+    .uruk-watermark-bg {
+        font-size: 110px;
+        line-height: 90px;
+        right: -10px;
+        bottom: -15px;
+    }
+
+    .restoration-card-unesco {
+        float: none;
+        width: 100%;
+        max-width: 100%;
+        margin-right: 0;
+    }
+}
