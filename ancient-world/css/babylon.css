@@ -101,7 +101,7 @@ main h2.card-title {
     bottom: -35px;
     font-size: 220px;
     color: var(--gold-accent);
-    opacity: 0.05;
+    opacity: 0.10;
     pointer-events: none;
     user-select: none;
 }
@@ -147,8 +147,8 @@ main h2.card-title {
 .babylon-divider-cuneiform {
     position: relative;
     border: none;
-    height: 20px;
-    background: linear-gradient(90deg, transparent, rgba(217, 119, 6, 0.4), transparent);
+    height: 10px;
+    background: linear-gradient(90deg, transparent, rgba(217, 119, 6, 0.8), transparent);
     margin: 48px 0;
 }
 
