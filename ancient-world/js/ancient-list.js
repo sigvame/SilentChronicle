@@ -43,5 +43,14 @@ const ancientPlaces = [
       desc: "Легендарная столица Ближнего Востока на берегах Евфрата. Город лазурных ворот Иштар, первого в истории свода законов и знаменитых садов Семирамиды.",
       image: "images/babylon/babylon-lead.jpg",
       link: "pages/wonders_ancient/babylon.html"
-    }     
+    },
+    {
+      title: "Иерихон (Телль-эс-Султан)",
+      categories: ["wonders-old"],
+      tag: "Древние чудеса • Ближний Восток",
+      country: "📍 Палестина",
+      desc: "Древнейшие укрепленное поселение в истории, возникшие около 9 000 лет назад. Родина первого каменного небоскреба и легендарных Иерихонских стен.",
+      image: "images/jericho/jericho-lead.jpg",
+      link: "pages/wonders_ancient/jericho.html"
+    }   
 ];
