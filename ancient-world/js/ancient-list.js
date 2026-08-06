@@ -28,11 +28,20 @@ const ancientPlaces = [
       },
       {
         title: "Урук (Город Гильгамеша)",
-        categories: ["wonders-old"], 
+        categories: ["wonders-old", "mesopotamia"], 
         tag: "Древние чудеса • Месопотамия",
         country: "📍 Современный Ирак",
         desc: "Первый город и мегаполис в истории человечества. Родина клинописи, колеса и легендарного царя-героя Гильгамеша.",
         image: "images/uruk/uruk-lead.jpg",
         link: "pages/wonders_ancient/uruk.html"
+      },
+      {
+        title: "Вавилон (Babylon)",
+        categories: ["wonders-old", "mesopotamia"],
+        tag: "Древние чудеса • Месопотамия",
+        country: "📍 Современный Ирак",
+        desc: "Легендарная столица Ближнего Востока на берегах Евфрата. Город лазурных ворот Иштар, первого в истории свода законов и знаменитых садов Семирамиды.",
+        image: "images/babylon/babylon-lead.jpg",
+        link: "pages/wonders_ancient/babylon.html"
       }
 ];
