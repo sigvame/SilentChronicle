@@ -1,0 +1,107 @@
+:root {
+    --jericho-sand: #d4a373;
+    --jericho-sand-glow: rgba(212, 163, 115, 0.2);
+    --jericho-stone-dark: #1a1716;
+    --jericho-border: rgba(212, 163, 115, 0.25);
+    --jericho-bg-card: rgba(30, 27, 26, 0.85);
+    --jericho-accent: #e6ccb2;
+}
+
+/* ================= =========================
+   Новая шапка (Монументальный центрированный стиль)
+   =========================================== */
+.jericho-hero-header {
+    background: radial-gradient(circle at top center, rgba(212, 163, 115, 0.08) 0%, rgba(12, 11, 14, 0) 70%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 2.5rem;
+}
+
+.jericho-badge-pill {
+    background-color: var(--jericho-sand-glow);
+    color: var(--jericho-accent);
+    border: 1px solid var(--jericho-border);
+    border-radius: 50px;
+    padding: 5px 14px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    display: inline-block;
+}
+
+.jericho-hero-title {
+    font-family: 'Cinzel', Georgia, serif;
+    letter-spacing: 2px;
+    color: #f8fafc;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8), 0 0 30px rgba(212, 163, 115, 0.2);
+}
+
+.jericho-hero-subtitle {
+    color: var(--jericho-sand);
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+/* Карточки быстрых показателей */
+.jericho-mini-stat {
+    background: var(--jericho-bg-card);
+    border: 1px solid var(--jericho-border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    transition: all 0.2s ease;
+}
+
+.jericho-mini-stat:hover {
+    border-color: var(--jericho-sand);
+    transform: translateY(-2px);
+}
+
+.stat-label {
+    display: block;
+    font-size: 11px;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+.stat-value {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-size: 15px;
+    color: var(--jericho-accent);
+}
+
+/* ================= =========================
+   Элементы контента
+   =========================================== */
+.jericho-feature-card {
+    background: var(--jericho-bg-card);
+    border: 1px solid var(--border-color);
+    border-left: 3px solid var(--jericho-sand);
+    border-radius: 8px;
+    padding: 24px;
+    height: 100%;
+}
+
+.tower-highlight-box {
+    background: linear-gradient(135deg, rgba(43, 41, 39, 0.9) 0%, rgba(20, 18, 25, 0.95) 100%);
+    border: 1px solid var(--jericho-border);
+    border-radius: 12px;
+    padding: 28px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.jericho-chronicle-box {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.jericho-img-container {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
