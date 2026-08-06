@@ -1,0 +1,228 @@
+:root {
+    --babylon-blue: #0f2338;
+    --babylon-blue-glow: rgba(15, 35, 56, 0.6);
+    --ishtar-lapis: #2563eb;
+    --ishtar-lapis-soft: rgba(37, 99, 235, 0.12);
+    --gold-accent: #d97706;
+    --gold-light: #f59e0b;
+    --basalt-dark: #0f172a;
+    --text-muted-custom: #94a3b8;
+    --text-light-custom: #f8fafc;
+}
+
+/* --------------------------------------------------------------------------
+   Типографика и заголовки
+   -------------------------------------------------------------------------- */
+.article-content h2.card-title,
+main h2.card-title {
+    font-family: 'Cinzel', serif;
+    font-size: 26px !important;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 20px !important;
+    color: var(--gold-light);
+}
+
+@media (max-width: 768px) {
+
+    .article-content h2.card-title,
+    main h2.card-title {
+        font-size: 22px !important;
+    }
+}
+
+.babylon-text {
+    font-size: 16px;
+    line-height: 28px;
+    color: #cbd5e1;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* --------------------------------------------------------------------------
+   Иллюстрации и размеры фото
+   -------------------------------------------------------------------------- */
+/* Первое главное фото (не трогаем) */
+@media (min-width: 768px) {
+    .floating-lead-image {
+        max-width: 450px;
+    }
+}
+
+/* Уменьшенные размеры для всех последующих картинок */
+.article-img-compact {
+    max-width: 460px;
+    margin: 0 auto;
+}
+
+.article-img-compact-sm {
+    max-width: 380px;
+    margin: 0 auto;
+}
+
+.inline-article-img {
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* --------------------------------------------------------------------------
+   Шапка Вавилона (Hero Section)
+   -------------------------------------------------------------------------- */
+.babylon-hero-card {
+    background: radial-gradient(circle at 85% 15%, rgba(37, 99, 235, 0.25) 0%, rgba(15, 35, 56, 0.95) 70%),
+        linear-gradient(180deg, var(--babylon-blue) 0%, rgba(11, 15, 25, 0.98) 100%);
+    border: 1px solid rgba(217, 119, 6, 0.3);
+    border-radius: 16px;
+    padding: 40px 48px;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+}
+
+.babylon-hero-card::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold-light), transparent);
+}
+
+/* Водяной символ клинописи на заднем фоне */
+.babylon-hero-card::after {
+    content: '𒀭';
+    position: absolute;
+    right: 15px;
+    bottom: -35px;
+    font-size: 220px;
+    color: var(--gold-accent);
+    opacity: 0.05;
+    pointer-events: none;
+    user-select: none;
+}
+
+.babylon-hero-title {
+    font-family: 'Cinzel', serif;
+    font-size: 48px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    background: linear-gradient(135deg, #ffffff 30%, var(--gold-light) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .babylon-hero-card {
+        padding: 24px 20px;
+    }
+
+    .babylon-hero-title {
+        font-size: 32px;
+        letter-spacing: 1.5px;
+    }
+}
+
+.badge-babylon {
+    background-color: var(--ishtar-lapis-soft);
+    color: #93c5fd;
+    border: 1px solid rgba(37, 99, 235, 0.3);
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* --------------------------------------------------------------------------
+   Кастомные вавилонские разделительные линии
+   -------------------------------------------------------------------------- */
+.babylon-divider-cuneiform {
+    position: relative;
+    border: none;
+    height: 20px;
+    background: linear-gradient(90deg, transparent, rgba(217, 119, 6, 0.4), transparent);
+    margin: 48px 0;
+}
+
+.babylon-divider-cuneiform::after {
+    content: '𒀭  𓄿  𒀭';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0b0f19;
+    padding: 0 16px;
+    color: var(--gold-light);
+    font-size: 14px;
+    letter-spacing: 8px;
+    opacity: 0.85;
+}
+
+.babylon-divider-ziggurat {
+    position: relative;
+    border: none;
+    height: 5px;
+    background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.4), transparent);
+    margin: 48px 0;
+}
+
+.babylon-divider-ziggurat::after {
+    content: '✴  ❖  ✴';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0b0f19;
+    padding: 0 16px;
+    color: #60a5fa;
+    font-size: 12px;
+    letter-spacing: 6px;
+}
+
+/* --------------------------------------------------------------------------
+   Карточки и текстовые блоки
+   -------------------------------------------------------------------------- */
+.stele-card {
+    background-color: var(--basalt-dark);
+    border-left: 4px solid var(--gold-accent);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.wonder-card {
+    background: rgba(15, 35, 56, 0.4);
+    border: 1px solid rgba(37, 99, 235, 0.25);
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 300ms ease;
+}
+
+.wonder-card:hover {
+    border-color: var(--gold-accent);
+    transform: translateY(-2px);
+}
+
+.babylon-quote {
+    background: rgba(15, 23, 42, 0.6);
+    border-left: 4px solid var(--gold-accent);
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.symbol-icon {
+    color: var(--gold-light);
+    opacity: 0.85;
+}
