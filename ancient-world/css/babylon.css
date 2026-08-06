@@ -168,7 +168,7 @@ main h2.card-title {
 .babylon-divider-ziggurat {
     position: relative;
     border: none;
-    height: 5px;
+    height: 10px;
     background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.4), transparent);
     margin: 48px 0;
 }
