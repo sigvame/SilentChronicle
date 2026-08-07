@@ -71,6 +71,15 @@ const ruinsPlaces = [
     desc: "Остров, который дважды в день отрезает морем от всего мира. Именно здесь в 793 году под небесные знамения «огненных драконов» высадились викинги, заложив начало самой кровавой эпохе Европы.",
     image: "images/lindisfarne/lindisfarne-castle.jpg",
     link: "places/europe/lindisfarne-castle.html"
+  },
+  {
+    title: "Замок Шато де Веос",
+    categories: ["europe", "castle", "medieval"],
+    tag: "Европа • Замок • Средневековье",
+    country: "📍 Франция",
+    desc: "Французский замок Оверни с тысячелетней историей, овеянный мрачной легендой о призраке заточенной служанки Люси и скрывающий тайны древних башен.",
+    image: "images/veauce/veauce-castle.jpg",
+    link: "places/europe/veauce-castle.html"
   }
 ];
 
