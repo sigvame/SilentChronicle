@@ -52,5 +52,14 @@ const ancientPlaces = [
       desc: "Древнейшие укрепленное поселение в истории, возникшие около 9 000 лет назад. Родина первого каменного небоскреба и легендарных Иерихонских стен.",
       image: "images/jericho/jericho-lead.jpg",
       link: "pages/wonders_ancient/jericho.html"
-    }   
+    },
+    {
+      title: "Македонская империя",
+      categories: ["empires"],
+      tag: "Древний мир • Империя",
+      country: "🏛️ Македония / Греция",
+      desc: "Сверхдержава древности, созданная Александром Великим. Государство, объединившее Запад и Восток и положившее начало эпохе эллинизма.",
+      image: "images/macedon/macedon-main.jpg",
+      link: "pages/empires/macedonian-empire.html"
+    }
 ];
