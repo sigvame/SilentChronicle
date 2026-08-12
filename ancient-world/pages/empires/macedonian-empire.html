@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silent Chronicle — Македонская империя</title>
+
+    <!-- Шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Иконки & Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Стили -->
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../css/macedonian-style.css">
+</head>
+
+<body class="macedonian-theme">
+
+    <!-- НАВБАР -->
+    <nav class="navbar custom-navbar sticky-top">
+        <div class="container navbar-container d-flex align-items-center justify-content-between position-relative">
+            <div style="flex: 1; min-width: 0;" class="text-start">
+                <a href="../../conquerors-index.html"
+                    class="btn btn-outline-secondary btn-sm rounded-pill px-2 px-sm-3 text-nowrap">
+                    <i class="bi bi-arrow-left me-1"></i>
+                    <span class="d-none d-sm-inline">Назад в архив</span>
+                    <span class="d-sm-none">Назад</span>
+                </a>
+            </div>
+
+            <div class="text-center mx-1 mx-sm-3">
+                <a href="../../../index.html"
+                    class="logo text-center d-flex flex-column flex-sm-row align-items-center gap-1 gap-sm-2">
+                    <span>SILENT</span>
+                    <span>CHRONICLE</span>
+                </a>
+            </div>
+
+            <div style="flex: 1; min-width: 0;" class="text-end">
+                <div class="vergina-sun-badge d-inline-block rounded-pill">
+                    <span>☀ MACEDON</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO ОБЛОЖКА -->
+    <header class="macedonian-hero py-5">
+        <div class="container py-md-4">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-7 text-start">
+                    <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+                        <span class="badge badge-macedonian text-uppercase px-3 py-2">Сверхдержава • Эллинизм</span>
+                        <span class="text-warning small font-monospace">334 — 323 гг. до н.э.</span>
+                    </div>
+
+                    <h1 class="macedonian-title display-3 fw-bold text-white mb-3">
+                        МАКЕДОНСКАЯ <span class="gold-gradient-text">ИМПЕРИЯ</span>
+                    </h1>
+                    <p class="lead text-light-50 mb-4 fs-5">
+                        От полуварварской балканской окраины до величайшей сверхдержавы древности. Держава, созданная
+                        гением Александра Великого, перекроившая политическую карту мира и соединившая культуры Запада и
+                        Востока.
+                    </p>
+
+                    <div class="macedonian-quote p-3 rounded-3 position-relative">
+                        <p class="italic-text mb-0 text-light fs-6">«Нет ничего невозможного для того, кто дерзает
+                            попробовать».</p>
+                        <small class="text-warning font-monospace d-block mt-2">— Александр Македонский</small>
+                    </div>
+                </div>
+
+                <!-- Главная Мозаика -->
+                <div class="col-lg-5">
+                    <figure class="mb-0">
+                        <div
+                            class="article-img-wrapper rounded-3 overflow-hidden shadow-lg border border-warning border-opacity-25">
+                            <img src="../../images/macedon/alexander-mosaic.jpg" alt="Мозаика Александра Великого"
+                                class="img-fluid w-100 object-fit-cover" style="max-height: 400px;">
+                        </div>
+                        <figcaption class="figure-caption text-center small text-muted mt-2">
+                            <i>Александр Великий атаковывает персов при Иссе. Помпейская мозаика.</i>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- МЕТРИКИ И КЛЮЧЕВЫЕ ПОКАЗАТЕЛИ -->
+    <section class="container my-5">
+        <div class="row row-cols-2 row-cols-md-4 g-3 text-center">
+            <div class="col">
+                <div class="macedonian-card p-3 h-100 d-flex flex-column justify-content-center">
+                    <span class="macedonian-stat-number">5.2 млн км²</span>
+                    <span class="d-block small text-muted mt-1">Площадь на пике</span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="macedonian-card p-3 h-100 d-flex flex-column justify-content-center">
+                    <span class="macedonian-stat-number">13 лет</span>
+                    <span class="d-block small text-muted mt-1">Срок создания империи</span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="macedonian-card p-3 h-100 d-flex flex-column justify-content-center">
+                    <span class="macedonian-stat-number">6 метров</span>
+                    <span class="d-block small text-muted mt-1">Длина пики (Сариссы)</span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="macedonian-card p-3 h-100 d-flex flex-column justify-content-center">
+                    <span class="macedonian-stat-number">70+ Городов</span>
+                    <span class="d-block small text-muted mt-1">Основанные Александрии</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ОСНОВНОЙ КОНТЕНТ -->
+    <main class="container my-5">
+
+        <!-- СЕКЦИЯ I: ХРОНИКА ВОСХОЖДЕНИЯ И РЕФОРМЫ -->
+        <section class="row g-4 g-lg-5 mb-5 align-items-start">
+            <div class="col-lg-7">
+                <h2 class="macedonian-h2">Военная революция Филиппа II</h2>
+                <p class="fs-5 text-light-50">
+                    До середины IV века до нашей эры Македония оставалась раздробленным и уязвимым государством.
+                    Ситуацию переломил царь <strong>Филипп II</strong> (359–336 гг. до н.э.), который превратил
+                    полуварварский край в мощнейшую военную державу своего времени.
+                </p>
+                <p>
+                    Филипп II создал профессиональную армию, ключевым элементом которой стала знаменитая македонская
+                    фаланга. Пехотинцы, вооруженные шестиметровыми пиками (<i>сариссами</i>), образовывали монолитный
+                    щитовой барьер. Центр армии сковывал противника, а тяжелая дворянская конница (<i>гетайры</i>)
+                    наносила решающий фланговый удар в рамках тактики «молота и наковальни».
+                </p>
+                <p>
+                    Подчинив греческие полисы в битве при Херонее (338 г. до н.э.) и создав Коринфский союз, Филипп
+                    подготовил почву для походов в Азию. После его неожиданного убийства в 336 году до н.э. трон
+                    унаследовал двадцатилетний сын Александр, доведший замыслы отца до абсолюта.
+                </p>
+
+                <!-- Дополнительный блок: Гордиев узел -->
+                <div class="p-4 rounded-3 macedonian-card border-start border-warning my-4">
+                    <h4 class="h6 macedonian-gold-title mb-2"><i class="bi bi-shield-check me-2"></i>Гордиев узел и
+                        символизм власти</h4>
+                    <p class="small text-muted mb-0">
+                        В 333 году до н.э. в древней столице Фригии Гордионе Александр столкнулся с легендарным
+                        запутанным узлом на повозке царя Мидаса. Пророчество гласило, что рассекший узел станет
+                        властелином всей Азии. Александр не стал тратить время на распутывание и просто разрубил узел
+                        мечом, продемонстрировав решительность, ставшую его главным политическим символом.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Правая колонка: Хронология походов -->
+            <div class="col-lg-5">
+                <div class="macedonian-card p-4 h-100">
+                    <h3 class="h5 macedonian-gold-title mb-4 border-bottom border-secondary border-opacity-25 pb-2">
+                        <i class="bi bi-clock-history me-2"></i>Хроника Походов (334–323 гг.)
+                    </h3>
+
+                    <div class="timeline-list">
+                        <div class="timeline-item">
+                            <strong class="text-warning d-block">334 г. до н.э. — Битва при Гранике</strong>
+                            <span class="small text-muted">Первый разгром персидских сатрапов в Малой Азии и
+                                освобождение греческих городов.</span>
+                        </div>
+                        <div class="timeline-item">
+                            <strong class="text-warning d-block">333 г. до н.э. — Битва при Иссе</strong>
+                            <span class="small text-muted">Прямая победа над Дарием III. Захват побережья Леванта и
+                                взятие Дамаска.</span>
+                        </div>
+                        <div class="timeline-item">
+                            <strong class="text-warning d-block">332 г. до н.э. — Осада Тира</strong>
+                            <span class="small text-muted">Строительство гигантской дамбы и взятие неприступной
+                                островной крепости Финикии.</span>
+                        </div>
+                        <div class="timeline-item">
+                            <strong class="text-warning d-block">331 г. до н.э. — Битва при Гавгамелах</strong>
+                            <span class="small text-muted">Решающий разгром Персии. Падение Вавилона, Суз и сожжение
+                                Персеполя.</span>
+                        </div>
+                        <div class="timeline-item">
+                            <strong class="text-warning d-block">327 г. до н.э. — Взятие Согдийской скалы</strong>
+                            <span class="small text-muted">Горная кампания в Бактрии, пленение семьи Оксиарта и брак с
+                                Роксаной.</span>
+                        </div>
+                        <div class="timeline-item">
+                            <strong class="text-warning d-block">326 г. до н.э. — Битва при Гидаспе</strong>
+                            <span class="small text-muted">Тяжелейшая победа над индийским царем Пором и его боевыми
+                                слонами. Поворот армии.</span>
+                        </div>
+                        <div class="timeline-item mb-0">
+                            <strong class="text-warning d-block">323 г. до н.э. — Смерть в Вавилоне</strong>
+                            <span class="small text-muted">Внезапная смерть Александра в возрасте 32 лет и начало эпохи
+                                войн Диадохов.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- СЕКЦИЯ II: ПОЛНОШИРИННЫЙ ХАБ КАРТЫ ИМПЕРИИ -->
+        <section class="my-5 w-100">
+            <div class="map-hub-card p-4 p-lg-5 shadow-lg">
+                <div
+                    class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center border-bottom border-secondary border-opacity-25 pb-3 mb-4 gap-2">
+                    <div>
+                        <span class="badge badge-macedonian text-uppercase mb-2">Географический пик</span>
+                        <h2 class="macedonian-gold-title display-6 mb-0"><i class="bi bi-geo-alt me-2"></i>Македонская
+                            империя в период расцвета, наложенная на современные границы</h2>
+                    </div>
+                    <span class="text-muted font-monospace small">Площадь: ~5 200 000 км²</span>
+                </div>
+
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-8">
+                        <div
+                            class="article-img-wrapper rounded-3 overflow-hidden border border-warning border-opacity-25 shadow">
+                            <img src="../../images/macedon/macedon-map.jpg" alt="Карта империи на пике"
+                                class="img-fluid w-100">
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <h4
+                            class="h6 text-white text-uppercase font-monospace mb-3 border-bottom border-secondary border-opacity-25 pb-2">
+                            Охваченные Территории
+                        </h4>
+                        <ul class="list-unstyled small text-muted mb-4">
+                            <li class="mb-2"><strong class="text-warning">• Европа:</strong> Македония, Фракия,
+                                Греческие полисы, Иллирия.</li>
+                            <li class="mb-2"><strong class="text-warning">• Северная Африка:</strong> Египет, Ливия,
+                                оазис Сива.</li>
+                            <li class="mb-2"><strong class="text-warning">• Ближний Восток:</strong> Сирия, Финикия,
+                                Иудея, Месопотамия.</li>
+                            <li class="mb-2"><strong class="text-warning">• Азия:</strong> Персия, Парфия, Бактрия,
+                                Согдиана, Гиркания.</li>
+                            <li class="mb-0"><strong class="text-warning">• Индия:</strong> Бассейн реки Инд и Пенджаб.
+                            </li>
+                        </ul>
+                        <div class="p-3 rounded-3 bg-dark bg-opacity-60 border border-secondary border-opacity-25">
+                            <p class="small text-muted mb-0">
+                                <i class="bi bi-info-circle text-warning me-2"></i>
+                                Под единой властью Александра оказалась территория, охватывающая более 30 современных
+                                государств Европы, Азии и Африки.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- СЕКЦИЯ III: ИНЖЕНЕРИЯ И ВОЕННЫЙ ГЕНИЙ -->
+        <section class="my-5">
+            <h2 class="macedonian-h2 mb-4">Инженерный гений и осада Тира</h2>
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                    <p class="fs-6 text-light-50">
+                        Осада островного города Тир в 332 году до н.э. вошла в историю как один из самых выдающихся
+                        примеров античного инженерного искусства. Находясь на острове в 800 метрах от берега и
+                        защищенный 45-метровыми стенами, Тир казался неприступным для армии без мощного флота.
+                    </p>
+                    <p class="small text-muted">
+                        Александр приказал построить гигантскую насыпь (дамбу) шириной 60 метров прямо по дну
+                        Средиземного моря. Когда тирийцы начали атаковать строителей с кораблей, македоняне воздвигли
+                        две 50-метровые осадные башни, обшитые сырыми кожами для защиты от горящих стрел. В ходе
+                        семимесячной осады македонский флот блокировал гавани, а тараны на кораблях пробили брешь в
+                        стенах.
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row row-cols-1 row-cols-sm-2 g-3">
+                        <div class="col">
+                            <div class="macedonian-card p-3 h-100">
+                                <span class="text-warning fw-bold d-block mb-1">800 метров</span>
+                                <span class="small text-muted">Длина построенной дамбы к островному городу.</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="macedonian-card p-3 h-100">
+                                <span class="text-warning fw-bold d-block mb-1">50 метров</span>
+                                <span class="small text-muted">Высота самых высоких осадных башен древности.</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="macedonian-card p-3 h-100">
+                                <span class="text-warning fw-bold d-block mb-1">Катапульты</span>
+                                <span class="small text-muted">Массовое применение метательных машин на судах.</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="macedonian-card p-3 h-100">
+                                <span class="text-warning fw-bold d-block mb-1">7 месяцев</span>
+                                <span class="small text-muted">Длительность непрерывной инженерии и штурма.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- СЕКЦИЯ IV: СТРУКТУРА И УПРАВЛЕНИЕ -->
+        <section class="my-5">
+            <h2 class="macedonian-h2 mb-4">Государство и политика слияния</h2>
+
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="macedonian-card p-4 h-100">
+                        <div class="text-warning fs-3 mb-3"><i class="bi bi-diagram-2"></i></div>
+                        <h3 class="h5 macedonian-gold-title mb-2">Администрация</h3>
+                        <p class="small text-muted mb-0">
+                            Александр сохранил традиционную персидскую систему сатрапий. Однако он разделил власть:
+                            гражданские функции часто сохраняли знатные персы, а военные и финансовые рычаги находились
+                            в руках македонских и греческих офицеров.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="macedonian-card p-4 h-100">
+                        <div class="text-warning fs-3 mb-3"><i class="bi bi-people"></i></div>
+                        <h3 class="h5 macedonian-gold-title mb-2">«Свадьба в Сузах»</h3>
+                        <p class="small text-muted mb-0">
+                            Чтобы сплотить знать Запада и Востока, в 324 году до н.э. была организована массовая
+                            свадьба: 10 000 македонских воинов и 80 высших полководцев сочетались браком с знатными
+                            персидскими женщинами.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="macedonian-card p-4 h-100">
+                        <div class="text-warning fs-3 mb-3"><i class="bi bi-bank"></i></div>
+                        <h3 class="h5 macedonian-gold-title mb-2">Финансы и Города</h3>
+                        <p class="small text-muted mb-0">
+                            Введение огромных персидских сокровищ в экономический оборот подстегнуло международную
+                            торговлю. Основание десятков новых городов (Александрий) создало сеть опорных пунктов
+                            культуры и ремесла.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- СЕКЦИЯ V: ЖИЗНЬ ИМПЕРИИ: ОБЩЕСТВО, БЫТ И ЭКОНОМИКА (НОВЫЙ РАЗДЕЛ) -->
+        <section class="my-5">
+            <h2 class="macedonian-h2 mb-4">Жизнь империи: Общество, быт и повседневность</h2>
+
+            <div class="row g-4 mb-4">
+                <div class="col-lg-6">
+                    <div class="macedonian-card p-4 h-100">
+                        <h3 class="h5 macedonian-gold-title mb-3">
+                            <i class="bi bi-houses me-2"></i>Городской быт и мультикультурализм
+                        </h3>
+                        <p class="small text-muted">
+                            Жизнь в заново основанных Александриях кардинально отличалась от быта в глухих провинциях.
+                            В городах насаждался греческий образ жизни: возводились гимнасии, театры, ипподромы и
+                            агоры. Греческие переселенцы, воины-ветераны и торговцы формировали новую элиту.
+                        </p>
+                        <p class="small text-muted mb-0">
+                            При этом в повседневной жизни простые жители — египетские феллахи, вавилонские земледельцы и
+                            согдийские скотоводы — продолжали жить по многовековым традициям. Возник уникальный
+                            языковой дуализм: греческий язык (койне) стал языком власти и торговли, а в быту сохранялись
+                            арамейский, коптский и древнеперсидский.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="macedonian-card p-4 h-100">
+                        <h3 class="h5 macedonian-gold-title mb-3">
+                            <i class="bi bi-cash-coin me-2"></i>Экономика, налоги и монетизация
+                        </h3>
+                        <p class="small text-muted">
+                            Захват персидских царских сокровищниц в Сузах и Персеполе выбросил на рынок сотни тонн
+                            золота и серебра. Это спровоцировало мощнейший экономический бум и интеграцию рынков.
+                        </p>
+                        <p class="small text-muted mb-0">
+                            Александр перевел всю империю на единую серебряную монету — <strong>аттическую
+                                тетрадрахму</strong>. Налоги собирались жестко: крестьяне выплачивали долю урожая (до
+                            10–20%), а торговые караваны облагались пошлинами на границах сатрапий. Денежная реформа
+                            навсегда вытеснила натуральный обмен из крупной торговли.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="macedonian-card p-3 p-lg-4 h-100">
+                        <div class="text-warning fs-4 mb-2"><i class="bi bi-person-workspace"></i></div>
+                        <h4 class="h6 macedonian-gold-title mb-2">Социальная иерархия</h4>
+                        <p class="small text-muted mb-0">
+                            Вершину пирамиды занимали греко-македонские полководцы и чиновники, за ними следовала
+                            высшая восточная знать, присягнувшая царю. Основную массу населения составляли свободные
+                            ремесленники, земледельцы и огромная армия рабов.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="macedonian-card p-3 p-lg-4 h-100">
+                        <div class="text-warning fs-4 mb-2"><i class="bi bi-flower1"></i></div>
+                        <h4 class="h6 macedonian-gold-title mb-2">Религиозная веротерпимость</h4>
+                        <p class="small text-muted mb-0">
+                            Александр не навязывал греческих богов. Он короновался как фараон в Египте, жертвовал
+                            Вавилонскому Мардуку и почитал местный пантеон, что обеспечивало лояльность жречества и
+                            простого народа.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="macedonian-card p-3 p-lg-4 h-100">
+                        <div class="text-warning fs-4 mb-2"><i class="bi bi-truck"></i></div>
+                        <h4 class="h6 macedonian-gold-title mb-2">Связь и Дорожная сеть</h4>
+                        <p class="small text-muted mb-0">
+                            Использование и модернизация Царской дороги Персии позволили наладить быструю курьерскую
+                            почту. Торговые караваны и военные отряды перемещались между Средиземноморьем и Индией в
+                            рекордные сроки.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- СЕКЦИЯ VI: МЯТЕЖ В ОПИСЕ И ВНУТРЕННИЕ КРИЗИСЫ -->
+        <section class="my-5">
+            <div class="macedonian-card p-4 p-lg-5">
+                <h2 class="macedonian-h2 mb-3">Мятеж в Описе и отмена старой гвардии</h2>
+                <p class="text-light-50">
+                    Нарастающее проникновение восточных традиций вызывало бурный протест среди старых македонских
+                    ветеранов. В 324 году до н.э. в городе Опис Александр объявил об отпуске домой пожилых и раненых
+                    воинов с щедрыми выплатами. Войско восприняло это как попытку полностью заменить македонян
+                    азиатскими персидскими юношами («эпигонами»).
+                </p>
+                <p class="small text-muted mb-0">
+                    Армия подняла мятеж, выкрикивая, чтобы царь отправлялся воевать дальше только со своим отцом Амоном.
+                    Александр ответил суровыми казненными мерами против зачинщиков, а затем закрылся в дворце на три
+                    дня, общаясь исключительно с персидской знатью. Осознав опасность быть отстраненными от царской
+                    милости, македонские солдаты пришли к дворцу с мольбами о прощении, что закончилось грандиозным
+                    пиром примирения на 9 000 гостей.
+                </p>
+            </div>
+        </section>
+
+        <!-- СЕКЦИЯ VII: РАСПАД И ДИАДОХИ -->
+        <section class="row g-4 g-lg-5 my-5 align-items-center">
+            <div class="col-lg-7">
+                <h2 class="macedonian-h2">Падение и Войны Диадохов</h2>
+                <p>
+                    Держава Александра держалась исключительно на авторитете и таланте своего создателя. Когда 10 июня
+                    323 года до н.э. Александр умер в Вавилоне в возрасте 32 лет, у него не было зрелого наследника.
+                </p>
+                <p>
+                    Вопрос о преемственности вылился в 40-летние кровопролитные **Войны Диадохов** (полководцев
+                    Александра). Империя распалась на несколько эллинистических царств:
+                </p>
+                <ul class="list-unstyled ps-3 border-start border-warning border-opacity-25 my-3 text-muted small">
+                    <li class="mb-2"><strong class="text-light">Государство Птолемеев:</strong> Закрепилось в Египте со
+                        столицей в Александрии.</li>
+                    <li class="mb-2"><strong class="text-light">Держава Селевкидов:</strong> Охватила Ближний Восток,
+                        Месопотамию и Иранское нагорье.</li>
+                    <li class="mb-0"><strong class="text-light">Царство Антигонидов:</strong> Удержало контроль над
+                        Македонией и Грецией.</li>
+                </ul>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="macedonian-card p-4">
+                    <figure class="mb-3">
+                        <div
+                            class="article-img-wrapper rounded-3 overflow-hidden border border-warning border-opacity-25">
+                            <img src="../../images/macedon/alexander-bust.jpg" alt="Бюст Александра"
+                                class="img-fluid w-100">
+                        </div>
+                    </figure>
+                    <h4 class="h6 macedonian-gold-title text-center mb-0">Царь Александр III Великий (356–323 гг. до
+                        н.э.)</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- СЕКЦИЯ VIII: ЦИВИЛИЗАЦИОННОЕ НАСЛЕДИЕ -->
+        <section class="mt-5 pt-4 border-top border-secondary border-opacity-25 w-100">
+            <h2 class="macedonian-h2 text-center mb-3"><i class="bi bi-globe me-2"></i>Наследие Эллинизма</h2>
+            <p class="text-center text-muted col-lg-8 mx-auto mb-5">
+                Распад государства не уничтожил цивилизационные плоды походов. На развалинах возникла глобальная
+                культура эллинизма.
+            </p>
+
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3">
+                <div class="col">
+                    <div class="macedonian-card p-4 h-100">
+                        <div class="text-warning fs-3 mb-2"><i class="bi bi-translate"></i></div>
+                        <h4 class="h6 macedonian-gold-title mb-2">Язык Койне</h4>
+                        <p class="small text-muted mb-0">
+                            Общегреческий диалект стал единым языком международной торговли, науки и дипломатии от Рима
+                            до Индии.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="macedonian-card p-4 h-100">
+                        <div class="text-warning fs-3 mb-2"><i class="bi bi-book"></i></div>
+                        <h4 class="h6 macedonian-gold-title mb-2">Александрийская Библиотека</h4>
+                        <p class="small text-muted mb-0">
+                            Крупнейший центр науки античности, объединивший труды греческих, египетских и восточных
+                            ученых.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="macedonian-card p-4 h-100">
+                        <div class="text-warning fs-3 mb-2"><i class="bi bi-palette"></i></div>
+                        <h4 class="h6 macedonian-gold-title mb-2">Греко-Буддизм</h4>
+                        <p class="small text-muted mb-0">
+                            Синтез античного реалистического искусства и восточной философии в Бактрии и Гандхаре.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="macedonian-card p-4 h-100">
+                        <div class="text-warning fs-3 mb-2"><i class="bi bi-arrows-move"></i></div>
+                        <h4 class="h6 macedonian-gold-title mb-2">Торговые Сети</h4>
+                        <p class="small text-muted mb-0">
+                            Интеграция дорог и рынков заложила основу для Великого Шелкового пути и торговли с Индией.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Скрипты -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
