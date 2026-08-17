@@ -80,6 +80,15 @@ const ruinsPlaces = [
     desc: "Французский замок Оверни с тысячелетней историей, овеянный мрачной легендой о призраке заточенной служанки Люси и скрывающий тайны древних башен.",
     image: "images/veauce/veauce-castle.jpg",
     link: "places/europe/veauce-castle.html"
+  },
+  {
+    title: "Собор Святого Вита (Katedrála svatého Víta)",
+    categories: ["europe", "cathedral", "medieval"],
+    tag: "Европа • Собор • Средневековье",
+    country: "📍 Чехия",
+    desc: "Готический шедевр и главная святыня Праги, строившаяся почти 600 лет, где покоятся чешские короли и хранятся древние коронационные регалии.",
+    image: "images/prague-castle/prague-castle.jpg",
+    link: "places/europe/prague-castle.html"
   }
 ];
 
