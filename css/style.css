@@ -702,20 +702,28 @@ main h2.card-title {
     border-left: 4px solid #0dcaf0;
 }
 
+/* Базовый стиль для мобильных (без задирания вверх) */
 .article-date {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 13px;
-    font-style: italic;
-    color: rgba(255, 255, 255, 0.45);
-    opacity: 0.60;
-    letter-spacing: 0.5px;
-    margin-top: -16px;
-    margin-bottom: 4px;
-    user-select: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-style: italic;
+  color: #ffffff;
+  opacity: 0.35;
+  letter-spacing: 0.5px;
+  margin-top: 0; /* На телефоне отступ нулевой */
+  margin-bottom: 6px;
+  user-select: none;
 }
 
 .article-date i {
-    font-size: 14px; 
+  font-size: 14px;
+}
+
+/* Отрицательный отступ включается только на экранах от 576px (планшеты и ПК) */
+@media (min-width: 576px) {
+  .article-date {
+    margin-top: -16px;
+  }
 }
