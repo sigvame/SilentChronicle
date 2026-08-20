@@ -30,10 +30,19 @@
 
 .badge-roman {
     background-color: #800020;
-    /* Пурпурный цвет */
     color: #f8f9fa;
     border: 1px solid #d4af37;
     font-family: 'Cinzel', serif;
+    white-space: nowrap;
+}
+
+/* Адаптация плашки для мобильных устройств */
+@media (max-width: 576px) {
+    .badge-roman {
+        font-size: 11px !important;
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
 }
 
 /* =========================================
