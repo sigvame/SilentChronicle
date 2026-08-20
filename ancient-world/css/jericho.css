@@ -7,13 +7,52 @@
     --jericho-accent: #e6ccb2;
 }
 
+/* Дата над зоной свечения */
+.article-date-top {
+    font-family: var(--bs-font-monospace);
+    font-size: 13px;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.45);
+    opacity: 0.6;
+    letter-spacing: 0.5px;
+}
+
 /* ================= =========================
-   Новая шапка (Монументальный центрированный стиль)
-   =========================================== */
+   Шапка
+   =========================================== 
+*/
 .jericho-hero-header {
-    background: radial-gradient(circle at top center, rgba(212, 163, 115, 0.08) 0%, rgba(12, 11, 14, 0) 70%);
+    position: relative;
+    background: transparent !important;
+    overflow: visible !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    padding-bottom: 2.5rem;
+    padding-top: 15px;
+    padding-bottom: 40px;
+}
+
+/* Расширенный слой свечения, выходящий ЗА границы хедера */
+.jericho-hero-header::before {
+    content: '';
+    position: absolute;
+
+    top: -60px;
+    bottom: -40px;
+    left: -20%;
+    right: -20%;
+
+    /* Мягкое свечение: уходит вниз и плавно рассеивается */
+    background: radial-gradient(ellipse 50% 85% at 50% 30%,
+            rgba(212, 163, 115, 0.11) 0%,
+            rgba(212, 163, 115, 0.03) 45%,
+            transparent 80%);
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+.jericho-hero-header > * {
+    position: relative;
+    z-index: 1;
 }
 
 .jericho-badge-pill {
