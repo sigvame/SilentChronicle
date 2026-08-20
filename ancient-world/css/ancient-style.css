@@ -36,12 +36,12 @@
     white-space: nowrap;
 }
 
-/* Адаптация плашки для мобильных устройств */
+/* Адаптация плашки строго для узких мобильных экранов */
 @media (max-width: 576px) {
     .badge-roman {
-        font-size: 11px !important;
-        padding-left: 8px !important;
-        padding-right: 8px !important;
+        font-size: 0.65rem !important; 
+        padding: 4px 8px !important;    
+        letter-spacing: normal;        
     }
 }
 
