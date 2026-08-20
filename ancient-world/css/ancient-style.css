@@ -28,6 +28,14 @@
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
 }
 
+/* 1. Блокировка горизонтального скролла всей страницы */
+html,
+body {
+    max-width: 100% !important;
+    overflow-x: clip !important;
+}
+
+/* 2. Адаптация плашки и заголовков */
 .badge-roman {
     background-color: #800020;
     color: #f8f9fa;
@@ -36,12 +44,17 @@
     white-space: nowrap;
 }
 
-/* Адаптация плашки строго для узких мобильных экранов */
 @media (max-width: 576px) {
     .badge-roman {
-        font-size: 0.65rem !important; 
-        padding: 4px 8px !important;    
-        letter-spacing: normal;        
+        font-size: 11px !important;
+        padding: 4px 8px !important;
+        white-space: normal !important;
+        text-align: center;
+        display: inline-block;
+    }
+
+    .roman-title.display-3 {
+        font-size: 2rem !important;
     }
 }
 
