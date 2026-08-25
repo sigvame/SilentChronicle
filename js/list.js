@@ -89,6 +89,14 @@ const ruinsPlaces = [
     desc: "Готический шедевр и главная святыня Праги, строившаяся почти 600 лет, где покоятся чешские короли и хранятся древние коронационные регалии.",
     image: "images/prague-castle/prague-castle.jpg",
     link: "places/europe/prague-castle.html"
+  },
+  {
+    title: "Замок Троски (Trosky Castle)",
+    categories: ["europe", "castle", "medieval"],
+    tag: "Европа • Замок • Средневековье",
+    country: "📍 Чехия",
+    desc: "Живописные руины средневековой крепости XIV века на двух базальтовых скалах потухшего вулкана, ставшие неофициальным символом региона Чешский Рай.",
+    image: "images/trosky-castle/trosky-main.jpg",
+    link: "places/europe/trosky-castle.html"
   }
 ];
-
