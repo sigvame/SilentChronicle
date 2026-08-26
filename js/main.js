@@ -8,6 +8,11 @@ function shuffleArray(array) {
   return shuffled;
 }
 
+// Функция сортировки массива по дате (от новых к старым)
+function getSortedByDate(items) {
+  return [...items].sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0));
+}
+
 // Подтягивание места (руины древний мир и тд)
 let originalPlaces = [];
 let storageKeyPrefix = 'default';
@@ -44,15 +49,10 @@ let fuse = null; // экземпляр Fuse
 // Настройки Fuse.js
 function initFuse() {
   const options = {
-    // Поиск по названию, описанию и тегам
     keys: ['title', 'desc', 'tag', 'country'],
-    // Прощает 1-2 опечатки и не выдает мусор
     threshold: 0.4,
-    // Насколько сильно учитывать расстояние опечатки от начала слова
     distance: 100,
-    // Минимальное количество символов для запуска нечеткого поиска
     minMatchCharLength: 2,
-    // Игнорирование регистра
     isCaseSensitive: false
   };
 
@@ -103,7 +103,7 @@ function closeMobileMenu() {
   }
 }
 
-// Переключение категорий
+// Переключение категорий и сортировка
 function filterAndRender(targetCategory) {
   const container = document.getElementById('places-container');
   if (!container) return;
@@ -111,16 +111,22 @@ function filterAndRender(targetCategory) {
   const searchInput = document.getElementById('search-input');
   if (searchInput) searchInput.value = '';
 
-  const filteredPlaces = targetCategory === 'all' 
-    ? places 
-    : places.filter(place => place.categories && place.categories.includes(targetCategory));
+  let filteredPlaces;
+
+  if (targetCategory === 'all') {
+    filteredPlaces = places;
+  } else if (targetCategory === 'newest') {
+    filteredPlaces = getSortedByDate(places);
+  } else {
+    filteredPlaces = places.filter(place => place.categories && place.categories.includes(targetCategory));
+  }
 
   container.innerHTML = generateCardsHTML(filteredPlaces);
 
   sessionStorage.setItem(ACTIVE_CATEGORY_KEY, targetCategory);
 
   document.querySelectorAll('.filter-btn').forEach(btn => {
-    if (btn.dataset.category === targetCategory) {
+    if (btn.dataset.category === targetCategory || btn.dataset.sort === targetCategory) {
       btn.classList.add('active');
     } else {
       btn.classList.remove('active');
@@ -137,7 +143,6 @@ function handleSearch(query) {
 
   const cleanQuery = query.trim().replaceAll('ё', 'е').replaceAll('Ё', 'Е');
 
-  // Если строка пустая — возвращаем выбранную категорию
   if (!cleanQuery) {
     const savedCategory = sessionStorage.getItem(ACTIVE_CATEGORY_KEY) || 'all';
     filterAndRender(savedCategory);
@@ -163,8 +168,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const filterButtons = document.querySelectorAll('.filter-btn');
   filterButtons.forEach(button => {
     button.addEventListener('click', (e) => {
-      const category = e.currentTarget.dataset.category;
-      filterAndRender(category);
+      const category = e.currentTarget.dataset.category || e.currentTarget.dataset.sort;
+      if (category) {
+        filterAndRender(category);
+      }
     });
   });
 
@@ -179,25 +186,39 @@ document.addEventListener('DOMContentLoaded', () => {
 // Кнопка Наверх
 const btnScrollToTop = document.getElementById('btnScrollToTop');
 
-window.addEventListener('scroll', () => {
+if (btnScrollToTop) {
+  window.addEventListener('scroll', () => {
     if (window.scrollY > 300) {
-        btnScrollToTop.classList.add('show');
+      btnScrollToTop.classList.add('show');
     } else {
-        btnScrollToTop.classList.remove('show');
+      btnScrollToTop.classList.remove('show');
     }
-});
+  });
 
-let focusTimeout;
+  let focusTimeout;
 
-btnScrollToTop.addEventListener('click', function () {
+  btnScrollToTop.addEventListener('click', function () {
     window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+      top: 0,
+      behavior: 'smooth'
     });
 
     clearTimeout(focusTimeout);
 
     focusTimeout = setTimeout(() => {
-        this.blur();
-    }, 1500); 
-});
+      this.blur();
+    }, 1500);
+  });
+}
+
+// Логика для просмотра увеличенных фото
+function openModal(card) {
+  const img = card.querySelector('img');
+  const caption = card.querySelector('.gallery-caption');
+
+  document.getElementById('modalImage').src = img.src;
+  document.getElementById('modalCaption').innerText = caption ? caption.innerText : '';
+
+  const imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
+  imageModal.show();
+}
