@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Silent Chronicle — Архив заброшенных и легендарных мест</title>
+    <title>Silent Chronicle — Хроники руин</title>
 
     <!-- Шрифты: Cinzel (заголовки) + Inter (текст) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,6 +58,7 @@
             <!-- Кнопки в сетку -->
             <div class="d-flex flex-wrap gap-2 justify-content-start">
                 <button class="btn btn-chip filter-btn active" data-category="all">Все</button>
+                <button class="btn btn-chip filter-btn" data-category="newest">Сначала новые</button>
                 <button class="btn btn-chip filter-btn" data-category="europe">Европа</button>
                 <button class="btn btn-chip filter-btn" data-category="asia">Азия</button>
                 <button class="btn btn-chip filter-btn" data-category="castle">Замки</button>
@@ -100,6 +101,7 @@
         <!-- Скрыта на телефонах (d-md-flex) -->
         <div class="category-scroll-wrapper d-none d-md-flex gap-2 mb-4">
             <button class="btn btn-chip filter-btn active" data-category="all">Все</button>
+            <button class="btn btn-chip filter-btn" data-category="newest">Сначала новые</button>
             <button class="btn btn-chip filter-btn" data-category="europe">Европа</button>
             <button class="btn btn-chip filter-btn" data-category="asia">Азия</button>
             <button class="btn btn-chip filter-btn" data-category="castle">Замки</button>
@@ -115,6 +117,7 @@
         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-2 g-sm-3" id="places-container">
             <!-- Карточки сгенерированы автоматически -->
         </div>
+
     </main>
 
     <!-- Кнопка прокрутки наверх -->
