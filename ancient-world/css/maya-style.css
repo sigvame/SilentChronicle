@@ -1,0 +1,203 @@
+/* Основные переменные стиля Майя (Палитра тропических джунглей и нефрита) */
+:root {
+    --maya-jade-bright: #52b788;
+    /* Светлый нефрит для заголовков и иконок */
+    --maya-jade-glow: rgba(82, 183, 136, 0.3);
+    --maya-emerald-dark: #143829;
+    /* Глубокий изумрудный цвет для фонов */
+    --maya-emerald-light: #2d6a4f;
+    /* Насыщенный зеленый для акцентов */
+    --maya-dark-bg: #060b08;
+    /* Глухой темный фон ночных джунглей */
+    --maya-card-bg: rgba(10, 22, 16, 0.9);
+    --maya-card-border: rgba(82, 183, 136, 0.25);
+    --maya-text-main: #e8f5e9;
+    /* Чистый светлый текст */
+    --maya-text-muted: #8fae9d;
+    /* Приглушенный зеленый текст */
+}
+
+body {
+    background-color: var(--maya-dark-bg);
+    color: var(--maya-text-main);
+    font-family: 'Inter', sans-serif;
+    background-image:
+        radial-gradient(circle at 50% 0px, rgba(45, 106, 79, 0.25), transparent 900px),
+        radial-gradient(circle at 90% 800px, rgba(20, 56, 41, 0.2), transparent 700px),
+        linear-gradient(to bottom, rgba(6, 11, 8, 0.94), rgba(6, 11, 8, 0.99));
+}
+
+/* Шапка с атмосферой древних пирамид в джунглях */
+.maya-hero-section {
+    position: relative;
+    padding: 80px 16px 64px 16px;
+    background: 
+      linear-gradient(180deg, rgba(6, 11, 8, 0.25) 0%, rgba(6, 11, 8, 0.8) 100%),
+      radial-gradient(ellipse at center, rgba(20, 56, 41, 0.35) 0%, rgba(6, 11, 8, 0.75) 100%),
+      url('../images/maya/maya-hero-bg.jpg') center/cover no-repeat;
+    border-bottom: 2px solid var(--maya-card-border);
+    overflow: hidden;
+}
+
+/* Нефритовая рамка с орнаментом пирамиды */
+.maya-pyramid-border {
+    position: relative;
+    padding: 40px;
+    background: var(--maya-card-bg);
+    border: 1px solid var(--maya-card-border);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.9), 0 0 25px rgba(82, 183, 136, 0.15);
+    backdrop-filter: blur(10px);
+}
+
+.maya-pyramid-border::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px;
+    height: 6px;
+    background: var(--maya-jade-bright);
+    box-shadow: 0 0 14px var(--maya-jade-glow);
+    clip-path: polygon(0% 100%, 15% 0%, 85% 0%, 100% 100%);
+}
+
+.maya-title {
+    font-family: 'Cinzel', serif;
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9);
+}
+
+.maya-subtitle {
+    color: var(--maya-jade-bright);
+    font-family: 'Cinzel', serif;
+    font-size: 17px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Стили заголовков и карточек */
+.maya-section-title {
+    font-family: 'Cinzel', serif;
+    color: var(--maya-jade-bright);
+    border-left: 4px solid var(--maya-jade-bright);
+    padding-left: 14px;
+    margin-bottom: 24px;
+    text-shadow: 0 0 10px var(--maya-jade-glow);
+}
+
+.maya-card {
+    background: var(--maya-card-bg);
+    border: 1px solid var(--maya-card-border);
+    border-radius: 8px;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.maya-card:hover {
+    border-color: var(--maya-jade-bright);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8), 0 0 20px var(--maya-jade-glow);
+}
+
+/* Стилизация иконок статуй и атрибутов */
+.maya-icon {
+    color: var(--maya-jade-bright);
+    font-size: 24px;
+    margin-right: 8px;
+    vertical-align: middle;
+    filter: drop-shadow(0 0 6px var(--maya-jade-glow));
+}
+
+/* Баннеры с фоновыми изображениями */
+.maya-bg-banner {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 48px 32px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid var(--maya-card-border);
+}
+
+.maya-bg-banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(6, 11, 8, 0.95) 0%, rgba(20, 56, 41, 0.88) 100%);
+    z-index: 1;
+}
+
+.maya-bg-banner-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Аккордеон */
+.maya-accordion .accordion-button {
+    background: var(--maya-card-bg);
+    color: var(--maya-jade-bright);
+    border: 1px solid var(--maya-card-border);
+    font-family: 'Cinzel', serif;
+}
+
+.maya-accordion .accordion-button:not(.collapsed) {
+    background: var(--maya-emerald-dark);
+    color: #ffffff;
+    box-shadow: none;
+    border-color: var(--maya-jade-bright);
+}
+
+.maya-accordion .accordion-body {
+    background: rgba(8, 16, 12, 0.97);
+    color: var(--maya-text-main);
+    border: 1px solid var(--maya-card-border);
+    border-top: none;
+}
+
+/* Дополнительные стили джунглей и древних водяных знаков */
+.maya-jungle-theme {
+    background-image:
+        radial-gradient(circle at 50% 0px, rgba(45, 106, 79, 0.3), transparent 800px),
+        radial-gradient(circle at 10% 1200px, rgba(20, 56, 41, 0.25), transparent 600px),
+        linear-gradient(to bottom, rgba(6, 11, 8, 0.95), rgba(6, 11, 8, 0.99));
+}
+
+/* Эскиз/водяной знак статуи в хедере */
+.maya-watermark-mask {
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='%2352b788'%3E%3Cpath d='M50 5 L65 25 L85 25 L70 45 L80 75 L50 65 L20 75 L30 45 L15 25 L35 25 Z' opacity='0.15'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    pointer-events: none;
+}
+
+/* Статуя водяного знака в баннере */
+.maya-bg-statue-overlay {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 300px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2352b788'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v4h-2zm0 6h2v5h-2z' opacity='0.08'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Рамки для фотографий */
+.maya-photo-frame {
+    border: 1px solid rgba(82, 183, 136, 0.3) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    pointer-events: none;
+}
+
+.maya-inner-block {
+    background: rgba(6, 11, 8, 0.5);
+    border: 1px solid var(--maya-card-border);
+    border-radius: 8px; 
+}
