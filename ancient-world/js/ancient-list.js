@@ -90,4 +90,3 @@ const ancientPlaces = [
       link: "pages/others/china-article.html"
     }
 ];
-
