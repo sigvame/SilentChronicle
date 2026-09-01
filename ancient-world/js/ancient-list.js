@@ -78,5 +78,15 @@ const ancientPlaces = [
       desc: "Высокоразвитая цивилизация тропических джунглей, подарившая миру уникальную иероглифическую письменность, концепцию нуля, календарь и грандиозные ступенчатые пирамиды.",
       image: "images/maya/maya-hero-bg.jpg",
       link: "pages/peoples/maya.html"
+    },
+    {
+      title: "Империи Китая: Хань, Тан и Мин",
+      categories: ["peoples", "asia", "empires"],
+      tag: "Азия • Древний Восток • Империи",
+      country: "📍 Китай",
+      date: "2026-09-01",
+      desc: "Три великие эпохи Поднебесной, сформировавшие традиционную китайскую идентичность, Запретный город и величайшие изобретения человечества.",
+      image: "images/china/china-hero-forbidden-city.jpg",
+      link: "pages/others/china-article.html"
     }
 ];
