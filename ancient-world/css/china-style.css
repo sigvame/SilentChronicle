@@ -1,0 +1,258 @@
+:root {
+    --china-dark-bg: #090304;
+    --china-card-bg: rgba(18, 6, 8, 0.94);
+    --china-vermilion: #d32f2f;
+    --china-crimson-dark: #8a0e10;
+    --china-red-glow: rgba(211, 47, 47, 0.35);
+
+    /* Цвета Белого Золота и Азиатских Акцентов */
+    --china-white-gold: #f4f7fa;
+    --china-gold-accent: #e5c158;
+    --china-gold-glow: rgba(229, 193, 88, 0.25);
+    --china-border-gold: rgba(244, 247, 250, 0.3);
+    --china-border-red: rgba(211, 47, 47, 0.45);
+    --china-text-main: #e2e8e4;
+    --china-text-muted: #a1b0a6;
+}
+
+body {
+    background-color: var(--china-dark-bg);
+    color: var(--china-text-main);
+    font-family: 'Inter', sans-serif;
+    background-image:
+        radial-gradient(circle at 50% 80px, rgba(110, 12, 16, 0.2), transparent 800px),
+        radial-gradient(circle at 50% 300px, rgba(150, 25, 25, 0.1), transparent 400px),
+        linear-gradient(to bottom, rgba(5, 1, 2, 0.8), rgba(5, 1, 2, 0.8)),
+        url('../images/china/china-global-bg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: normal, normal, overlay, normal;
+}
+
+.china-nav-badge {
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--china-white-gold) !important;
+    background: linear-gradient(135deg, rgba(138, 14, 16, 0.7), rgba(211, 47, 47, 0.4));
+    border: 1px solid var(--china-border-gold);
+    border-radius: 20px;
+    padding: 5px 14px;
+    box-shadow: 0 0 12px var(--china-red-glow);
+    text-shadow: 0 0 6px rgba(211, 47, 47, 0.8);
+}
+
+.dragon-scales-bg {
+    position: relative;
+    background-color: #120406;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 32 32'%3E%3Cpath fill='%23d32f2f' fill-opacity='0.09' d='M16 0 C24 0 32 8 32 16 C32 24 24 32 16 32 C8 32 0 24 0 16 C0 8 8 0 16 0 Z M16 4 C21 4 28 10 28 16 C28 22 21 28 16 28 C11 28 4 22 4 16 C4 10 11 4 16 4 Z'/%3E%3C/svg%3E");
+    border: 1px solid var(--china-border-red);
+}
+
+.china-hero-dragon-wrapper {
+    position: relative;
+    padding: 70px 0 50px 0;
+    background:
+        radial-gradient(circle at 50% 30%, rgba(211, 47, 47, 0.25) 0%, transparent 70%),
+        linear-gradient(180deg, rgba(9, 3, 4, 0.7) 0%, rgba(9, 3, 4, 0.98) 100%),
+        url('../images/china/china-hero-dragon-architecture.jpg') center/cover no-repeat;
+    overflow: hidden;
+    border-bottom: 2px solid var(--china-border-gold);
+}
+
+/* Рамка-щит Императорской Печати */
+.china-imperial-shield {
+    position: relative;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 48px 36px 40px 36px;
+    background: linear-gradient(180deg, rgba(22, 7, 10, 0.96) 0%, rgba(14, 4, 6, 0.98) 100%);
+    border: 1px solid var(--china-border-gold);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.95), 0 0 35px var(--china-red-glow);
+    border-radius: 4px;
+}
+
+.china-imperial-shield::before,
+.china-imperial-shield::after {
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    opacity: 0.75;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='%23e5c158'%3E%3Cpath d='M32 2C18 2 8 12 8 22c0 6 3 11 8 15-2 4-5 7-9 9 6 0 12-2 16-6 3 2 6 3 9 3 14 0 24-10 24-20S46 2 32 2zm0 34c-9 0-16-6-16-14S23 8 32 8s16 6 16 14-7 14-16 14z'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0 0 6px var(--china-gold-glow));
+}
+
+.china-imperial-shield::before {
+    top: 12px;
+    left: 16px;
+}
+
+.china-imperial-shield::after {
+    top: 12px;
+    right: 16px;
+    transform: scaleX(-1);
+}
+
+/* Драконий медальон-печать над шапкой */
+.china-dragon-crest {
+    position: absolute;
+    top: -26px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #1f0507, #5c090b);
+    border: 1.5px solid var(--china-gold-accent);
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px var(--china-gold-glow), 0 0 15px var(--china-red-glow);
+    z-index: 5;
+}
+
+/* Стилизация китайского иероглифа */
+.china-kanji {
+    font-family: "Noto Serif SC", "STKaiti", "KaiTi", serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--china-gold-accent);
+    text-shadow: 0 0 8px var(--china-gold-glow);
+    line-height: 1;
+    user-select: none;
+}
+
+.china-dragon-crest i {
+    color: var(--china-white-gold);
+    font-size: 22px;
+    opacity: 0.9;
+    filter: drop-shadow(0 0 3px var(--china-gold-accent));
+}
+
+.china-dragon-crest i {
+    color: var(--china-gold-accent);
+    font-size: 24px;
+    filter: drop-shadow(0 0 4px rgba(244, 247, 250, 0.8));
+}
+
+.china-header-meta {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: var(--china-gold-accent);
+    text-transform: uppercase;
+}
+
+.china-hero-title {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--china-white-gold) !important;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.9), 0 0 25px var(--china-red-glow);
+    margin-top: 10px;
+}
+
+.china-hero-subtitle {
+    font-size: 1.05rem;
+    color: var(--china-text-main);
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+     КАРТОЧКИ, ЗАГОЛОВКИ И ДЕКОРАТИВНЫЕ ЭЛЕМЕНТЫ
+     ========================================================================== */
+
+.china-card {
+    background: var(--china-card-bg);
+    border: 1px solid var(--china-border-gold);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.china-card:hover {
+    border-color: var(--china-vermilion);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.9), 0 0 20px var(--china-red-glow);
+}
+
+.china-section-title {
+    font-family: 'Cinzel', serif;
+    color: var(--china-white-gold);
+    border-left: 4px solid var(--china-vermilion);
+    padding-left: 14px;
+    margin-bottom: 22px;
+    text-shadow: 0 0 10px var(--china-red-glow);
+}
+
+.china-icon {
+    color: var(--china-vermilion);
+    font-size: 22px;
+    margin-right: 8px;
+    vertical-align: middle;
+    filter: drop-shadow(0 0 6px var(--china-red-glow));
+}
+
+.china-badge {
+    background-color: rgba(138, 14, 16, 0.5) !important;
+    color: var(--china-white-gold) !important;
+    border: 1px solid var(--china-border-red) !important;
+    padding: 6px 12px;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+     ОФОРМЛЕНИЕ БЛОКОВ С ФОТОГРАФИЯМИ И РАМКАМИ
+     ========================================================================== */
+
+.china-inner-block {
+    background: rgba(12, 4, 6, 0.8);
+    border: 1px solid var(--china-border-red);
+    border-radius: 6px;
+}
+
+/* Рамка для фотографий в стиле белого золота */
+.china-photo-frame {
+    border: 1px solid var(--china-border-gold) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.85);
+    pointer-events: none;
+}
+
+/* Текстурный баннер для разделов */
+.china-bg-banner {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 48px 32px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid var(--china-border-gold);
+}
+
+.china-bg-banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(9, 3, 4, 0.94) 0%, rgba(138, 14, 16, 0.85) 100%);
+    z-index: 1;
+}
+
+.china-bg-banner-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Адаптивные стили */
+@media (max-width: 576px) {
+    .china-hero-title {
+        font-size: 1.8rem;
+    }
+
+    .china-imperial-shield {
+        padding: 36px 20px 28px 20px;
+    }
+}
