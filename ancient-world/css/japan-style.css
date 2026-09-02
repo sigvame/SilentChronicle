@@ -29,12 +29,6 @@ body {
     background-blend-mode: normal, normal, overlay, normal;
 }
 
-@media (max-width: 768px) {
-    body {
-        background-attachment: scroll;
-    }
-}
-
 /* ==========================================
    2. ГЛАВНЫЙ БАННЕР (HERO SECTION)
    ========================================== */
